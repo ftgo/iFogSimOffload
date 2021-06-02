@@ -12,8 +12,17 @@ For test, you can set storageModes = Arrays.asList(CloudStorage,ClosestNode,FogS
 
 The path  of the main class is: src/org/fog/examples/DataPlacement.java
 
-Next, various configurations and setups to reuse this extension, are shown.
-1- Clone this repository in your machine.
-2- Install Cplex: there is a free acadimique version.
-3- Add the Cplex Jar:
-4- Install Metis.
+Next, various configurations and setups to reuse this extension, are shown.  
+1- Clone this repository in your machine.  
+2- Install Cplex: there is a free acadimique version.  
+3- Add the Cplex Jar:  
+4- Install Metis.  
+
+
+# This fork
+* Download and install CPLEX: https://www.ibm.com/analytics/cplex-optimizer
+* Add CPLEX to `LD_LIBRARY_PATH` environment variable or execute with `-Djava.library.path`
+    * e.g.: `-Djava.library.path=/opt/ibm/ILOG/CPLEX_Studio_Community201/cplex/bin/x86-64_linux`  
+* Better build: `mvn clean install` (no `jars` needed)
+    * But first, execute (replacing `<VERSION>`, e.g.: 20.1.0.0) `mvn install:install-file -Dpackaging=jar -DgeneratePom=true -Dfile=cplex.jar -DgroupId=ilog -DartifactId=cplex -Dversion=<VERSION>`
+

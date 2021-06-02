@@ -86,16 +86,16 @@ public class DataPlacement {
 	public static final long HGW_Storage = 1000000000; // 1 GB
 
 	/* infrastructure */
-	public static int nb_HGW=500; //6 HGW per LPOP
-	public static final int nb_LPOP = 50; //4 LPOP per RPOP
-	public static final int nb_RPOP = 10; //2 RPOP per DC
-	public static final int nb_DC = 5; //
+//	public static int nb_HGW=500; //6 HGW per LPOP
+//	public static final int nb_LPOP = 50; //4 LPOP per RPOP
+//	public static final int nb_RPOP = 10; //2 RPOP per DC
+//	public static final int nb_DC = 5; //
 
-//	public static int nb_HGW=12; //3 HGW per LPOP
-//	public static final int nb_LPOP = 4; //2 LPOP per RPOP
-//	public static final int nb_RPOP = 2; //2 RPOP per DC
-//	public static final int nb_DC = 1; //
-	
+	public static int nb_HGW=12; //3 HGW per LPOP
+	public static final int nb_LPOP = 4; //2 LPOP per RPOP
+	public static final int nb_RPOP = 2; //2 RPOP per DC
+	public static final int nb_DC = 1; //
+
 	public static final int nb_SnrPerHGW = 1;
 	public static final int nb_ActPerHGW = 1;
 
@@ -128,14 +128,15 @@ public class DataPlacement {
 	public static final String GraphPartitionStorage = "GraphPartitionStorage";
 
 	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
-	//public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
+//	public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
+//public static final List<String> storageModes = Arrays.asList(ZoningStorage);
 
 	public static final List<Integer> nb_zones_list = Arrays.asList(5);
 	public static final List<Integer> nb_partitions_list = Arrays.asList(2,5);
 
-	
+
 	public static int nb_zone;
-	
+
 	public static int nb_partitions;
 
 	public static String storageMode;
@@ -147,21 +148,21 @@ public class DataPlacement {
 	public static int nb_DataCons_By_DataProd ;
 
 	public static boolean parallel = true;
-	
+
 	public static final String zoning = "zoning";
 	public static final String mixed = "mixed";
 	public static final String distributed = "distributed";
-	
+
 	//private static final List<String> dataflows = Arrays.asList(zoning,mixed,distributed);
 	public static final List<String> dataflows = Arrays.asList(distributed);
-	
-	public static final String FloydPath = "/home/t430/Bureau/";
-	
+
+	public static final String FloydPath = System.getProperty("user.dir") + "/"; // "/home/t430/Bureau/"
+
 	public static String dataflow_used;
-	
-	
+
+
 	public static int nb_externCons=0;
-	
+
 	public static boolean trace_flag = true; // mean trace events
 	public static Calendar calendar;
 	public static int num_user = 1; // number of cloud users
@@ -171,26 +172,26 @@ public class DataPlacement {
 		System.out.println("Starting the simulation");
 		Log.writeInLogFile("DataPlacement", "Starting the simulation");
 		try {
-			
-			
+
+
 			Log.disable();
 			calendar = Calendar.getInstance();
 			//Log.initializeLogFile();
-			System.out.println();	
-			
+			System.out.println();
+
 			/* this specifies the number of data consumers that share the same data */
 			for(int i = 1; i < 2; i++){
 			nb_DataCons_By_DataProd=i;
 			System.out.println("nb_DataCons_By_DataProd="+ nb_DataCons_By_DataProd);
 			Log.writeInLogFile("DataPlacement", "nb_DataCons_By_DataProd="+ nb_DataCons_By_DataProd);
-			
+
 			for(String df: dataflows){
 				dataflow_used = df;
-			
+
 			long b_sim, e_sim;
-				
+
 			b_sim = Calendar.getInstance().getTimeInMillis();
-			
+
 			//for(int simul=0;simul<5;simul++){
 
 			for(String storMode : storageModes){
@@ -199,18 +200,18 @@ public class DataPlacement {
 			if (storageMode.equals(CloudStorage)) {
 				CloudStorage cloud = new CloudStorage();
 				cloud.sim();
-			
+
 
 			} else if (storageMode.equals(ClosestNode)) {
 				ClosestNodeStorage closestnode = new ClosestNodeStorage();
 				closestnode.sim();
-				
-				
+
+
 			} else if (storageMode.equals(FogStorage)) {
 				FogStorage fog = new FogStorage();
 				fog.sim();
-				
-				
+
+
 			} else if (storageMode.equals(ZoningStorage)) {
 				ZoningStorage zoning = new ZoningStorage();
 				zoning.sim();
@@ -218,14 +219,14 @@ public class DataPlacement {
 			} else if (storageMode.equals(GraphPartitionStorage)) {
 				GraphPartitionStorage graphpartition = new org.StorageMode.GraphPartitionStorage();
 				graphpartition.sim();
-				
-			} 
+
+			}
 		}
 			e_sim = Calendar.getInstance().getTimeInMillis();
 			//org.fog.examples.Log.writeSimulationTime(nb_HGW, String.valueOf((e_sim - b_sim)/60000));
 		}
-			
-	}	
+
+	}
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -233,11 +234,11 @@ public class DataPlacement {
 		}
 	}
 
-	
+
 
 	/**
 	 * Create Fog Devices
-	 * 
+	 *
 	 * @param userId
 	 * @param appId
 	 */
@@ -283,14 +284,14 @@ public class DataPlacement {
 		}
 	}
 
-	
+
 	/**
 	 * Create Sensors and actuators
-	 * 
+	 *
 	 * @param userId
 	 * @param appId
 	 */
-	
+
 
 	public static void createSensorsAndActuators(int userId, String appId) {
 		/* create HGW */
@@ -301,10 +302,10 @@ public class DataPlacement {
 
 			/* create sensors */
 			for (int j = 0; j < nb_SnrPerHGW; j++, id_snr++) {
-				Sensor snr = new Sensor("s-" + id_snr, "TempSNR"+ (int) (id_snr), userId, appId,new DeterministicDistribution(SNR_TRANSMISSION_TIME)); 
+				Sensor snr = new Sensor("s-" + id_snr, "TempSNR"+ (int) (id_snr), userId, appId,new DeterministicDistribution(SNR_TRANSMISSION_TIME));
 				sensors.add(snr);
 				snr.setGatewayDeviceId(HGW.getId());
-				snr.setLatency(LatencyHGWToSNR); 
+				snr.setLatency(LatencyHGWToSNR);
 			}
 
 			/* create actuators */
@@ -312,14 +313,14 @@ public class DataPlacement {
 				Actuator act = new Actuator("a-" + id_act, userId, appId,"DISPLAY" + (int) (id_act));
 				actuators.add(act);
 				act.setGatewayDeviceId(HGW.getId());
-				act.setLatency(LatencyHGWToACT); 
+				act.setLatency(LatencyHGWToACT);
 			}
 
 		}
 
 	}
 
-	
+
 	public static long storageAllocation(String name) {
 		if (name.startsWith("DC"))
 			return DC_Storage;
@@ -332,7 +333,7 @@ public class DataPlacement {
 		else
 			return -1;
 	}
-	
+
 	private static FogDevice createFogDevice(String nodeName, long mips,
 			int ram, long upBw, long downBw, int level, double ratePerMips,
 			double busyPower, double idlePower) {
@@ -340,7 +341,7 @@ public class DataPlacement {
 		List<Pe> peList = new ArrayList<Pe>();
 
 		// 3. Create PEs and add these into a list.
-		peList.add(new Pe(0, new PeProvisionerOverbooking(mips))); 
+		peList.add(new Pe(0, new PeProvisionerOverbooking(mips)));
 
 		int hostId = FogUtils.generateEntityId();
 
@@ -363,7 +364,7 @@ public class DataPlacement {
 		double costPerStorage = 0.001; // the cost of using storage in this
 										// resource
 		double costPerBw = 0.0; // the cost of using bw in this resource
-		LinkedList<Storage> storageList = new LinkedList<Storage>(); 
+		LinkedList<Storage> storageList = new LinkedList<Storage>();
 
 		FogDeviceCharacteristics characteristics = new FogDeviceCharacteristics(arch, os, vmm, host, time_zone, cost, costPerMem,costPerStorage, costPerBw);
 
@@ -381,7 +382,7 @@ public class DataPlacement {
 		fogdevice.setLevel(level);
 		return fogdevice;
 	}
-	
+
 
 	private static float getRightLatency(String nodeName, int right) {
 		if ((nodeName.startsWith("DC")) && (right != -1))
@@ -390,7 +391,7 @@ public class DataPlacement {
 			return rightLatencyRPOP;
 		return -1;
 	}
-	
+
 
 	private static float getLeftLatency(String nodeName, int left) {
 		if ((nodeName.startsWith("DC")) && (left != -1))
@@ -399,7 +400,7 @@ public class DataPlacement {
 			return leftLatencyRPOP;
 		return -1;
 	}
-	
+
 
 	private static int getleft(String nodeName) {
 		int fogId;
@@ -420,7 +421,7 @@ public class DataPlacement {
 		} else
 			return -1;
 	}
-	
+
 
 	private static int getRight(String nodeName) {
 		int fogId;
@@ -447,13 +448,7 @@ public class DataPlacement {
 	/**
 	 * Create Application Add Modules Add AppEdges "Data flow" Add Tuples
 	 * Mapping "Tuples Frequencies" Add AppLoop "Control"
-	 * 
-	 * @param appId
-	 * @param userId
-	 * @return
 	 */
-	
-	
 	private static List<String> getArrayListOfServices() {
 		List<String> modulesList = new ArrayList<String>();
 		try {
