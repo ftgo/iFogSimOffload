@@ -20,9 +20,17 @@ Next, various configurations and setups to reuse this extension, are shown.
 
 
 # This fork
+* Download and install Metis: http://glaros.dtc.umn.edu/gkhome/metis/metis/download
+  * Change `IDXTYPEWIDTH` and `REALTYPEWIDTH` to `64` 
+  * Run: `make config shared=1 prefix=./precompiled && make && make install`
 * Download and install CPLEX: https://www.ibm.com/analytics/cplex-optimizer
-* Add CPLEX to `LD_LIBRARY_PATH` environment variable or execute with `-Djava.library.path`
-    * e.g.: `-Djava.library.path=/opt/ibm/ILOG/CPLEX_Studio_Community201/cplex/bin/x86-64_linux`  
-* Better build: `mvn clean install` (no `jars` needed)
-    * But first, execute (replacing `<VERSION>`, e.g.: 20.1.0.0) `mvn install:install-file -Dpackaging=jar -DgeneratePom=true -Dfile=cplex.jar -DgroupId=ilog -DartifactId=cplex -Dversion=<VERSION>`
-
+* Add CPLEX and Metis to `LD_LIBRARY_PATH`
+  * e.g.: `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ibm/ILOG/CPLEX_Studio_Community201/cplex/bin/x86-64_linux:/opt/usr/lib/metis/metis-5.1.0/build/Linux-x86_64/precompiled/lib`  
+* Add Metis to `PATH` 
+  * e.g.: `PATH=$PATH:/opt/usr/lib/metis/metis-5.1.0/build/Linux-x86_64/precompiled/bin`
+* Import CPLEX `cplex.jar` to local Maven
+  * e.g. (for CPLEX 20.1.0.0): `mvn install:install-file -Dpackaging=jar -DgeneratePom=true -Dfile=cplex.jar -DgroupId=ilog -DartifactId=cplex -Dversion=20.1.0.0`
+* Build: `mvn clean install` (no `jars` needed)
+* Run
+  * a) With exports: `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ibm/ILOG/CPLEX_Studio_Community201/cplex/bin/x86-64_linux:/opt/usr/lib/metis/metis-5.1.0/build/Linux-x86_64/precompiled/lib;PATH=$PATH:/opt/usr/lib/metis/metis-5.1.0/build/Linux-x86_64/precompiled/bin java -jar target/ifogsim-jar-with-dependencies.jar`
+  * b) Without exports (variables already exported): `java -jar target/ifogsim-jar-with-dependencies.jar`

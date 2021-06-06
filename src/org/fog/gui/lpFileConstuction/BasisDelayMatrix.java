@@ -507,6 +507,9 @@ public class BasisDelayMatrix {
 		// System.out.println("Generating Basis Latency file ...");
 		FileWriter fichier;
 
+		File latencies = new File("latencies");
+		if (!latencies.exists()) latencies.mkdir();
+
 		if (DataPlacement.parallel == false) {
 			fichier = new FileWriter("latencies/latency" + DataPlacement.nb_HGW+ "sequence.txt");
 		} else {

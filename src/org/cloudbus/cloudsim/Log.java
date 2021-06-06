@@ -9,6 +9,7 @@
 package org.cloudbus.cloudsim;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -169,6 +170,9 @@ public class Log {
 	}
 	
 	public static void writeInLogFile(String devName, String msg) {
+		java.io.File log = new File("Log");
+		if (!log.exists()) log.mkdir();
+
 		FileWriter lpFile;
 		try {
 			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", true);
@@ -184,6 +188,9 @@ public class Log {
 	}
 	
 	public static void initializeLogFile() {
+		java.io.File log = new File("Log");
+		if (!log.exists()) log.mkdir();
+
 		FileWriter lpFile;
 		try {
 			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt");
