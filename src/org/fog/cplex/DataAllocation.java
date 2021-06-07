@@ -457,11 +457,6 @@ public class DataAllocation {
 		}		
 	}
 
-	public void setDataAllocationMapInOffload(int nb_HGW, Application application) throws FileNotFoundException {
-		// TODO offload
-		setDataPlacementMap(nb_HGW, application);
-	}
-
 	private Integer getFogDeviceIndexInPartition(int col, int partition, GraphPartitioning gp) {
 		// TODO Auto-generated method stub
 		

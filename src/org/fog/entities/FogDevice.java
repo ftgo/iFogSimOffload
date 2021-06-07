@@ -30,6 +30,7 @@ import org.fog.application.AppLoop;
 import org.fog.application.AppModule;
 import org.fog.application.Application;
 import org.fog.cplex.DataAllocation;
+import org.fog.cplex.DataAllocationOffload;
 import org.fog.examples.DataPlacement;
 import org.fog.gui.lpFileConstuction.BasisDelayMatrix;
 import org.fog.gui.lpFileConstuction.LatencyStats;
@@ -961,7 +962,7 @@ public class FogDevice extends PowerDatacenter {
 			Log.writeInLogFile(this.getName(), "Offload Storage -> a offload Fog node will be choosed!");
 			////*System.out.println("tupleType:"+tupleType);
 			Log.writeInLogFile(this.getName(), "tupleType:"+tupleType);
-			return DataAllocation.getEmplacementNodeId(tupleType);
+			return DataAllocationOffload.getEmplacementNodeId(tupleType);
 
 		}else{
 			////*System.out.println("Error on Storage mode, please choose 1..4");
