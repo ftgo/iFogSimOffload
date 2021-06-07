@@ -955,6 +955,14 @@ public class FogDevice extends PowerDatacenter {
 			Log.writeInLogFile(this.getName(), "tupleType:"+tupleType);
 			return DataAllocation.getEmplacementNodeId(tupleType);
 			
+		}else if(DataPlacement.storageMode.equals(DataPlacement.OffloadStorage)){
+			// TODO offload
+			////*System.out.println("Graph Partition Storage -> a Fog node will be choosed!");
+			Log.writeInLogFile(this.getName(), "Offload Storage -> a offload Fog node will be choosed!");
+			////*System.out.println("tupleType:"+tupleType);
+			Log.writeInLogFile(this.getName(), "tupleType:"+tupleType);
+			return DataAllocation.getEmplacementNodeId(tupleType);
+
 		}else{
 			////*System.out.println("Error on Storage mode, please choose 1..4");
 			Log.writeInLogFile(this.getName(), "Error on Storage mode, please choose 1..4");

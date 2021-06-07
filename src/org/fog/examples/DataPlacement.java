@@ -7,11 +7,7 @@ import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.StorageMode.ClosestNodeStorage;
-import org.StorageMode.CloudStorage;
-import org.StorageMode.FogStorage;
-import org.StorageMode.GraphPartitionStorage;
-import org.StorageMode.ZoningStorage;
+import org.StorageMode.*;
 import org.cloudbus.cloudsim.Host;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.Pe;
@@ -121,13 +117,15 @@ public class DataPlacement {
 	public static final long SERVICE_HGW_BW = 1000;
 	public static final int SERVICE_HGW_MIPS = 1000;
 
+	public static final String OffloadStorage = "OffloadStorage";
+
 	public static final String CloudStorage = "CloudStorage";
 	public static final String ClosestNode = "ClosestNode";
 	public static final String FogStorage = "FogStorage";
 	public static final String ZoningStorage = "ZoningStorage";
 	public static final String GraphPartitionStorage = "GraphPartitionStorage";
 
-	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
+	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage,OffloadStorage);
 	//public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
 
 	public static final List<Integer> nb_zones_list = Arrays.asList(2);
@@ -144,6 +142,9 @@ public class DataPlacement {
 	public static List<Sensor> sensors = new ArrayList<Sensor>();
 	public static List<Actuator> actuators = new ArrayList<Actuator>();
 
+	/**
+	 * this specifies the number of data consumers that share the same data
+	 */
 	public static int nb_DataCons_By_DataProd ;
 
 	public static boolean parallel = true;
@@ -219,7 +220,10 @@ public class DataPlacement {
 				GraphPartitionStorage graphpartition = new org.StorageMode.GraphPartitionStorage();
 				graphpartition.sim();
 				
-			} 
+			} else if (storageMode.equals(OffloadStorage)) {
+				org.StorageMode.OffloadStorage offload = new org.StorageMode.OffloadStorage();
+				offload.sim();
+			}
 		}
 			e_sim = Calendar.getInstance().getTimeInMillis();
 			//org.fog.examples.Log.writeSimulationTime(nb_HGW, String.valueOf((e_sim - b_sim)/60000));

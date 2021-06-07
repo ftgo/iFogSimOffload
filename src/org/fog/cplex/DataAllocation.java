@@ -1,9 +1,6 @@
 package org.fog.cplex;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -458,6 +455,11 @@ public class DataAllocation {
 			int index = hgwId - DataPlacement.nb_DC - DataPlacement.nb_RPOP - DataPlacement.nb_LPOP; 
 			dataPlacementMap.put("TempHGW"+index, hgwId+3);
 		}		
+	}
+
+	public void setDataAllocationMapInOffload(int nb_HGW, Application application) throws FileNotFoundException {
+		// TODO offload
+		setDataPlacementMap(nb_HGW, application);
 	}
 
 	private Integer getFogDeviceIndexInPartition(int col, int partition, GraphPartitioning gp) {
