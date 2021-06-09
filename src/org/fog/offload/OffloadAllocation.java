@@ -7,6 +7,7 @@ import org.fog.examples.DataPlacement;
 
 import java.util.Map;
 
+import static java.lang.String.format;
 import static java.util.stream.Collectors.toMap;
 
 public class OffloadAllocation {
@@ -62,8 +63,13 @@ public class OffloadAllocation {
         StorageState storage = state.getStorageState();
         if (storage.save(tuple)) {
             FogDevice device = state.getDevice();
+
+            Log.write(format("getEmplacementNodeId{tuple=%s, id=%s}", tuple, device.getId()));
+
             return device.getId();
         }
+
+        Log.write(format("getEmplacementNodeId{tuple=%s, id=%s}", tuple, -1));
 
         return -1;
     }
