@@ -93,6 +93,14 @@ public abstract class SimEntity implements Cloneable {
 		CloudSim.send(id, dest, delay, tag, data);
 	}
 
+	// TODO offload
+	public void schedule_reply(int dest, double delay, int tag, Object data) {
+		if (!CloudSim.running()) {
+			return;
+		}
+		CloudSim.send_reply(id, dest, delay, tag, data);
+	}
+
 	/**
 	 * Send an event to another entity by id number and with <b>no</b> data. Note that the tag
 	 * <code>9999</code> is reserved.
@@ -545,6 +553,36 @@ public abstract class SimEntity implements Cloneable {
 //		}
 		
 		schedule(entityId, delay, cloudSimTag, data);
+	}
+
+	// TODO offload
+	protected void reply(int entityId, double delay, int cloudSimTag, Object data) {
+		if (entityId < 0) {
+			return;
+		}
+
+		// if delay is -ve, then it doesn't make sense. So resets to 0.0
+		if (delay < 0) {
+			delay = 0;
+		}
+
+		if (Double.isInfinite(delay)) {
+			throw new IllegalArgumentException("The specified delay is infinite value");
+		}
+
+		if (entityId < 0) {
+			Log.printLine(getName() + ".send(): Error - " + "invalid entity id " + entityId);
+			return;
+		}
+
+		int srcId = getId();
+//		if (entityId != srcId) {// does not delay self messages
+//			delay += getNetworkDelay(srcId, entityId);
+//			//*System.out.println("delay="+delay+"   getNetworkDelay("+srcId+","+ entityId+") ="+getNetworkDelay(srcId, entityId)+
+//					"  new delay="+delay+getNetworkDelay(srcId, entityId));
+//		}
+
+		schedule_reply(entityId, delay, cloudSimTag, data);
 	}
 
 	/**

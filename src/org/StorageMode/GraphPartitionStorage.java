@@ -27,6 +27,7 @@ import org.fog.gui.lpFileConstuction.LatencyStats;
 import org.fog.gui.lpFileConstuction.MakeLPFileInPartition;
 import org.fog.jni.GraphPartitioning;
 import org.fog.jni.GraphPonderation;
+import org.fog.offload.OffloadAllocation;
 import org.fog.placement.Controller;
 import org.fog.placement.ModuleMapping;
 import org.fog.utils.TimeKeeper;
@@ -244,6 +245,7 @@ public class GraphPartitionStorage {
 			
 			org.fog.examples.Log.writeDataAllocationStatsExternZoneCons(DataPlacement.nb_HGW,"Graph Partition Storage "+DataPlacement.nb_partitions
 					+"\n Nb extern cons :"+DataPlacement.nb_externCons);
+			OffloadAllocation.reset();
 
 			CloudSim.startSimulation();
 			CloudSim.stopSimulation();

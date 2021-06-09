@@ -5,12 +5,12 @@ import java.util.Calendar;
 import org.Results.SaveResults;
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.CloudSim;
-import org.cloudbus.cloudsim.network.DelayMatrix_Float;
 import org.fog.application.Application;
 import org.fog.entities.FogBroker;
 import org.fog.examples.DataPlacement;
 import org.fog.gui.lpFileConstuction.BasisDelayMatrix;
 import org.fog.gui.lpFileConstuction.LatencyStats;
+import org.fog.offload.OffloadAllocation;
 import org.fog.placement.Controller;
 import org.fog.placement.ModuleMapping;
 import org.fog.utils.TimeKeeper;
@@ -104,7 +104,9 @@ public class ClosestNodeStorage {
 //		application.saveTupleMappingFraction();
 //		System.out.println("End of saving");
 //		//System.exit(0);
-		
+
+		OffloadAllocation.reset();
+
 		System.out.println("Loading ....");
 		application.loadApplicationEdges();
 		application.loadTupleMappingFraction();

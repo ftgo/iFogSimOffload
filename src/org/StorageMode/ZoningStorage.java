@@ -25,6 +25,7 @@ import org.fog.gui.lpFileConstuction.DataSizeVector;
 import org.fog.gui.lpFileConstuction.FreeCapacityVector;
 import org.fog.gui.lpFileConstuction.LatencyStats;
 import org.fog.gui.lpFileConstuction.MakeLPFileInZone;
+import org.fog.offload.OffloadAllocation;
 import org.fog.placement.Controller;
 import org.fog.placement.ModuleMapping;
 import org.fog.utils.TimeKeeper;
@@ -163,6 +164,8 @@ public class ZoningStorage {
 					+"\n Nb extern cons :"+DataPlacement.nb_externCons);
 
 			System.out.println("----------------------");
+
+			OffloadAllocation.reset();
 
 			CloudSim.startSimulation();
 			CloudSim.stopSimulation();

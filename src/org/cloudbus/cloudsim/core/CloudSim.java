@@ -8,6 +8,7 @@
 
 package org.cloudbus.cloudsim.core;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -321,6 +322,8 @@ public class CloudSim {
 
 	/** The future event queue. */
 	protected static FutureQueue future;
+	// TODO offload
+	protected static List<SimEvent> reply;
 
 	/** The deferred event queue. */
 	protected static DeferredQueue deferred;
@@ -356,6 +359,8 @@ public class CloudSim {
 		entities = new ArrayList<SimEntity>();
 		entitiesByName = new LinkedHashMap<String, SimEntity>();
 		future = new FutureQueue();
+		// TODO offload
+		reply = new ArrayList<>();
 		deferred = new DeferredQueue();
 		waitPredicates = new HashMap<Integer, Predicate>();
 		clock = 0;
@@ -619,6 +624,12 @@ public class CloudSim {
 			running = false;
 			printMessage("Simulation: No more future events");
 			Log.writeInLogFile("CloudSim", "Simulation: No more future events");
+
+			// TODO offload
+			List<SimEvent> cp = new ArrayList<>(reply);
+			for (SimEvent e : cp) {
+				future.addEvent(e);
+			}
 		}
 
 		return queue_empty;
@@ -685,6 +696,25 @@ public class CloudSim {
 		Log.writeInLogFile("CloudSim", "add to future evnt:"+e.toString());
 		////*System.out.println("future size ="+future.size());
 		
+	}
+
+	// TODO offload
+	public static void send_reply(int src, int dest, double delay, int tag, final Object data) {
+		if (delay < 0) {
+			throw new IllegalArgumentException("Send delay can't be negative.");
+		}
+
+
+
+		SimEvent e = new SimEvent(SimEvent.SEND, delay+clock , src, dest, tag, data);
+
+		////*System.out.println("add to future evnt:"+e.toString());
+		////*System.out.println("future size ="+future.size());
+		reply.add(e);
+		//*System.out.println("add to future evnt:"+e.toString());
+		Log.writeInLogFile("CloudSim", "add to future reply evnt:"+e.toString());
+		////*System.out.println("future size ="+future.size());
+
 	}
 
 	/**

@@ -20,6 +20,7 @@ import org.fog.gui.lpFileConstuction.DataSizeVector;
 import org.fog.gui.lpFileConstuction.FreeCapacityVector;
 import org.fog.gui.lpFileConstuction.LatencyStats;
 import org.fog.gui.lpFileConstuction.MakeLPFile;
+import org.fog.offload.OffloadAllocation;
 import org.fog.placement.Controller;
 import org.fog.placement.ModuleMapping;
 import org.fog.utils.TimeKeeper;
@@ -167,7 +168,7 @@ public class FogStorage {
 				DataPlacement.storageMode+"\n"+ DataAllocation.dataAllocationStats(application));
 
 		// DataAllocation.printDataAllocationMap(application);
-		
+		OffloadAllocation.reset();
 		
 		CloudSim.startSimulation();
 		CloudSim.stopSimulation();
