@@ -81,33 +81,34 @@ public class DataPlacement {
 //	public static final long LPOP_Storage = 1000000000; // 100 GB
 //	public static final long HGW_Storage = 1000000000; // 1 GB
 
-	/* Fog devices storage capacity on bytes */
+	// TODO offload
 	private static final float STORAGE_UNIT_BYTES = 10; // 1024 50 B
 	public static final long DC_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 7);
 	public static final long RPOP_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4);
 	public static final long LPOP_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4);
 	public static final long HGW_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4);
 
+	// TODO offload
 	public static final float DC_Storage_Min_Threshold = 20.1f;
 	public static final float RPOP_Storage_Min_Threshold = 20.1f;
 	public static final float LPOP_Storage_Min_Threshold = 20.1f;
 	public static final float HGW_Storage_Min_Threshold = 20.1f;
-
 	public static final float DC_Storage_Max_Threshold = 29.9f;
 	public static final float RPOP_Storage_Max_Threshold = 29.9f;
 	public static final float LPOP_Storage_Max_Threshold = 29.9f;
 	public static final float HGW_Storage_Max_Threshold = 29.9f;
 
 	/* infrastructure */
-//	public static int nb_HGW=500; //6 HGW per LPOP
-//	public static final int nb_LPOP = 50; //4 LPOP per RPOP
-//	public static final int nb_RPOP = 10; //2 RPOP per DC
-//	public static final int nb_DC = 5; //
-
-	public static int nb_HGW=12; //3 HGW per LPOP
-	public static final int nb_LPOP = 4; //2 LPOP per RPOP
-	public static final int nb_RPOP = 2; //2 RPOP per DC
-	public static final int nb_DC = 1; //
+	// TODO CPLEX Academic Initiative (AI)
+	public static int nb_HGW=500; //6 HGW per LPOP
+	public static final int nb_LPOP = 50; //4 LPOP per RPOP
+	public static final int nb_RPOP = 10; //2 RPOP per DC
+	public static final int nb_DC = 5; //
+	// TODO CPLEX Community
+//	public static int nb_HGW=12; //3 HGW per LPOP
+//	public static final int nb_LPOP = 4; //2 LPOP per RPOP
+//	public static final int nb_RPOP = 2; //2 RPOP per DC
+//	public static final int nb_DC = 1; //
 
 	public static final int nb_SnrPerHGW = 1;
 	public static final int nb_ActPerHGW = 1;
@@ -140,11 +141,14 @@ public class DataPlacement {
 	public static final String ZoningStorage = "ZoningStorage";
 	public static final String GraphPartitionStorage = "GraphPartitionStorage";
 
-//	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage,OffloadStorage);
+	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
 //	public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
-	public static final List<String> storageModes = Arrays.asList(CloudStorage, FogStorage);
+//	public static final List<String> storageModes = Arrays.asList(CloudStorage, FogStorage);
 
-	public static final List<Integer> nb_zones_list = Arrays.asList(2);
+	// TODO CPLEX Academic Initiative (AI)
+	public static final List<Integer> nb_zones_list = Arrays.asList(5);
+	// TODO CPLEX Community
+//	public static final List<Integer> nb_zones_list = Arrays.asList(2);
 	public static final List<Integer> nb_partitions_list = Arrays.asList(2,5);
 
 	
