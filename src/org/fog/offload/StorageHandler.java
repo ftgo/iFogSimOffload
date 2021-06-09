@@ -3,6 +3,8 @@ package org.fog.offload;
 import org.fog.entities.FogDevice;
 import org.fog.entities.Tuple;
 
+import static java.lang.String.format;
+
 public class StorageHandler implements Listener<StorageEvent> {
     @Override
     public void update(StorageEvent event) {
@@ -33,14 +35,13 @@ public class StorageHandler implements Listener<StorageEvent> {
     }
 
     private void keep(StorageEvent event) {
-        System.out.println("  >>> keep, tupleType=" + event.getTuple().getTupleType());
         StorageState state = event.getStorageState();
+
+        Log.write(format("keep{event=%s, state=%s}", event, state));
         state.setOffloading(false);
     }
 
     private void offload(StorageEvent event) {
-        System.out.println("  >>> offload, tupleType=" + event.getTuple().getTupleType());
-
         Tuple tuple = event.getTuple();
         StorageState state = event.getStorageState();
         DeviceState deviceState = state.getDeviceState();
@@ -50,7 +51,7 @@ public class StorageHandler implements Listener<StorageEvent> {
 
 
         while (state.isOffloading()) {
-            System.out.println("  >>> offload, state=" + state);
+            Log.write(format("offload{event=%s, state=%s}", event, state));
             state.delete(tuple);
             device.replyUp(tuple);
         }

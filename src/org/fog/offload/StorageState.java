@@ -158,11 +158,11 @@ public class StorageState implements Subject<StorageEvent> {
     public String toString() {
         return "StorageState{" +
                 "total=" + total +
-                ", minThreshold=" + minThreshold +
-                ", maxThreshold=" + maxThreshold +
+                ", current=" + current +
                 ", lower=" + lower +
                 ", upper=" + upper +
-                ", current=" + current +
+                ", minThreshold=" + minThreshold +
+                ", maxThreshold=" + maxThreshold +
                 ", offloading=" + offloading +
                 '}';
     }

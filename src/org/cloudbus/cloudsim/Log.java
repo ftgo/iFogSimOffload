@@ -168,14 +168,24 @@ public class Log {
 	public static void enable() {
 		setDisabled(false);
 	}
-	
+
+	private static boolean append = false;
+
+	private static boolean append() {
+		if (!append) {
+			append = true;
+			return false;
+		}
+		return true;
+	}
+
 	public static void writeInLogFile(String devName, String msg) {
 		java.io.File log = new File("Log");
 		if (!log.exists()) log.mkdir();
 
 		FileWriter lpFile;
 		try {
-			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", true);
+			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", append());
 			BufferedWriter fw = new BufferedWriter(lpFile);
 			fw.write(devName+"\t"+msg+"\n");
 			fw.close();

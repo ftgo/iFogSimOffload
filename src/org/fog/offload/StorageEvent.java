@@ -38,4 +38,13 @@ public class StorageEvent extends Event {
     public Status getStatus() {
         return status;
     }
+
+    @Override
+    public String toString() {
+        return "StorageEvent{" +
+                "status=" + status +
+                ", type=" + type +
+                ", tuple=" + tuple +
+                '}';
+    }
 }

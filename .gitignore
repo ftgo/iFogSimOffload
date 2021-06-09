@@ -6,6 +6,7 @@
 /Log/*
 /Stats/*
 /latencies/*
+/offload/*
 
 .idea/
 ifogsim.iml
