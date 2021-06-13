@@ -9,6 +9,7 @@ import java.util.Map;
 
 import static java.lang.String.format;
 import static java.util.stream.Collectors.toMap;
+import static org.fog.offload.Bits.randomBits;
 
 public class OffloadAllocation {
     private static final int NAME_PREFIX_LENGTH = "Temp".length();
@@ -60,8 +61,10 @@ public class OffloadAllocation {
 
         DeviceState state = this.deviceMap.get(name);
 
+        Bits bits = randomBits(name);
+
         StorageState storage = state.getStorageState();
-        if (storage.save(tuple)) {
+        if (storage.save(tuple, bits)) {
             FogDevice device = state.getDevice();
 
             Log.write(format("getEmplacementNodeId{tuple=%s, id=%s}", tuple, device.getId()));

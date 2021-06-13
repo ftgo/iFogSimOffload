@@ -1,11 +1,15 @@
 package org.fog.offload;
 
+import com.sun.istack.internal.NotNull;
 import org.fog.entities.Tuple;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 import static java.lang.Float.compare;
+import static org.fog.examples.DataPlacement.*;
+import static org.fog.offload.Bits.Tag.COMPRESSION;
+import static org.fog.offload.Bits.Tag.CRITICAL;
 
 public class StorageState implements Subject<StorageEvent> {
     private final transient Object lock = new Object();
@@ -64,55 +68,96 @@ public class StorageState implements Subject<StorageEvent> {
     }
 
     public boolean save(Tuple tuple) {
+        return save(tuple, new Bits());
+    }
+
+    public boolean save(Tuple tuple, @NotNull Bits bits) {
         synchronized (this.lock) {
-            if (this.offloading)
+            if (this.offloading && !bits.get(CRITICAL))
                 return false;
 
             long size = getSize(tuple);
+
+            if (bits.get(COMPRESSION)) {
+                float compression = getCompression();
+                size *= (100 - compression) / 100;
+            }
+
             long expected = this.current + size;
 
             if (compare(expected, this.total) > 0) {
-                trigger(new StorageEvent(this, tuple, StorageEvent.Type.SAVE, StorageEvent.Status.FAILED));
+                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.FAILED));
                 return false;
             }
 
             if (compare(expected, this.upper) > 0) {
-                trigger(new StorageEvent(this, tuple, StorageEvent.Type.SAVE, StorageEvent.Status.HIT));
+                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.HIT));
             }
 
             this.current += size;
 
-            trigger(new StorageEvent(this, tuple, StorageEvent.Type.SAVE, StorageEvent.Status.OK));
+            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.OK));
         }
         return true;
     }
 
     public boolean delete(Tuple tuple) {
+        return delete(tuple, new Bits());
+    }
+
+    public boolean delete(Tuple tuple, Bits bits) {
         synchronized (this.lock) {
+            if (bits.get(CRITICAL))
+                return false;
+
             long size = getSize(tuple);
+
+            if (bits.get(COMPRESSION)) {
+                float compression = getCompression();
+                size *= (100 - compression) / 100;
+            }
+
             long expected = this.current - size;
 
             if (compare(expected, 0) < 0) {
-                trigger(new StorageEvent(this, tuple, StorageEvent.Type.DELETE, StorageEvent.Status.FAILED));
+                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.FAILED));
                 return false;
             }
 
 
             if (compare(expected, this.lower) < 0) {
-                trigger(new StorageEvent(this, tuple, StorageEvent.Type.DELETE, StorageEvent.Status.HIT));
+                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.HIT));
             }
 
             this.current -= size;
 
-            trigger(new StorageEvent(this, tuple, StorageEvent.Type.DELETE, StorageEvent.Status.OK));
+            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.OK));
         }
         return true;
     }
 
-    private long getSize(Tuple tuple) {
-        return tuple.getCloudletFileSize();
+    private float getCompression() {
+        DeviceType type = DeviceType.of(this.deviceState.getDevice().getName());
+        switch (type) {
+            case DC:
+                return DC_Storage_Compression;
+            case RPOP:
+                return RPOP_Storage_Compression;
+            case LPOP:
+                return LPOP_Storage_Compression;
+            case HGW:
+                return HGW_Storage_Compression;
+            default:
+                return 0;
+        }
     }
 
+    private long getSize(Tuple tuple) {
+        long size = tuple.getCloudletFileSize();
+
+
+        return size;
+    }
 
     public long getCurrent() {
         return this.current;

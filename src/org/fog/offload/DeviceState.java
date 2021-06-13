@@ -9,7 +9,6 @@ import org.fog.entities.FogDevice;
 import static org.fog.examples.DataPlacement.*;
 
 public class DeviceState {
-
     private final FogDevice device;
 
     private final StorageState storageState;
@@ -27,19 +26,19 @@ public class DeviceState {
     }
 
     private Pair<Float, Float> getThreshold(FogDevice device) {
-        String name = device.getName();
-
-        if (name.contains("RPOP")) {
-            return new Pair<>(RPOP_Storage_Min_Threshold, RPOP_Storage_Max_Threshold);
-        } else if (name.contains("LPOP")) {
-            return new Pair<>(LPOP_Storage_Min_Threshold, LPOP_Storage_Max_Threshold);
-        } else if (name.contains("HGW")) {
-            return new Pair<>(HGW_Storage_Min_Threshold, HGW_Storage_Max_Threshold);
-        } else if (name.contains("DC")) {
-            return new Pair<>(DC_Storage_Min_Threshold, DC_Storage_Max_Threshold);
+        DeviceType type = DeviceType.of(device.getName());
+        switch (type) {
+            case DC:
+                return new Pair<>(DC_Storage_Min_Threshold, DC_Storage_Max_Threshold);
+            case RPOP:
+                return new Pair<>(RPOP_Storage_Min_Threshold, RPOP_Storage_Max_Threshold);
+            case LPOP:
+                return new Pair<>(LPOP_Storage_Min_Threshold, LPOP_Storage_Max_Threshold);
+            case HGW:
+                return new Pair<>(HGW_Storage_Min_Threshold, HGW_Storage_Max_Threshold);
+            default:
+                return new Pair<>(-1f, -1f);
         }
-
-        return new Pair<>(-1f, -1f);
     }
 
     private long getTotalStorage(FogDevice device) {
