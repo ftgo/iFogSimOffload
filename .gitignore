@@ -9,6 +9,9 @@
 # This directory contains a sauvegarde of an infrastrcutre shortest paths latencies. It avoids computing them at every simulation.
 /latencies/*
 
+# Backups created with out.sh
+out_*/
+
 .idea/
 ifogsim.iml
 target/
