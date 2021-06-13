@@ -85,6 +85,7 @@ public class DataPlacement {
     public static final long HGW_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4);
 
     // TODO offload
+    public static boolean offload = true;
     public static final float DC_Storage_Min_Threshold = 20.1f;
     public static final float RPOP_Storage_Min_Threshold = 20.1f;
     public static final float LPOP_Storage_Min_Threshold = 20.1f;
@@ -151,7 +152,8 @@ public class DataPlacement {
 
     //	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
 //	public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
-    public static final List<String> storageModes = Arrays.asList(CloudStorage, FogStorage);
+    // TODO offload
+    public static final List<String> storageModes = Arrays.asList(CloudStorage);
 
     // TODO CPLEX Academic Initiative (AI)
     public static final List<Integer> nb_zones_list = Arrays.asList(5);

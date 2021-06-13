@@ -933,9 +933,11 @@ public class FogDevice extends PowerDatacenter {
 
 	private int getStorageNodeId(Tuple tuple) {
 		// TODO offload
-		int offloadNodeId = OffloadAllocation.instance().getEmplacementNodeId(tuple);
-		if (offloadNodeId != -1)
-			return offloadNodeId;
+		if (DataPlacement.offload) {
+			int id = OffloadAllocation.instance().getEmplacementNodeId(tuple);
+			if (id != -1)
+				return id;
+		}
 
 		String tupleType = tuple.getTupleType();
 
