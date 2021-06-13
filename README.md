@@ -32,4 +32,4 @@ Next, various configurations and setups to reuse this extension, are shown.
     * Add to `LD_LIBRARY_PATH` (e.g.: `LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/ibm/ILOG/CPLEX_Studio201/cplex/bin/x86-64_linux`)
 * Import CPLEX `/opt/ibm/ILOG/CPLEX_Studio201/cplex/lib/cplex.jar` to local Maven (e.g.: `mvn install:install-file -Dpackaging=jar -DgeneratePom=true -Dfile=cplex.jar -DgroupId=ilog -DartifactId=cplex -Dversion=20.1.0.0`)
 * Build: `mvn clean install` (no `jars` needed)
-* Run: `java -jar target/ifogsim-jar-with-dependencies.jar`
+* Run: `java -jar -Xmx4096m target/ifogsim-jar-with-dependencies.jar`
