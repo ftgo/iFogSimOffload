@@ -4,8 +4,10 @@
 /*.graph.*
 /Log/*
 /Stats/*
-/latencies/*
 /offload/*
+
+# This directory contains a sauvegarde of an infrastrcutre shortest paths latencies. It avoids computing them at every simulation.
+/latencies/*
 
 .idea/
 ifogsim.iml
