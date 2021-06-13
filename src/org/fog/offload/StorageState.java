@@ -1,20 +1,18 @@
 package org.fog.offload;
 
-import com.sun.istack.internal.NotNull;
 import org.fog.entities.Tuple;
 
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 import static java.lang.Float.compare;
 import static org.fog.examples.DataPlacement.*;
-import static org.fog.offload.Bits.Tag.COMPRESSION;
-import static org.fog.offload.Bits.Tag.CRITICAL;
+import static org.fog.offload.Bits.Tag.*;
 
 public class StorageState implements Subject<StorageEvent> {
-    private final transient Object lock = new Object();
-
-    private final Set<Listener<StorageEvent>> listeners = new LinkedHashSet<>();
+    private final Set<Listener<StorageEvent>> listeners;
+    private Set<Tuple> tuples;
 
     private final DeviceState deviceState;
     private final long total;
@@ -50,6 +48,9 @@ public class StorageState implements Subject<StorageEvent> {
 
         this.lower = this.total * (this.minThreshold) / 100;
         this.upper = this.total * this.maxThreshold / 100;
+
+        this.listeners = new LinkedHashSet<>();
+        this.tuples = new HashSet<>();
     }
 
     @Override
@@ -67,76 +68,72 @@ public class StorageState implements Subject<StorageEvent> {
         trigger(event, this.listeners);
     }
 
-    public boolean save(Tuple tuple) {
-        return save(tuple, new Bits());
-    }
+    public boolean save(Tuple tuple, Bits bits) {
+        if (this.offloading)
+            return false;
 
-    public boolean save(Tuple tuple, @NotNull Bits bits) {
-        synchronized (this.lock) {
-            if (this.offloading && !bits.get(CRITICAL))
-                return false;
+        long size = getSize(tuple, bits);
+        long expected = this.current + size;
 
-            long size = getSize(tuple);
-
-            if (bits.get(COMPRESSION)) {
-                float compression = getCompression();
-                size *= (100 - compression) / 100;
-            }
-
-            long expected = this.current + size;
-
-            if (compare(expected, this.total) > 0) {
-                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.FAILED));
-                return false;
-            }
-
-            if (compare(expected, this.upper) > 0) {
-                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.HIT));
-            }
-
-            this.current += size;
-
-            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.OK));
+        if (compare(expected, this.total) > 0) {
+            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.FAILED));
+            return false;
         }
-        return true;
-    }
 
-    public boolean delete(Tuple tuple) {
-        return delete(tuple, new Bits());
+        if (compare(expected, this.upper) > 0) {
+            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.HIT));
+        }
+
+        this.current += size;
+
+        trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.OK));
+
+        this.tuples.add(tuple);
+
+        return true;
     }
 
     public boolean delete(Tuple tuple, Bits bits) {
-        synchronized (this.lock) {
-            if (bits.get(CRITICAL))
-                return false;
+        long size = getSize(tuple, bits);
 
-            long size = getSize(tuple);
+        long expected = this.current - size;
 
-            if (bits.get(COMPRESSION)) {
-                float compression = getCompression();
-                size *= (100 - compression) / 100;
-            }
-
-            long expected = this.current - size;
-
-            if (compare(expected, 0) < 0) {
-                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.FAILED));
-                return false;
-            }
-
-
-            if (compare(expected, this.lower) < 0) {
-                trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.HIT));
-            }
-
-            this.current -= size;
-
-            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.OK));
+        if (compare(expected, 0) < 0) {
+            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.FAILED));
+            return false;
         }
+
+        if (compare(expected, this.lower) < 0) {
+            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.HIT));
+        }
+
+        this.current -= size;
+
+        trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.OK));
+
+        this.tuples.remove(tuple);
+
         return true;
     }
 
-    private float getCompression() {
+    private long getSize(Tuple tuple, Bits bits) {
+        long size = tuple.getCloudletFileSize();
+
+        if (!bits.get(TOUCHED) && bits.get(COMPRESSION)) {
+            float compression = getCompression(tuple, bits);
+
+            size *= (100 - compression) / 100;
+
+            // TODO offload
+            tuple.setCloudletFileSize(size);
+        }
+
+        bits.set(TOUCHED, true);
+
+        return size;
+    }
+
+    private float getCompression(Tuple tuple, Bits bits) {
         DeviceType type = DeviceType.of(this.deviceState.getDevice().getName());
         switch (type) {
             case DC:
@@ -152,12 +149,6 @@ public class StorageState implements Subject<StorageEvent> {
         }
     }
 
-    private long getSize(Tuple tuple) {
-        long size = tuple.getCloudletFileSize();
-
-
-        return size;
-    }
 
     public long getCurrent() {
         return this.current;
@@ -197,6 +188,20 @@ public class StorageState implements Subject<StorageEvent> {
 
     public boolean isOffloading() {
         return offloading;
+    }
+
+    public Tuple getTuple() {
+        return this.tuples.stream().findFirst().orElse(null);
+    }
+
+    public Tuple getNonCriticalTuple() {
+        OffloadAllocation allocation = OffloadAllocation.instance();
+        Tuple tuple = this.tuples.stream().filter(n -> !allocation.getBits(n).get(CRITICAL)).findFirst().orElse(null);
+        return tuple;
+    }
+
+    public int getTupleCount() {
+        return this.tuples.size();
     }
 
     @Override

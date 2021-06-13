@@ -12,9 +12,6 @@ public interface Subject<TEvent extends Event> {
 
     default void trigger(TEvent event, Collection<Listener<TEvent>> listeners) {
         for (Listener<TEvent> listener : listeners) {
-//            Thread thread = new Thread(() -> listener.update(event));
-//            thread.start();
-
             listener.update(event);
         }
     }

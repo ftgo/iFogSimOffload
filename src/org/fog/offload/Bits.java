@@ -1,13 +1,15 @@
 package org.fog.offload;
 
+import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import static org.fog.examples.DataPlacement.*;
 import static org.fog.offload.Bits.Tag.COMPRESSION;
 import static org.fog.offload.Bits.Tag.CRITICAL;
 
 public class Bits {
-    public enum Tag {COMPRESSION, CRITICAL}
+    public enum Tag {COMPRESSION, CRITICAL, TOUCHED}
 
     private boolean[] tags = new boolean[Tag.values().length];
 
@@ -25,38 +27,36 @@ public class Bits {
 
     @Override
     public String toString() {
+        String tagStr = String.join(",", Arrays.stream(Tag.values()).filter(this::get).map(Object::toString).collect(Collectors.toList()));
+
+
         return "Bits{" +
-                "tags="
-                + String.join(",", (get(COMPRESSION) ? "COMPRESSION" : ""), (get(CRITICAL) ? "CRITICAL" : ""))
+                "tags=" + tagStr
                 + '}';
     }
 
-    public static Bits randomBits(String name) {
-        Bits tags = new Bits();
-
+    public static void randomTags(Bits bits, String name) {
         Random random = new Random();
         if (random.nextDouble() <= getCriticalThreshold(name)) {
-            tags.toggle(CRITICAL);
+            bits.toggle(CRITICAL);
         }
 
         if (random.nextDouble() <= getCompressionThreshold(name)) {
-            tags.toggle(COMPRESSION);
+            bits.toggle(COMPRESSION);
         }
-
-        return tags;
     }
 
     private static float getCriticalThreshold(String name) {
         DeviceType type = DeviceType.of(name);
         switch (type) {
             case DC:
-                return DC_Critical_Threshold;
+                return DC_Critical_Selection;
             case RPOP:
-                return RPOP_Critical_Threshold;
+                return RPOP_Critical_Selection;
             case LPOP:
-                return LPOP_Critical_Threshold;
+                return LPOP_Critical_Selection;
             case HGW:
-                return HGW_Critical_Threshold;
+                return HGW_Critical_Selection;
             default:
                 return 0;
         }
@@ -66,13 +66,13 @@ public class Bits {
         DeviceType type = DeviceType.of(name);
         switch (type) {
             case DC:
-                return DC_Compression_Threshold;
+                return DC_Compression_Selection;
             case RPOP:
-                return RPOP_Compression_Threshold;
+                return RPOP_Compression_Selection;
             case LPOP:
-                return LPOP_Compression_Threshold;
+                return LPOP_Compression_Selection;
             case HGW:
-                return HGW_Compression_Threshold;
+                return HGW_Compression_Selection;
             default:
                 return 0;
         }

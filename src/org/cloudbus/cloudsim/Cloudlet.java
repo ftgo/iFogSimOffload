@@ -40,10 +40,12 @@ public class Cloudlet {
 	 * The input file size of this Cloudlet before execution (unit: in byte). in byte = program +
 	 * input data size
 	 */
-	private final long cloudletFileSize;
+	// TODO offload
+	private long cloudletFileSize; // final
 
 	/** The output file size of this Cloudlet after execution (unit: in byte). */
-	private final long cloudletOutputSize;
+	// TODO offload
+	private long cloudletOutputSize; // final
 
 	/** The num of Pe required to execute this job. */
 	private int numberOfPes;
@@ -698,6 +700,11 @@ public class Cloudlet {
 		return cloudletFileSize;
 	}
 
+	// TODO offload
+	public void setCloudletFileSize(long cloudletFileSize) {
+		this.cloudletFileSize = cloudletFileSize;
+	}
+
 	/**
 	 * Gets the output size of this Cloudlet <tt>AFTER</tt> submitting and executing to a
 	 * CloudResource.
@@ -708,6 +715,11 @@ public class Cloudlet {
 	 */
 	public long getCloudletOutputSize() {
 		return cloudletOutputSize;
+	}
+
+	// TODO offload
+	public void setCloudletOutputSize(long cloudletOutputSize) {
+		this.cloudletOutputSize = cloudletOutputSize;
 	}
 
 	/**

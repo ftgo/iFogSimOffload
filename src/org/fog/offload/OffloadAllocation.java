@@ -5,11 +5,12 @@ import org.fog.entities.FogDevice;
 import org.fog.entities.Tuple;
 import org.fog.examples.DataPlacement;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static java.lang.String.format;
 import static java.util.stream.Collectors.toMap;
-import static org.fog.offload.Bits.randomBits;
+import static org.fog.offload.Bits.randomTags;
 
 public class OffloadAllocation {
     private static final int NAME_PREFIX_LENGTH = "Temp".length();
@@ -20,11 +21,15 @@ public class OffloadAllocation {
 
     private final Map<String, DeviceState> deviceMap;
 
+    private final Map<Tuple, Bits> bitsMap;
+
     private OffloadAllocation() {
         if (DataPlacement.fogDevices == null || DataPlacement.fogDevices.isEmpty())
             throw new IllegalStateException("DataPlacement not initialized.");
 
         this.deviceMap = getDeviceMap();
+
+        this.bitsMap = new HashMap<>();
     }
 
     private Map<String, DeviceState> getDeviceMap() {
@@ -57,24 +62,37 @@ public class OffloadAllocation {
     }
 
     public int getEmplacementNodeId(Tuple tuple) {
-        String name = getName(tuple);
+        DeviceState state = this.deviceMap.get(getName(tuple));
 
-        DeviceState state = this.deviceMap.get(name);
-
-        Bits bits = randomBits(name);
+        Bits bits = getRandomBits(tuple);
 
         StorageState storage = state.getStorageState();
+
+        int id = -1;
         if (storage.save(tuple, bits)) {
             FogDevice device = state.getDevice();
 
-            Log.write(format("getEmplacementNodeId{tuple=%s, id=%s}", tuple, device.getId()));
-
-            return device.getId();
+            id = device.getId();
         }
 
-        Log.write(format("getEmplacementNodeId{tuple=%s, id=%s}", tuple, -1));
+        Log.write(format("getEmplacementNodeId{tuple=%s, id=%s}", Tuples.toString(tuple), id));
 
-        return -1;
+        return id;
+    }
+
+    public Bits getBits(Tuple tuple) {
+        return this.bitsMap.get(tuple);
+    }
+
+    private Bits getRandomBits(Tuple tuple) {
+        Bits bits = this.bitsMap.get(tuple);
+        if (bits == null) {
+            bits = new Bits();
+            randomTags(bits, getName(tuple));
+            this.bitsMap.put(tuple, bits);
+        }
+
+        return bits;
     }
 
     private String getName(Tuple tuple) {

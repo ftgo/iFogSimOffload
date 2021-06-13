@@ -11,7 +11,6 @@ public class StorageHandler implements Listener<StorageEvent> {
         StorageEvent.Status status = event.getStatus();
         switch (status) {
             case OK:
-                break;
             case FAILED:
                 break;
             case HIT:
@@ -42,17 +41,27 @@ public class StorageHandler implements Listener<StorageEvent> {
     }
 
     private void offload(StorageEvent event) {
-        Tuple tuple = event.getTuple();
         StorageState state = event.getStorageState();
         DeviceState deviceState = state.getDeviceState();
         FogDevice device = deviceState.getDevice();
 
         state.setOffloading(true);
 
-
         while (state.isOffloading()) {
+            Tuple tuple = state.getNonCriticalTuple();
+            if (tuple == null) {
+                if (state.getTupleCount() > 0)
+                    Log.write(format("offload{event=%s, state=%s, CRITICAL_INTERRUPT}", event, state));
+
+                state.setOffloading(false);
+                break;
+            }
+
             Log.write(format("offload{event=%s, state=%s}", event, state));
-            state.delete(tuple);
+
+            Bits bits = OffloadAllocation.instance().getBits(tuple);
+
+            state.delete(tuple, bits);
             device.replyUp(tuple);
         }
     }

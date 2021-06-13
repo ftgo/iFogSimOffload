@@ -97,14 +97,14 @@ public class DataPlacement {
     public static final float RPOP_Storage_Compression = 60.0f;
     public static final float LPOP_Storage_Compression = 60.0f;
     public static final float HGW_Storage_Compression = 60.0f;
-    public static final float DC_Critical_Threshold = 0.05f;
-    public static final float RPOP_Critical_Threshold = 0.05f;
-    public static final float LPOP_Critical_Threshold = 0.2f;
-    public static final float HGW_Critical_Threshold = 0.05f;
-    public static final float DC_Compression_Threshold = 0.3f;
-    public static final float RPOP_Compression_Threshold = 0.4f;
-    public static final float LPOP_Compression_Threshold = 0.4f;
-    public static final float HGW_Compression_Threshold = 0.3f;
+    public static final float DC_Critical_Selection = 0.05f;
+    public static final float RPOP_Critical_Selection = 0.05f;
+    public static final float LPOP_Critical_Selection = 0.2f;
+    public static final float HGW_Critical_Selection = 0.9f; // here
+    public static final float DC_Compression_Selection = 0.3f;
+    public static final float RPOP_Compression_Selection = 0.4f;
+    public static final float LPOP_Compression_Selection = 0.4f;
+    public static final float HGW_Compression_Selection = 0.1f; // here
 
     /* infrastructure */
     // TODO CPLEX Academic Initiative (AI)

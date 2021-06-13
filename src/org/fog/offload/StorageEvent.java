@@ -2,6 +2,8 @@ package org.fog.offload;
 
 import org.fog.entities.Tuple;
 
+import static java.lang.String.format;
+
 public class StorageEvent extends Event {
 
     public enum Type {SAVE, DELETE}
@@ -52,11 +54,7 @@ public class StorageEvent extends Event {
 
     @Override
     public String toString() {
-        return "StorageEvent{" +
-                "status=" + status +
-                ", bits=" + bits +
-                ", type=" + type +
-                ", tuple=" + tuple +
-                '}';
+        return format("StorageEvent{status=%s, bits=%s, type=%s, tuple=%s}",
+                status, bits, type, Tuples.toString(tuple));
     }
 }
