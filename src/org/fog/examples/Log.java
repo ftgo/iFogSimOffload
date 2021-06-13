@@ -1,16 +1,18 @@
 package org.fog.examples;
 
 import java.io.*;
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.fog.examples.DataPlacement.nb_DataCons_By_DataProd;
 
 
 public class Log {
-    private static boolean append = false;
+    private static Set<String> appendSet = new HashSet<>();
 
-    private static boolean append() {
-        if (!append) {
-            append = true;
+    private static boolean append(String token) {
+        if (!appendSet.contains(token)) {
+            appendSet.add(token);
             return false;
         }
         return true;
@@ -20,7 +22,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/solvingtime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/solvingtime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("solvingtime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -37,7 +39,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/problemFormulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/problemFormulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("problemFormulationTime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -54,7 +56,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/dataAllocationStats" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/dataAllocationStats" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("dataAllocationStats"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -71,7 +73,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/dataAllocationStatsExternZoneCons" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/dataAllocationStatsExternZoneCons" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("dataAllocationStatsExternZoneCons"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -89,7 +91,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/SimulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/SimulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("SimulationTime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -106,7 +108,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/InfraCreationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/InfraCreationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("InfraCreationTime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -123,7 +125,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/graphPonderationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/graphPonderationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("graphPonderationTime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -140,7 +142,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/graphPartitionInformation" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/graphPartitionInformation" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("graphPartitionInformation"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -157,7 +159,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/partitionTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/partitionTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("partitionTime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -174,7 +176,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/shortPathTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append());
+        FileWriter lpFile = new FileWriter("Stats/shortPathTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("shortPathTime"));
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");

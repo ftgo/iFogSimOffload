@@ -14,13 +14,15 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.fog.examples.DataPlacement;
 
 /**
  * The Log class used for performing loggin of the simulation process. It provides the ability to
  * substitute the output stream by any OutputStream subclass.
- * 
+ *
  * @author Anton Beloglazov
  * @since CloudSim Toolkit 2.0
  */
@@ -37,7 +39,7 @@ public class Log {
 
 	/**
 	 * Prints the message.
-	 * 
+	 *
 	 * @param message the message
 	 */
 	public static void print(String message) {
@@ -52,7 +54,7 @@ public class Log {
 
 	/**
 	 * Prints the message passed as a non-String object.
-	 * 
+	 *
 	 * @param message the message
 	 */
 	public static void print(Object message) {
@@ -63,7 +65,7 @@ public class Log {
 
 	/**
 	 * Prints the line.
-	 * 
+	 *
 	 * @param message the message
 	 */
 	public static void printLine(String message) {
@@ -83,7 +85,7 @@ public class Log {
 
 	/**
 	 * Prints the line passed as a non-String object.
-	 * 
+	 *
 	 * @param message the message
 	 */
 	public static void printLine(Object message) {
@@ -94,7 +96,7 @@ public class Log {
 
 	/**
 	 * Prints a string formated as in String.format().
-	 * 
+	 *
 	 * @param format the format
 	 * @param args the args
 	 */
@@ -106,7 +108,7 @@ public class Log {
 
 	/**
 	 * Prints a line formated as in String.format().
-	 * 
+	 *
 	 * @param format the format
 	 * @param args the args
 	 */
@@ -118,7 +120,7 @@ public class Log {
 
 	/**
 	 * Sets the output.
-	 * 
+	 *
 	 * @param _output the new output
 	 */
 	public static void setOutput(OutputStream _output) {
@@ -127,7 +129,7 @@ public class Log {
 
 	/**
 	 * Gets the output.
-	 * 
+	 *
 	 * @return the output
 	 */
 	public static OutputStream getOutput() {
@@ -139,7 +141,7 @@ public class Log {
 
 	/**
 	 * Sets the disable output flag.
-	 * 
+	 *
 	 * @param _disabled the new disabled
 	 */
 	public static void setDisabled(boolean _disabled) {
@@ -148,7 +150,7 @@ public class Log {
 
 	/**
 	 * Checks if the output is disabled.
-	 * 
+	 *
 	 * @return true, if is disable
 	 */
 	public static boolean isDisabled() {
@@ -169,11 +171,11 @@ public class Log {
 		setDisabled(false);
 	}
 
-	private static boolean append = false;
+	private static Set<String> appendSet = new HashSet<>();
 
-	private static boolean append() {
-		if (!append) {
-			append = true;
+	private static boolean append(String token) {
+		if (!appendSet.contains(token)) {
+			appendSet.add(token);
 			return false;
 		}
 		return true;
@@ -185,7 +187,7 @@ public class Log {
 
 		FileWriter lpFile;
 		try {
-			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", append());
+			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", append("logFile"));
 			BufferedWriter fw = new BufferedWriter(lpFile);
 			fw.write(devName+"\t"+msg+"\n");
 			fw.close();
@@ -194,9 +196,9 @@ public class Log {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 	public static void initializeLogFile() {
 		java.io.File log = new File("Log");
 		if (!log.exists()) log.mkdir();
@@ -212,7 +214,7 @@ public class Log {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

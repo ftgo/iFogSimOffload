@@ -21,9 +21,9 @@ public class Log {
 
     private static Set<String> appendSet = new HashSet<>();
 
-    private static boolean append(String storageMode) {
-        if (!Log.appendSet.contains(storageMode)) {
-            Log.appendSet.add(storageMode);
+    private static boolean append(String token) {
+        if (!appendSet.contains(token)) {
+            appendSet.add(token);
             return false;
         }
         return true;
