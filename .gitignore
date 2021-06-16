@@ -10,7 +10,7 @@
 /latencies/*
 
 # Backups created with out.sh
-out_*/
+out_*
 
 .idea/
 ifogsim.iml

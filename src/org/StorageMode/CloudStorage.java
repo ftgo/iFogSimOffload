@@ -64,7 +64,7 @@ public class CloudStorage {
 		/*
 		 * generate basis delay matrix
 		 */
-		if (DataPlacement.nb_DataCons_By_DataProd == 1) {
+		if (DataPlacement.offload == false/*DataPlacement.nb_DataCons_By_DataProd == 1*/) {
 			begin_t = Calendar.getInstance().getTimeInMillis();
 			delayMatrix.getDelayMatrix(DataPlacement.fogDevices);
 
@@ -82,31 +82,40 @@ public class CloudStorage {
 
 		} else {
 			BasisDelayMatrix.loadBasisDelayMatrix();
+
+
 		}
-		
-		
-		/*
-		 * Connecting the application modules (vertices) in the
-		 * application model (directed graph) with edges
-		 */
-		application.addAppEdgesToApplication();
 
-		/*
-		 * Defining the input-output relationships (represented by
-		 * selectivity) of the application modules.
-		 */
-		application.addTupleMappingFraction();
+		if (DataPlacement.offload) {
+			System.out.println("Loading ....");
+			application.loadApplicationEdges();
+			application.loadTupleMappingFraction();
+			System.out.println("Loaded");
+		} else {
+			/*
+			 * Connecting the application modules (vertices) in the
+			 * application model (directed graph) with edges
+			 */
+			application.addAppEdgesToApplication();
 
-		
-		// loadBasisDelayMatrix(delayMatrix);
+			/*
+			 * Defining the input-output relationships (represented by
+			 * selectivity) of the application modules.
+			 */
+			application.addTupleMappingFraction();
 
-		/* saving the configurations */
-		System.out.println("Saving infrastructure ...");
-		Log.writeInLogFile("DataPlacement", "Saving infrastructure ...");
-		Application.saveApplicationEdges();
-		application.saveTupleMappingFraction();
-		System.out.println("End of saving");
-		Log.writeInLogFile("DataPlacement", "End of saving");
+
+			// loadBasisDelayMatrix(delayMatrix);
+
+			/* saving the configurations */
+			System.out.println("Saving infrastructure ...");
+			Log.writeInLogFile("DataPlacement", "Saving infrastructure ...");
+			Application.saveApplicationEdges();
+			application.saveTupleMappingFraction();
+			System.out.println("End of saving");
+			Log.writeInLogFile("DataPlacement", "End of saving");
+		}
+
 
 		OffloadAllocation.reset();
 

@@ -84,28 +84,39 @@ public class DataPlacement {
     public static final long LPOP_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4);
     public static final long HGW_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4);
 
+
     // TODO offload
-    public static boolean offload = true;
-    public static final float DC_Storage_Min_Threshold = 20.1f;
-    public static final float RPOP_Storage_Min_Threshold = 20.1f;
-    public static final float LPOP_Storage_Min_Threshold = 20.1f;
-    public static final float HGW_Storage_Min_Threshold = 20.1f;
-    public static final float DC_Storage_Max_Threshold = 29.9f;
-    public static final float RPOP_Storage_Max_Threshold = 29.9f;
-    public static final float LPOP_Storage_Max_Threshold = 29.9f;
-    public static final float HGW_Storage_Max_Threshold = 29.9f;
-    public static final float DC_Storage_Compression = 60.0f;
-    public static final float RPOP_Storage_Compression = 60.0f;
-    public static final float LPOP_Storage_Compression = 60.0f;
-    public static final float HGW_Storage_Compression = 60.0f;
-    public static final float DC_Critical_Selection = 0.05f;
-    public static final float RPOP_Critical_Selection = 0.05f;
-    public static final float LPOP_Critical_Selection = 0.2f;
-    public static final float HGW_Critical_Selection = 0.9f; // here
-    public static final float DC_Compression_Selection = 0.3f;
-    public static final float RPOP_Compression_Selection = 0.4f;
-    public static final float LPOP_Compression_Selection = 0.4f;
-    public static final float HGW_Compression_Selection = 0.1f; // here
+    public static final List<Float> Storage_Min_Threshold_List = Arrays.asList(20f, 30f, 40f);
+    public static final List<Float> Storage_Max_Threshold_List = Arrays.asList(50f, 60f, 70f);
+    public static final List<Float> Storage_Compression_List = Arrays.asList(30f, 60f, 90f);
+    public static final List<Float> HGW_Compression_Selection_List = Arrays.asList(0.3f, 0.5f, 0.7f);
+    public static final List<Float> HGW_Critical_Selection_List = Arrays.asList(0.3f, 0.5f, 0.7f);
+
+    public static boolean offload;
+    // offload min / max percentage
+    public static float DC_Storage_Min_Threshold = 20f;
+    public static float RPOP_Storage_Min_Threshold = 20f;
+    public static float LPOP_Storage_Min_Threshold = 20f;
+    public static float HGW_Storage_Min_Threshold = 20f;
+    public static float DC_Storage_Max_Threshold = 30f;
+    public static float RPOP_Storage_Max_Threshold = 30f;
+    public static float LPOP_Storage_Max_Threshold = 30f;
+    public static float HGW_Storage_Max_Threshold = 30f;
+    // offload compression level
+    public static float DC_Storage_Compression = 60.0f;
+    public static float RPOP_Storage_Compression = 60.0f;
+    public static float LPOP_Storage_Compression = 60.0f;
+    public static float HGW_Storage_Compression = 60.0f;
+
+    public static float DC_Critical_Selection = 0.05f;
+    public static float RPOP_Critical_Selection = 0.05f;
+    public static float LPOP_Critical_Selection = 0.2f;
+    public static float HGW_Critical_Selection = 0.9f; // here
+
+    public static float DC_Compression_Selection = 0.3f;
+    public static float RPOP_Compression_Selection = 0.4f;
+    public static float LPOP_Compression_Selection = 0.4f;
+    public static float HGW_Compression_Selection = 0.1f; // here
 
     /* infrastructure */
     // TODO CPLEX Academic Initiative (AI)
@@ -150,8 +161,8 @@ public class DataPlacement {
     public static final String ZoningStorage = "ZoningStorage";
     public static final String GraphPartitionStorage = "GraphPartitionStorage";
 
-    //	public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
-//	public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
+//    public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
+//    public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);
     // TODO offload
     public static final List<String> storageModes = Arrays.asList(CloudStorage);
 
@@ -197,7 +208,7 @@ public class DataPlacement {
     public static Calendar calendar;
     public static int num_user = 1; // number of cloud users
 
-    public static void main(String[] args) {
+    public static void main_data_placement(String[] args) {
         // TODO Auto-generated method stub
         System.out.println("Starting the simulation");
         Log.writeInLogFile("DataPlacement", "Starting the simulation");
@@ -558,4 +569,41 @@ public class DataPlacement {
 
     }
 
+    public static void main(String[] args) throws Exception {
+        // main_data_placement(args);
+
+        Locale.setDefault(Locale.US);
+        Log.disable();
+        calendar = Calendar.getInstance();
+        storageMode = CloudStorage;
+        nb_DataCons_By_DataProd = 1;
+        dataflow_used = dataflows.get(0);
+
+        System.out.println("Starting simulation");
+        Log.writeInLogFile("DataPlacement", "Starting simulation");
+
+        offload = false;
+        CloudStorage cloud = new CloudStorage();
+        cloud.sim();
+
+        offload = true;
+//        for(float Storage_Min_Threshold : Storage_Min_Threshold_List) {
+//            for(float Storage_Max_Threshold : Storage_Max_Threshold_List) {
+                for(float Storage_Compression : Storage_Compression_List) {
+                    for(float HGW_Compression_Selection_ : HGW_Compression_Selection_List) {
+                        for(float HGW_Critical_Selection_ : HGW_Critical_Selection_List) {
+//                            DC_Storage_Min_Threshold = RPOP_Storage_Min_Threshold = LPOP_Storage_Min_Threshold = HGW_Storage_Min_Threshold = Storage_Min_Threshold;
+//                            DC_Storage_Max_Threshold = RPOP_Storage_Max_Threshold = LPOP_Storage_Max_Threshold = HGW_Storage_Max_Threshold = Storage_Max_Threshold;
+                            DC_Storage_Compression = RPOP_Storage_Compression = LPOP_Storage_Compression = HGW_Storage_Compression = Storage_Compression;
+                            HGW_Compression_Selection = HGW_Compression_Selection_;
+                            HGW_Critical_Selection = HGW_Critical_Selection_;
+
+                            CloudStorage offload = new CloudStorage();
+                            offload.sim();
+                        }
+                    }
+                }
+//            }
+//        }
+    }
 }

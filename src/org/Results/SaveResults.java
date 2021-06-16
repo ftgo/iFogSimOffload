@@ -34,6 +34,15 @@ public class SaveResults {
 			if (storageMode.equals(DataPlacement.CloudStorage)) {
 				fw.write("**********************************************************************************\n");
 			}
+
+			if (DataPlacement.offload) {
+				fw.write("DC_Storage_Min_Threshold: " + DataPlacement.DC_Storage_Min_Threshold + "\n");
+				fw.write("DC_Storage_Max_Threshold: " + DataPlacement.DC_Storage_Max_Threshold + "\n");
+				fw.write("DC_Storage_Compression: " + DataPlacement.DC_Storage_Compression + "\n");
+				fw.write("HGW_Compression_Selection: " + DataPlacement.HGW_Compression_Selection + "\n");
+				fw.write("HGW_Critical_Selection: " + DataPlacement.HGW_Critical_Selection + "\n");
+			}
+
 			fw.write("DataCons/DataProd: " + dataConsPerDataProd + "\n");
 			fw.write("StorageMode: " + storageMode + "\n");
 			if (nb_z != -1) {

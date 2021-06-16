@@ -187,7 +187,9 @@ public class Log {
 
 		FileWriter lpFile;
 		try {
-			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", append("logFile"));
+			String tag = String.format("%.1f_%.1f_%.1f_%.1f_%.1f_%s_%b", DataPlacement.HGW_Storage_Min_Threshold, DataPlacement.HGW_Storage_Max_Threshold, DataPlacement.HGW_Storage_Compression, DataPlacement.HGW_Compression_Selection, DataPlacement.HGW_Critical_Selection, DataPlacement.storageMode, DataPlacement.offload);
+			lpFile = new FileWriter("Log/logFile_"+tag+".txt", append(tag));
+//			lpFile = new FileWriter("Log/logFile"+DataPlacement.nb_HGW+".txt", append("logFile"));
 			BufferedWriter fw = new BufferedWriter(lpFile);
 			fw.write(devName+"\t"+msg+"\n");
 			fw.close();
