@@ -91,7 +91,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/SimulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("SimulationTime"));
+        FileWriter lpFile = new FileWriter("Stats/SimulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, true);
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");
@@ -108,7 +108,7 @@ public class Log {
         File stats = new File("Stats");
         if (!stats.exists()) stats.mkdir();
 
-        FileWriter lpFile = new FileWriter("Stats/InfraCreationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, append("InfraCreationTime"));
+        FileWriter lpFile = new FileWriter("Stats/InfraCreationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd, true);
         try {
             BufferedWriter fw = new BufferedWriter(lpFile);
             fw.write(log + "\n");

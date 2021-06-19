@@ -97,10 +97,10 @@ public class DataPlacement {
             ,new Pair<>(10f, 40f)
             ,new Pair<>(20f, 30f)
             ,new Pair<>(20f, 40f)
-            ,new Pair<>(20f, 50f)
-            ,new Pair<>(50f, 60f)
-            ,new Pair<>(50f, 70f)
-            ,new Pair<>(50f, 80f)
+//            ,new Pair<>(20f, 50f)
+//            ,new Pair<>(50f, 60f)
+//            ,new Pair<>(50f, 70f)
+//            ,new Pair<>(50f, 80f)
     );
     public static final List<Float> Storage_Compression_List = Arrays.asList(20f, 40f, 60f);
     public static final List<Float> HGW_Compression_Selection_List = Arrays.asList(0.3f, 0.5f, 0.7f);
@@ -609,7 +609,6 @@ public class DataPlacement {
             CloudStorage cloud = new CloudStorage();
             cloud.sim();
         }
-
 
         offload = true;
         for (float Storage_Compression : Storage_Compression_List) {
