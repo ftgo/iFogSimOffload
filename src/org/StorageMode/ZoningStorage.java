@@ -184,9 +184,10 @@ public class ZoningStorage {
 			SaveResults.saveLatencyTimes(DataPlacement.nb_DataCons_By_DataProd, DataPlacement.storageMode,DataPlacement.nb_zone, 
 					LatencyStats.getOverall_read_Latency(),
 					LatencyStats.getOverall_write_Latency(),
-					LatencyStats.getOverall_Latency(), LatencyStats.getUnits());
+					LatencyStats.getOverall_Latency(), LatencyStats.getOverall_read_count(), LatencyStats.getOverall_write_count());
 
-			LatencyStats.reset_Units();
+			LatencyStats.reset_Overall_read_count();
+			LatencyStats.reset_Overall_write_count();
 			LatencyStats.reset_Overall_Letency();
 			LatencyStats.reset_Overall_write_Letency();
 			LatencyStats.reset_Overall_read_Letency();

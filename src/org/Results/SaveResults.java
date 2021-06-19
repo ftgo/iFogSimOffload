@@ -25,7 +25,7 @@ public class SaveResults {
 	}
 	
 	public static void saveLatencyTimes(int dataConsPerDataProd, String storageMode, int nb_z, double write, double read,
-			double overall, long units) throws IOException {
+			double overall, long readCount, long writeCount) throws IOException {
 		
 		System.out.println("Saving Latency time information");
 		FileWriter fichier = new FileWriter("Stats/latencyStats" + DataPlacement.nb_HGW+"_"+DataPlacement.nb_DataCons_By_DataProd, true);
@@ -49,10 +49,11 @@ public class SaveResults {
 			fw.write("Write latency: " + String.format("%.0f", write) + "\n");
 			fw.write("Read latency: " + String.format("%.0f", read) + "\n");
 			fw.write("Overall latency: " + String.format("%.0f", overall) + "\n");
-			fw.write("Units: " + units + "\n");
-			fw.write("Average Write latency: " + String.format("%.0f", write / units) + "\n");
-			fw.write("Average Read latency: " + String.format("%.0f", read / units) + "\n");
-			fw.write("Average Overall latency: " + String.format("%.0f", overall / units) + "\n");
+			fw.write("Read Count: " + readCount + "\n");
+			fw.write("Write Count: " + writeCount + "\n");
+			fw.write("Average Write latency: " + String.format("%.0f", write / writeCount) + "\n");
+			fw.write("Average Read latency: " + String.format("%.0f", read / readCount) + "\n");
+			fw.write("Average Overall latency: " + String.format("%.0f", overall / (writeCount + readCount)) + "\n");
 			fw.write("----------------------------------------------------------------------------------\n");
 			fw.close();
 		} catch (FileNotFoundException e) {

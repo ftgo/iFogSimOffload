@@ -4,10 +4,14 @@ public class LatencyStats {
 	public static double Overall_read_latency=0;
 	public static double Overall_write_latency=0;
 	public static double Overall_latency=0;
-	public static long Units=0;
+	public static long Overall_read_count =0;
+	public static long Overall_write_count =0;
 
-	public static void add_Units(long units){
-		Units= units;
+	public static void add_Overall_write_count(long count){
+		Overall_write_count = count;
+	}
+	public static void add_Overall_read_count(long count){
+		Overall_read_count = count;
 	}
 	public static void add_Overall_Letency(double latency){
 		Overall_latency= latency;
@@ -31,11 +35,18 @@ public class LatencyStats {
 		return Overall_write_latency;
 	}
 
-	public static long getUnits(){
-		return Units;
+	public static long getOverall_write_count(){
+		return Overall_write_count;
 	}
-	public static void reset_Units(){
-		Units= 0;
+	public static long getOverall_read_count(){
+		return Overall_read_count;
+	}
+
+	public static void reset_Overall_write_count(){
+		Overall_write_count = 0;
+	}
+	public static void reset_Overall_read_count(){
+		Overall_read_count = 0;
 	}
 	public static void reset_Overall_Letency(){
 		Overall_latency= 0;

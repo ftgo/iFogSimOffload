@@ -21,7 +21,7 @@ def increment():
     return i
 
 
-STATS = 14
+STATS = 15
 
 data = [[] for x in range(STATS)]
 with open('Stats/latencyStats500_1', 'r') as f:
@@ -39,7 +39,8 @@ with open('Stats/latencyStats500_1', 'r') as f:
         get(line, 'Write latency', data[increment()])
         get(line, 'Read latency', data[increment()])
         get(line, 'Overall latency', data[increment()])
-        get(line, 'Units', data[increment()])
+        get(line, 'Read Count', data[increment()])
+        get(line, 'Write Count', data[increment()])
         get(line, 'Average Write latency', data[increment()])
         get(line, 'Average Read latency', data[increment()])
         get(line, 'Average Overall latency', data[increment()])
