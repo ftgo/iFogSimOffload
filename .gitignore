@@ -5,12 +5,11 @@
 /*.graph.*
 /Log/*
 /Stats/*
-/offload/*
 
 # This directory contains a sauvegarde of an infrastrcutre shortest paths latencies. It avoids computing them at every simulation.
 /latencies/*
 
-# Backups created with bk.sh
+# Backups created with bk_all.sh
 out_*
 
 .idea/

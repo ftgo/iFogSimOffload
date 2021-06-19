@@ -11,7 +11,6 @@ mv *.graph $out 2>/dev/null
 mv *.graph.* $out 2>/dev/null
 mv Log $out 2>/dev/null
 mv Stats $out 2>/dev/null
-mv offload $out 2>/dev/null
 mv latencies $out 2>/dev/null
 
 tar -czvf $out.tar.gz $out

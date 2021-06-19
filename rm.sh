@@ -1,3 +1,8 @@
 #!/bin/bash
 
-rm !(.gitkeep) -rf *.csv *.txt *.lp *.graph *.graph.* Log/* Stats/* offload/* latencies/*
+rm -f *.csv *.txt *.lp *.graph *.graph.*
+
+find Log/ ! -name '.gitkeep' -type f -exec rm -f {} \;
+find Stats/ ! -name '.gitkeep' -type f -exec rm -f {} \;
+find latencies/ ! -name '.gitkeep' -type f -exec rm -f {} \;
+

@@ -6,7 +6,7 @@ i = -1
 
 
 def get(line, token, arr):
-    if token in line:
+    if line.startswith(token):
         arr.append(line[len(token) + 2:len(line) - 1])
 
 
@@ -21,7 +21,9 @@ def increment():
     return i
 
 
-data = [[] for x in range(10)]
+STATS = 14
+
+data = [[] for x in range(STATS)]
 with open('Stats/latencyStats500_1', 'r') as f:
     line = 1
     while line:
@@ -29,15 +31,21 @@ with open('Stats/latencyStats500_1', 'r') as f:
         reset()
         # get(line, 'StorageMode', data[increment()])
         get(line, 'offload', data[increment()])
-        get(line, 'DC_Storage_Min_Threshold', data[increment()])
-        get(line, 'DC_Storage_Max_Threshold', data[increment()])
-        get(line, 'DC_Storage_Compression', data[increment()])
+        get(line, 'HGW_Storage_Min_Threshold', data[increment()])
+        get(line, 'HGW_Storage_Max_Threshold', data[increment()])
+        get(line, 'HGW_Storage_Compression', data[increment()])
         get(line, 'HGW_Compression_Selection', data[increment()])
         get(line, 'HGW_Critical_Selection', data[increment()])
         get(line, 'Write latency', data[increment()])
         get(line, 'Read latency', data[increment()])
         get(line, 'Overall latency', data[increment()])
-
+        get(line, 'Units', data[increment()])
+        get(line, 'Average Write latency', data[increment()])
+        get(line, 'Average Read latency', data[increment()])
+        get(line, 'Average Overall latency', data[increment()])
+# Average Write latency: 161
+# Average Read latency: 164
+# Average Overall latency: 325
 with open('Stats/SimulationTime500_1', 'r') as f:
     line = 1
     j = increment()

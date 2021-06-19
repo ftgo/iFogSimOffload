@@ -23,6 +23,8 @@ import org.fog.utils.FogLinearPowerModel;
 import org.fog.utils.FogUtils;
 import org.fog.utils.distribution.DeterministicDistribution;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class DataPlacement {
@@ -603,8 +605,11 @@ public class DataPlacement {
         System.out.print("HGW_Compression_Selection: " + DataPlacement.HGW_Compression_Selection + "\n");
         System.out.print("HGW_Critical_Selection: " + DataPlacement.HGW_Critical_Selection + "\n");
 
-        CloudStorage cloud = new CloudStorage();
-        cloud.sim();
+        if (!simulated()) {
+            CloudStorage cloud = new CloudStorage();
+            cloud.sim();
+        }
+
 
         offload = true;
         for (float Storage_Compression : Storage_Compression_List) {
@@ -616,6 +621,9 @@ public class DataPlacement {
                         DC_Storage_Compression = RPOP_Storage_Compression = LPOP_Storage_Compression = HGW_Storage_Compression = Storage_Compression;
                         HGW_Compression_Selection = HGW_Compression_Selection_;
                         HGW_Critical_Selection = HGW_Critical_Selection_;
+
+                        if (simulated())
+                            break;
 
                         System.out.print("offload: " + DataPlacement.offload + "\n");
                         System.out.print("HGW_Storage_Min_Threshold: " + DataPlacement.HGW_Storage_Min_Threshold + "\n");
@@ -631,5 +639,22 @@ public class DataPlacement {
                 }
             }
         }
+    }
+
+    private static boolean simulated() throws FileNotFoundException {
+        String tag = String.format("%.1f_%.1f_%.1f_%.1f_%.1f_%s_%b", DataPlacement.HGW_Storage_Min_Threshold, DataPlacement.HGW_Storage_Max_Threshold, DataPlacement.HGW_Storage_Compression, DataPlacement.HGW_Compression_Selection, DataPlacement.HGW_Critical_Selection, DataPlacement.storageMode, DataPlacement.offload);
+
+        try (Scanner scanner = new Scanner(new File("Stats/SimulationTime" + nb_HGW + "_" + nb_DataCons_By_DataProd))) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                if (line.startsWith(tag)){
+                    return true;
+                }
+            }
+        } catch (FileNotFoundException e) {
+            // Do nothing
+        }
+
+        return false;
     }
 }

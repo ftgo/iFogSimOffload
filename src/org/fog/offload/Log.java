@@ -35,7 +35,7 @@ public class Log {
 
         String tag = String.format("%.1f_%.1f_%.1f_%.1f_%.1f_%s_%b", DataPlacement.HGW_Storage_Min_Threshold, DataPlacement.HGW_Storage_Max_Threshold, DataPlacement.HGW_Storage_Compression, DataPlacement.HGW_Compression_Selection, DataPlacement.HGW_Critical_Selection, DataPlacement.storageMode, DataPlacement.offload);
 
-        String fileName = "offload/logOffload_" + tag + ".txt";
+        String fileName = "Log/offload_" + tag + ".txt";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, append(tag)))) {
             String now = DATE_TIME_INSTANCE.format(new Date());
