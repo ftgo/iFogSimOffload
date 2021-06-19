@@ -85,7 +85,7 @@ public class DataPlacement {
 //	public static final long HGW_Storage = 1000000000; // 1 GB
 
     // TODO offload
-    public static final long DC_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4); // 1 PB // 1 GB
+    public static final long DC_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 4); // 1 PB // 1 TB
     public static final long RPOP_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 3); // 1 TB // 1 GB
     public static final long LPOP_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 3); // 1 TB // 1 GB
     public static final long HGW_Storage = (long) Math.pow(STORAGE_UNIT_BYTES, 2); // 100 GB // 100 MB // 10 MB // 1 MB
