@@ -82,8 +82,6 @@ public class CloudStorage {
 
 		} else {
 			BasisDelayMatrix.loadBasisDelayMatrix();
-
-
 		}
 
 		if (DataPlacement.offload) {
@@ -118,24 +116,36 @@ public class CloudStorage {
 
 
 		OffloadAllocation.reset();
-
+		long b_sim = Calendar.getInstance().getTimeInMillis();
 		CloudSim.startSimulation();
 		CloudSim.stopSimulation();
-		
+		long e_sim = Calendar.getInstance().getTimeInMillis();
+		String tag = String.format("%.1f_%.1f_%.1f_%.1f_%.1f_%s_%b", DataPlacement.HGW_Storage_Min_Threshold, DataPlacement.HGW_Storage_Max_Threshold, DataPlacement.HGW_Storage_Compression, DataPlacement.HGW_Compression_Selection, DataPlacement.HGW_Critical_Selection, DataPlacement.storageMode, DataPlacement.offload);
+		org.fog.examples.Log.writeSimulationTime(DataPlacement.nb_HGW, tag + " - " + (e_sim - b_sim));
 		System.out.println("End of simulation!");
 
 		System.out.println(DataPlacement.storageMode);
-		System.out.println("Read Latency:"+ LatencyStats.getOverall_read_Latency());
-		System.out.println("Write Latency:"+ LatencyStats.getOverall_write_Latency());
-		System.out.println("Overall Latency:"+ LatencyStats.getOverall_Latency());
+		System.out.println("Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency()));
+		System.out.println("Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency()));
+		System.out.println("Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency()));
+		System.out.println("Units:"+ String.format("%d", LatencyStats.Units));
+		System.out.println("Average Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency() / LatencyStats.getUnits()));
+		System.out.println("Average Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency() / LatencyStats.getUnits()));
+		System.out.println("Average Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency() / LatencyStats.getUnits()));
 
 		Log.writeInLogFile("DataPlacement", DataPlacement.storageMode);
-		Log.writeInLogFile("DataPlacement", "Read Latency:"+ LatencyStats.getOverall_read_Latency());
-		Log.writeInLogFile("DataPlacement", "Write Latency:"+ LatencyStats.getOverall_write_Latency());
-		Log.writeInLogFile("DataPlacement", "Overall Latency:"+ LatencyStats.getOverall_Latency());
+		Log.writeInLogFile("DataPlacement", "Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency()));
+		Log.writeInLogFile("DataPlacement", "Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency()));
+		Log.writeInLogFile("DataPlacement", "Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency()));
+		Log.writeInLogFile("DataPlacement", "Units:"+ String.format("%d", LatencyStats.Units));
+		Log.writeInLogFile("DataPlacement", "Average Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency() / LatencyStats.getUnits()));
+		Log.writeInLogFile("DataPlacement", "Average Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency() / LatencyStats.getUnits()));
+		Log.writeInLogFile("DataPlacement", "Average Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency() / LatencyStats.getUnits()));
 
-		SaveResults.saveLatencyTimes(DataPlacement.nb_DataCons_By_DataProd, DataPlacement.storageMode, -1, LatencyStats.getOverall_read_Latency(), LatencyStats.getOverall_write_Latency(), LatencyStats.getOverall_Latency());
+		SaveResults.saveLatencyTimes(DataPlacement.nb_DataCons_By_DataProd, DataPlacement.storageMode, -1, LatencyStats.getOverall_read_Latency(), LatencyStats.getOverall_write_Latency(), LatencyStats.getOverall_Latency(), LatencyStats.getUnits());
 
+
+		LatencyStats.reset_Units();
 		LatencyStats.reset_Overall_Letency();
 		LatencyStats.reset_Overall_write_Letency();
 		LatencyStats.reset_Overall_read_Letency();

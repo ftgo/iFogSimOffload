@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import org.fog.examples.DataPlacement;
+import org.fog.gui.lpFileConstuction.LatencyStats;
 
 
 /**
@@ -24,33 +25,34 @@ public class SaveResults {
 	}
 	
 	public static void saveLatencyTimes(int dataConsPerDataProd, String storageMode, int nb_z, double write, double read,
-			double overall) throws IOException {
+			double overall, long units) throws IOException {
 		
 		System.out.println("Saving Latency time information");
 		FileWriter fichier = new FileWriter("Stats/latencyStats" + DataPlacement.nb_HGW+"_"+DataPlacement.nb_DataCons_By_DataProd, true);
 		try {
 			BufferedWriter fw = new BufferedWriter(fichier);
 
-			if (storageMode.equals(DataPlacement.CloudStorage)) {
-				fw.write("**********************************************************************************\n");
-			}
+			fw.write("offload: " + DataPlacement.offload + "\n");
+			fw.write("HGW_Storage_Min_Threshold: " + DataPlacement.HGW_Storage_Min_Threshold + "\n");
+			fw.write("HGW_Storage_Max_Threshold: " + DataPlacement.HGW_Storage_Max_Threshold + "\n");
+			fw.write("HGW_Storage_Compression: " + DataPlacement.HGW_Storage_Compression + "\n");
+			fw.write("HGW_Compression_Selection: " + DataPlacement.HGW_Compression_Selection + "\n");
+			fw.write("HGW_Critical_Selection: " + DataPlacement.HGW_Critical_Selection + "\n");
 
-			if (DataPlacement.offload) {
-				fw.write("DC_Storage_Min_Threshold: " + DataPlacement.DC_Storage_Min_Threshold + "\n");
-				fw.write("DC_Storage_Max_Threshold: " + DataPlacement.DC_Storage_Max_Threshold + "\n");
-				fw.write("DC_Storage_Compression: " + DataPlacement.DC_Storage_Compression + "\n");
-				fw.write("HGW_Compression_Selection: " + DataPlacement.HGW_Compression_Selection + "\n");
-				fw.write("HGW_Critical_Selection: " + DataPlacement.HGW_Critical_Selection + "\n");
-			}
+
 
 			fw.write("DataCons/DataProd: " + dataConsPerDataProd + "\n");
 			fw.write("StorageMode: " + storageMode + "\n");
 			if (nb_z != -1) {
 				fw.write("nb_zone: " + nb_z + "\n");
 			}
-			fw.write("Write latency: " + write + "\n");
-			fw.write("Read latency: " + read + "\n");
-			fw.write("Overall latency: " + overall + "\n");
+			fw.write("Write latency: " + String.format("%.0f", write) + "\n");
+			fw.write("Read latency: " + String.format("%.0f", read) + "\n");
+			fw.write("Overall latency: " + String.format("%.0f", overall) + "\n");
+			fw.write("Units: " + units + "\n");
+			fw.write("Average Write latency: " + String.format("%.0f", write / units) + "\n");
+			fw.write("Average Read latency: " + String.format("%.0f", read / units) + "\n");
+			fw.write("Average Overall latency: " + String.format("%.0f", overall / units) + "\n");
 			fw.write("----------------------------------------------------------------------------------\n");
 			fw.close();
 		} catch (FileNotFoundException e) {
@@ -59,5 +61,4 @@ public class SaveResults {
 			e.printStackTrace();
 		}
 	}
-
 }

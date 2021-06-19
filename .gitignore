@@ -1,3 +1,4 @@
+/*.csv
 /*.txt
 /*.lp
 /*.graph
@@ -9,7 +10,7 @@
 # This directory contains a sauvegarde of an infrastrcutre shortest paths latencies. It avoids computing them at every simulation.
 /latencies/*
 
-# Backups created with out.sh
+# Backups created with bk.sh
 out_*
 
 .idea/

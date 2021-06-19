@@ -4,7 +4,11 @@ public class LatencyStats {
 	public static double Overall_read_latency=0;
 	public static double Overall_write_latency=0;
 	public static double Overall_latency=0;
-	
+	public static long Units=0;
+
+	public static void add_Units(long units){
+		Units= units;
+	}
 	public static void add_Overall_Letency(double latency){
 		Overall_latency= latency;
 	}
@@ -26,7 +30,13 @@ public class LatencyStats {
 	public static double getOverall_write_Latency(){
 		return Overall_write_latency;
 	}
-	
+
+	public static long getUnits(){
+		return Units;
+	}
+	public static void reset_Units(){
+		Units= 0;
+	}
 	public static void reset_Overall_Letency(){
 		Overall_latency= 0;
 	}

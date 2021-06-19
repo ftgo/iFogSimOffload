@@ -1132,7 +1132,7 @@ public class CloudSim {
 	 */
 	public static void finishSimulation() {
 		// Allow all entities to exit their body method
-		System.out.println("End of simulation");
+		System.out.println("End of simulation (CloudSim)");
 		if (!abruptTerminate) {
 			for (SimEntity ent : entities) {
 				if (ent.getState() != SimEntity.FINISHED) {

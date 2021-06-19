@@ -108,9 +108,9 @@ public class Controller extends SimEntity{
 			//printCostDetails();
 			//printNetworkUsageDetails();
 			System.out.println("Simulations riched its max time!");
-			System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
-			System.out.println("Overal write latency:"+LatencyStats.getOverall_write_Latency());
-			System.out.println("Overal latency:"+LatencyStats.getOverall_Latency());
+			System.out.println("Overal read latency:"+String.format("%.0f", LatencyStats.getOverall_read_Latency()));
+			System.out.println("Overal write latency:"+String.format("%.0f", LatencyStats.getOverall_write_Latency()));
+			System.out.println("Overal latency:"+String.format("%.0f", LatencyStats.getOverall_Latency()));
 			break;
 			
 		}
