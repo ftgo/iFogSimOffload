@@ -54,18 +54,18 @@ public class StorageState implements Subject<StorageEvent> {
     }
 
     @Override
-    public boolean add(Listener<StorageEvent> listener) {
+    public boolean addListener(Listener<StorageEvent> listener) {
         return this.listeners.add(listener);
     }
 
     @Override
-    public boolean remove(Listener<StorageEvent> listener) {
+    public boolean removeListener(Listener<StorageEvent> listener) {
         return this.listeners.add(listener);
     }
 
     @Override
-    public void trigger(StorageEvent event) {
-        trigger(event, this.listeners);
+    public void notifyEvent(StorageEvent event) {
+        notifyEvent(event, this.listeners);
     }
 
     public boolean save(Tuple tuple, Bits bits) {
@@ -76,17 +76,17 @@ public class StorageState implements Subject<StorageEvent> {
         long expected = this.current + size;
 
         if (compare(expected, this.total) > 0) {
-            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.FAILED));
+            notifyEvent(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.FAILED));
             return false;
         }
 
         if (compare(expected, this.upper) > 0) {
-            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.HIT));
+            notifyEvent(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.HIT));
         }
 
         this.current += size;
 
-        trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.OK));
+        notifyEvent(new StorageEvent(this, tuple, bits, StorageEvent.Type.SAVE, StorageEvent.Status.OK));
 
         this.tuples.add(tuple);
 
@@ -99,17 +99,17 @@ public class StorageState implements Subject<StorageEvent> {
         long expected = this.current - size;
 
         if (compare(expected, 0) < 0) {
-            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.FAILED));
+            notifyEvent(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.FAILED));
             return false;
         }
 
         if (compare(expected, this.lower) < 0) {
-            trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.HIT));
+            notifyEvent(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.HIT));
         }
 
         this.current -= size;
 
-        trigger(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.OK));
+        notifyEvent(new StorageEvent(this, tuple, bits, StorageEvent.Type.DELETE, StorageEvent.Status.OK));
 
         this.tuples.remove(tuple);
 

@@ -40,7 +40,7 @@ public class OffloadAllocation {
 
         for (DeviceState state : map.values()) {
             StorageState storage = state.getStorageState();
-            storage.add(handler);
+            storage.addListener(handler);
         }
 
         return map;

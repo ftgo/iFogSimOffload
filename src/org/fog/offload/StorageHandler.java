@@ -7,7 +7,7 @@ import static java.lang.String.format;
 
 public class StorageHandler implements Listener<StorageEvent> {
     @Override
-    public void update(StorageEvent event) {
+    public void updateEvent(StorageEvent event) {
         StorageEvent.Status status = event.getStatus();
         switch (status) {
             case OK:

@@ -4,15 +4,15 @@ import java.util.Collection;
 
 public interface Subject<TEvent extends Event> {
 
-    boolean add(Listener<TEvent> listener);
+    boolean addListener(Listener<TEvent> listener);
 
-    boolean remove(Listener<TEvent> listener);
+    boolean removeListener(Listener<TEvent> listener);
 
-    void trigger(TEvent event);
+    void notifyEvent(TEvent event);
 
-    default void trigger(TEvent event, Collection<Listener<TEvent>> listeners) {
+    default void notifyEvent(TEvent event, Collection<Listener<TEvent>> listeners) {
         for (Listener<TEvent> listener : listeners) {
-            listener.update(event);
+            listener.updateEvent(event);
         }
     }
 }
