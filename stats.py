@@ -40,7 +40,7 @@ def column(data, i):
     return [row[i] for row in data]
 
 
-def get_stats(dir=''):
+def get_stats(dir='Stats/'):
     data = [[] for x in range(16)]
     with open(dir + 'latencyStats500_1', 'r') as f:
         line = 1
@@ -100,7 +100,7 @@ def get_stats(dir=''):
     return data
 
 
-def to_csv(dir=''):
+def to_csv(dir='Stats/'):
     data = get_stats(dir)
     with open(dir + 'stats.csv', 'w+') as f:
         w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
@@ -109,14 +109,14 @@ def to_csv(dir=''):
     return data
 
 
-def from_csv(dir=''):
-    data_ = []
+def from_csv(dir='Stats/'):
+    data = []
     with open(dir + 'stats.csv') as file:
         reader = csv.reader(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         for line in reader:
-            data_.append(line)
+            data.append(line)
 
-    return data_
+    return data
 
 
 def filter(data, column, value):
@@ -197,7 +197,7 @@ def plot_bar(data, y):
     plt.show()
 
 
-def plot_bars(data, x, y, title, series, dir=''):
+def plot_bars(data, x, y, title, series, dir='Stats/'):
     f_data = filter(data, 1, 'true')  # only offload
 
     vs_0 = list(set(column(f_data, 0)))
@@ -364,9 +364,29 @@ def get_data_all(dir='Stats/'):
     return data_all
 
 
-def stats_avg(dir='Stats/'):
+def from_csv_avg(dir='Stats/'):
+    data = []
+    with open(dir + 'stats_avg.csv') as file:
+        reader = csv.reader(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
+        for line in reader:
+            data.append(line)
+
+    return data
+
+
+def to_csv_avg(dir='Stats/'):
     data_all = get_data_all(dir)
     data = get_data_avg(data_all)
+
+    with open(dir + 'stats_avg.csv', 'w+') as f:
+        w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
+        w.writerows(data)
+
+    return data
+
+
+def stats_avg(dir='Stats/'):
+    data = from_csv_avg(dir) if os.path.isfile(dir + 'stats_avg.csv') else to_csv_avg(dir)
     plot_all(data, dir)
 
 
