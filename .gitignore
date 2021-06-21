@@ -8,6 +8,7 @@
 
 # This directory contains a sauvegarde of an infrastrcutre shortest paths latencies. It avoids computing them at every simulation.
 /latencies/*
+/simulations/*
 
 # Backups created with bk_all.sh
 out_*

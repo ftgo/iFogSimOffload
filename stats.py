@@ -390,4 +390,4 @@ def stats_avg(dir='Stats/'):
     plot_all(data, dir)
 
 
-stats_avg()
+stats_avg('simulations/')
