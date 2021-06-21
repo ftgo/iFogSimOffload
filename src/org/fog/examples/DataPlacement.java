@@ -595,17 +595,16 @@ public class DataPlacement {
 
         Log.writeInLogFile("DataPlacement", "Starting simulation");
 
-
-
         offload = false;
-        System.out.print("offload: " + DataPlacement.offload + "\n");
-        System.out.print("HGW_Storage_Min_Threshold: " + DataPlacement.HGW_Storage_Min_Threshold + "\n");
-        System.out.print("HGW_Storage_Max_Threshold: " + DataPlacement.HGW_Storage_Max_Threshold + "\n");
-        System.out.print("HGW_Storage_Compression: " + DataPlacement.HGW_Storage_Compression + "\n");
-        System.out.print("HGW_Compression_Selection: " + DataPlacement.HGW_Compression_Selection + "\n");
-        System.out.print("HGW_Critical_Selection: " + DataPlacement.HGW_Critical_Selection + "\n");
 
         if (!simulated()) {
+            System.out.print("offload: " + DataPlacement.offload + "\n");
+            System.out.print("HGW_Storage_Min_Threshold: " + DataPlacement.HGW_Storage_Min_Threshold + "\n");
+            System.out.print("HGW_Storage_Max_Threshold: " + DataPlacement.HGW_Storage_Max_Threshold + "\n");
+            System.out.print("HGW_Storage_Compression: " + DataPlacement.HGW_Storage_Compression + "\n");
+            System.out.print("HGW_Compression_Selection: " + DataPlacement.HGW_Compression_Selection + "\n");
+            System.out.print("HGW_Critical_Selection: " + DataPlacement.HGW_Critical_Selection + "\n");
+
             CloudStorage cloud = new CloudStorage();
             cloud.sim();
         }
@@ -622,7 +621,7 @@ public class DataPlacement {
                         HGW_Critical_Selection = HGW_Critical_Selection_;
 
                         if (simulated())
-                            break;
+                            continue;
 
                         System.out.print("offload: " + DataPlacement.offload + "\n");
                         System.out.print("HGW_Storage_Min_Threshold: " + DataPlacement.HGW_Storage_Min_Threshold + "\n");
@@ -633,7 +632,6 @@ public class DataPlacement {
 
                         CloudStorage offload = new CloudStorage();
                         offload.sim();
-//                        System.exit(0);
                     }
                 }
             }

@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 
-import os.path
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
 import csv
+import os.path
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 i = -1
 
@@ -262,23 +261,50 @@ def plot_bars(data, x, y, title, series, dir=''):
     plt.xticks(id + width / 2, vs_0)
     plt.ylabel(series)
     plt.legend(loc='best')
-    plt.savefig(dir + title + '.png')
-    plt.show()
+    plt.savefig('{}{} - {}.png'.format(dir, title, series))
+    # plt.show()
+    plt.clf()
+    plt.cla()
+    plt.close()
+
+
+def plot_all(data, dir):
+    plot_bars(data, 4, 7, 'HGW_Storage_Compression', 'Write latency', dir)
+    plot_bars(data, 5, 7, 'HGW_Compression_Selection', 'Write latency', dir)
+    plot_bars(data, 6, 7, 'HGW_Critical_Selection', 'Write latency', dir)
+    plot_bars(data, 4, 8, 'HGW_Storage_Compression', 'Read latency', dir)
+    plot_bars(data, 5, 8, 'HGW_Compression_Selection', 'Read latency', dir)
+    plot_bars(data, 6, 8, 'HGW_Critical_Selection', 'Read latency', dir)
+    plot_bars(data, 4, 9, 'HGW_Storage_Compression', 'Overall latency', dir)
+    plot_bars(data, 5, 9, 'HGW_Compression_Selection', 'Overall latency', dir)
+    plot_bars(data, 6, 9, 'HGW_Critical_Selection', 'Overall latency', dir)
+    plot_bars(data, 4, 10, 'HGW_Storage_Compression', 'Read Count', dir)
+    plot_bars(data, 5, 10, 'HGW_Compression_Selection', 'Read Count', dir)
+    plot_bars(data, 6, 10, 'HGW_Critical_Selection', 'Read Count', dir)
+    plot_bars(data, 4, 11, 'HGW_Storage_Compression', 'Write Count', dir)
+    plot_bars(data, 5, 11, 'HGW_Compression_Selection', 'Write Count', dir)
+    plot_bars(data, 6, 11, 'HGW_Critical_Selection', 'Write Count', dir)
+    plot_bars(data, 4, 12, 'HGW_Storage_Compression', 'Average Write latency', dir)
+    plot_bars(data, 5, 12, 'HGW_Compression_Selection', 'Average Write latency', dir)
+    plot_bars(data, 6, 12, 'HGW_Critical_Selection', 'Average Write latency', dir)
+    plot_bars(data, 4, 13, 'HGW_Storage_Compression', 'Average Read latency', dir)
+    plot_bars(data, 5, 13, 'HGW_Compression_Selection', 'Average Read latency', dir)
+    plot_bars(data, 6, 13, 'HGW_Critical_Selection', 'Average Read latency', dir)
+    plot_bars(data, 4, 14, 'HGW_Storage_Compression', 'Average Overall latency', dir)
+    plot_bars(data, 5, 14, 'HGW_Compression_Selection', 'Average Overall latency', dir)
+    plot_bars(data, 6, 14, 'HGW_Critical_Selection', 'Average Overall latency', dir)
+    plot_bars(data, 4, 15, 'HGW_Storage_Compression', 'Execution Time', dir)
+    plot_bars(data, 5, 15, 'HGW_Compression_Selection', 'Execution Time', dir)
+    plot_bars(data, 6, 15, 'HGW_Critical_Selection', 'Execution Time', dir)
 
 
 def stats(dir='Stats/'):
     data = from_csv(dir) if os.path.isfile(dir + 'stats.csv') else to_csv(dir)
 
-    plot_bars(data, 4, 8, 'HGW_Storage_Compression', 'Read latency', dir)
-    plot_bars(data, 5, 8, 'HGW_Compression_Selection', 'Read latency', dir)
-    plot_bars(data, 6, 8, 'HGW_Critical_Selection', 'Read latency', dir)
-
 
 def get_pk(row):
     # "T_20_30";"false";20.0;30.0;60.0;0.1;0.9;875940;897240;1773180;5440;5440;161;165;163;71349
     return (row[1], row[2], row[3], row[4], row[5], row[6])
-
-
 
 
 def get_data_avg(data_all):
@@ -324,29 +350,24 @@ def get_data_avg(data_all):
 
     return data_avg
 
+
 def get_data_all(dir='Stats/'):
     data_all = []
     for n in range(99):
-        basedir = '{}/{}/'.format(dir, n)
+        basedir = '{}{}/'.format(dir, n)
         if not os.path.isdir(basedir):
             break
 
-        data = from_csv(basedir) if os.path.isfile(basedir + 'stats.csv') else to_csv(basedir + '0/')
+        data = from_csv(basedir) if os.path.isfile(basedir + 'stats.csv') else to_csv(basedir)
         data_all.append(data)
 
     return data_all
 
+
 def stats_avg(dir='Stats/'):
     data_all = get_data_all(dir)
-    data_avg = get_data_avg(data_all)
-
-    plot_bars(data_avg, 4, 8, 'HGW_Storage_Compression', 'Read latency', dir)
-    plot_bars(data_avg, 5, 8, 'HGW_Compression_Selection', 'Read latency', dir)
-    plot_bars(data_avg, 6, 8, 'HGW_Critical_Selection', 'Read latency', dir)
+    data = get_data_avg(data_all)
+    plot_all(data, dir)
 
 
-def main(dir='Stats/'):
-    stats_avg()
-
-
-main()
+stats_avg()
