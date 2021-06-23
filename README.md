@@ -1,7 +1,8 @@
 # iFogSimOffload
 This is an extension of iFogSim that makes it possible to simulate and evaluate data offloading strategies in context of Fog computing and IoT.
 
-Please, check the following steps to install and executed.
+
+### Install and run
 * [Download](http://glaros.dtc.umn.edu/gkhome/metis/metis/download) and install Metis
   * Change `IDXTYPEWIDTH` and `REALTYPEWIDTH` to `64` at `include/metis.h`
   * Run: `make config shared=1 prefix=./precompiled && make && make install`
@@ -15,6 +16,12 @@ Please, check the following steps to install and executed.
 * Import CPLEX `/opt/ibm/ILOG/CPLEX_Studio201/cplex/lib/cplex.jar` to local Maven (e.g.: `mvn install:install-file -Dpackaging=jar -DgeneratePom=true -Dfile=cplex.jar -DgroupId=ilog -DartifactId=cplex -Dversion=20.1.0.0`)
 * Build: `mvn clean install` (no `jars` folder needed)
 * Run: `java -jar -Xmx4096m target/ifogsim-jar-with-dependencies.jar`
+
+### Scripts
+* `rm.sh`: removes simulation temp files 
+* `bk.sh`: backup all simulation temp files
+* `stats.py`: generates simulation summaries and plots
+* `pidstat.sh`: analyse CPU and memory usage with `pidstat` (part of `sysstat` tools) - needs simulation running
 
 # iFogSimWithDataPlacement (upstream)
 

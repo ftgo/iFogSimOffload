@@ -7,6 +7,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 i = -1
+DIR_DEFAULT = 'simulations'
 
 
 def get_value(line, token, arr):
@@ -40,9 +41,13 @@ def column(data, i):
     return [row[i] for row in data]
 
 
-def get_stats(dir='Stats/'):
+def path(folder, file):
+    return '{}/{}'.format(folder, file)
+
+
+def get_stats(folder=DIR_DEFAULT):
     data = [[] for x in range(16)]
-    with open(dir + 'latencyStats500_1', 'r') as f:
+    with open(path(folder, 'latencyStats500_1'), 'r') as f:
         line = 1
         while line:
             line = f.readline()
@@ -63,7 +68,7 @@ def get_stats(dir='Stats/'):
             get_value(line, 'Average Read latency', data[increment()])
             get_value(line, 'Average Overall latency', data[increment()])
 
-    with open(dir + 'SimulationTime500_1', 'r') as f:
+    with open(path(folder, 'SimulationTime500_1'), 'r') as f:
         line = 1
         j = increment()
         while line:
@@ -100,18 +105,22 @@ def get_stats(dir='Stats/'):
     return data
 
 
-def to_csv(dir='Stats/'):
-    data = get_stats(dir)
-    with open(dir + 'stats.csv', 'w+') as f:
+def get_pidstat(folder=DIR_DEFAULT):
+    return None
+
+
+def to_csv(folder=DIR_DEFAULT):
+    data = get_stats(folder)
+    with open(path(folder, 'stats.csv'), 'w+') as f:
         w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         w.writerows(data)
 
     return data
 
 
-def from_csv(dir='Stats/'):
+def from_csv(folder=DIR_DEFAULT):
     data = []
-    with open(dir + 'stats.csv') as file:
+    with open(path(folder, 'stats.csv')) as file:
         reader = csv.reader(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         for line in reader:
             data.append(line)
@@ -197,7 +206,7 @@ def plot_bar(data, y):
     plt.show()
 
 
-def plot_bars(data, x, y, title, series, dir='Stats/'):
+def plot_bars(data, x, y, title, series, folder=DIR_DEFAULT):
     f_data = filter(data, 1, 'true')  # only offload
 
     vs_0 = list(set(column(f_data, 0)))
@@ -261,45 +270,45 @@ def plot_bars(data, x, y, title, series, dir='Stats/'):
     plt.xticks(id + width / 2, vs_0)
     plt.ylabel(series)
     plt.legend(loc='best')
-    plt.savefig('{}{} - {}.png'.format(dir, title, series))
+    plt.savefig(path(folder, '{}_{}.png'.format(title, series.replace(' ', '_'))))
     # plt.show()
     plt.clf()
     plt.cla()
     plt.close()
 
 
-def plot_all(data, dir):
-    plot_bars(data, 4, 7, 'HGW_Storage_Compression', 'Write latency', dir)
-    plot_bars(data, 5, 7, 'HGW_Compression_Selection', 'Write latency', dir)
-    plot_bars(data, 6, 7, 'HGW_Critical_Selection', 'Write latency', dir)
-    plot_bars(data, 4, 8, 'HGW_Storage_Compression', 'Read latency', dir)
-    plot_bars(data, 5, 8, 'HGW_Compression_Selection', 'Read latency', dir)
-    plot_bars(data, 6, 8, 'HGW_Critical_Selection', 'Read latency', dir)
-    plot_bars(data, 4, 9, 'HGW_Storage_Compression', 'Overall latency', dir)
-    plot_bars(data, 5, 9, 'HGW_Compression_Selection', 'Overall latency', dir)
-    plot_bars(data, 6, 9, 'HGW_Critical_Selection', 'Overall latency', dir)
-    plot_bars(data, 4, 10, 'HGW_Storage_Compression', 'Read Count', dir)
-    plot_bars(data, 5, 10, 'HGW_Compression_Selection', 'Read Count', dir)
-    plot_bars(data, 6, 10, 'HGW_Critical_Selection', 'Read Count', dir)
-    plot_bars(data, 4, 11, 'HGW_Storage_Compression', 'Write Count', dir)
-    plot_bars(data, 5, 11, 'HGW_Compression_Selection', 'Write Count', dir)
-    plot_bars(data, 6, 11, 'HGW_Critical_Selection', 'Write Count', dir)
-    plot_bars(data, 4, 12, 'HGW_Storage_Compression', 'Average Write latency', dir)
-    plot_bars(data, 5, 12, 'HGW_Compression_Selection', 'Average Write latency', dir)
-    plot_bars(data, 6, 12, 'HGW_Critical_Selection', 'Average Write latency', dir)
-    plot_bars(data, 4, 13, 'HGW_Storage_Compression', 'Average Read latency', dir)
-    plot_bars(data, 5, 13, 'HGW_Compression_Selection', 'Average Read latency', dir)
-    plot_bars(data, 6, 13, 'HGW_Critical_Selection', 'Average Read latency', dir)
-    plot_bars(data, 4, 14, 'HGW_Storage_Compression', 'Average Overall latency', dir)
-    plot_bars(data, 5, 14, 'HGW_Compression_Selection', 'Average Overall latency', dir)
-    plot_bars(data, 6, 14, 'HGW_Critical_Selection', 'Average Overall latency', dir)
-    plot_bars(data, 4, 15, 'HGW_Storage_Compression', 'Execution Time', dir)
-    plot_bars(data, 5, 15, 'HGW_Compression_Selection', 'Execution Time', dir)
-    plot_bars(data, 6, 15, 'HGW_Critical_Selection', 'Execution Time', dir)
+def plot_all(data, folder):
+    plot_bars(data, 4, 7, 'HGW_Storage_Compression', 'Write latency', folder)
+    plot_bars(data, 5, 7, 'HGW_Compression_Selection', 'Write latency', folder)
+    plot_bars(data, 6, 7, 'HGW_Critical_Selection', 'Write latency', folder)
+    plot_bars(data, 4, 8, 'HGW_Storage_Compression', 'Read latency', folder)
+    plot_bars(data, 5, 8, 'HGW_Compression_Selection', 'Read latency', folder)
+    plot_bars(data, 6, 8, 'HGW_Critical_Selection', 'Read latency', folder)
+    plot_bars(data, 4, 9, 'HGW_Storage_Compression', 'Overall latency', folder)
+    plot_bars(data, 5, 9, 'HGW_Compression_Selection', 'Overall latency', folder)
+    plot_bars(data, 6, 9, 'HGW_Critical_Selection', 'Overall latency', folder)
+    plot_bars(data, 4, 10, 'HGW_Storage_Compression', 'Read Count', folder)
+    plot_bars(data, 5, 10, 'HGW_Compression_Selection', 'Read Count', folder)
+    plot_bars(data, 6, 10, 'HGW_Critical_Selection', 'Read Count', folder)
+    plot_bars(data, 4, 11, 'HGW_Storage_Compression', 'Write Count', folder)
+    plot_bars(data, 5, 11, 'HGW_Compression_Selection', 'Write Count', folder)
+    plot_bars(data, 6, 11, 'HGW_Critical_Selection', 'Write Count', folder)
+    plot_bars(data, 4, 12, 'HGW_Storage_Compression', 'Average Write latency', folder)
+    plot_bars(data, 5, 12, 'HGW_Compression_Selection', 'Average Write latency', folder)
+    plot_bars(data, 6, 12, 'HGW_Critical_Selection', 'Average Write latency', folder)
+    plot_bars(data, 4, 13, 'HGW_Storage_Compression', 'Average Read latency', folder)
+    plot_bars(data, 5, 13, 'HGW_Compression_Selection', 'Average Read latency', folder)
+    plot_bars(data, 6, 13, 'HGW_Critical_Selection', 'Average Read latency', folder)
+    plot_bars(data, 4, 14, 'HGW_Storage_Compression', 'Average Overall latency', folder)
+    plot_bars(data, 5, 14, 'HGW_Compression_Selection', 'Average Overall latency', folder)
+    plot_bars(data, 6, 14, 'HGW_Critical_Selection', 'Average Overall latency', folder)
+    plot_bars(data, 4, 15, 'HGW_Storage_Compression', 'Execution Time', folder)
+    plot_bars(data, 5, 15, 'HGW_Compression_Selection', 'Execution Time', folder)
+    plot_bars(data, 6, 15, 'HGW_Critical_Selection', 'Execution Time', folder)
 
 
-def stats(dir='Stats/'):
-    data = from_csv(dir) if os.path.isfile(dir + 'stats.csv') else to_csv(dir)
+def stats(folder=DIR_DEFAULT):
+    data = from_csv(folder) if os.path.isfile(path(folder, 'stats.csv')) else to_csv(folder)
 
 
 def get_pk(row):
@@ -351,22 +360,22 @@ def get_data_avg(data_all):
     return data_avg
 
 
-def get_data_all(dir='Stats/'):
+def get_data_all(folder=DIR_DEFAULT):
     data_all = []
     for n in range(99):
-        basedir = '{}{}/'.format(dir, n)
-        if not os.path.isdir(basedir):
+        basefolder = path(folder, n)
+        if not os.path.isdir(basefolder):
             break
 
-        data = from_csv(basedir) if os.path.isfile(basedir + 'stats.csv') else to_csv(basedir)
+        data = from_csv(basefolder) if os.path.isfile(path(basefolder, 'stats.csv')) else to_csv(basefolder)
         data_all.append(data)
 
     return data_all
 
 
-def from_csv_avg(dir='Stats/'):
+def from_csv_avg(folder=DIR_DEFAULT):
     data = []
-    with open(dir + 'stats_avg.csv') as file:
+    with open(path(folder, 'stats_avg.csv')) as file:
         reader = csv.reader(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         for line in reader:
             data.append(line)
@@ -374,20 +383,20 @@ def from_csv_avg(dir='Stats/'):
     return data
 
 
-def to_csv_avg(dir='Stats/'):
-    data_all = get_data_all(dir)
+def to_csv_avg(folder=DIR_DEFAULT):
+    data_all = get_data_all(folder)
     data = get_data_avg(data_all)
 
-    with open(dir + 'stats_avg.csv', 'w+') as f:
+    with open(path(folder, 'stats_avg.csv'), 'w+') as f:
         w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         w.writerows(data)
 
     return data
 
 
-def stats_avg(dir='Stats/'):
-    data = from_csv_avg(dir) if os.path.isfile(dir + 'stats_avg.csv') else to_csv_avg(dir)
-    plot_all(data, dir)
+def stats_avg(folder=DIR_DEFAULT):
+    data = from_csv_avg(folder) if os.path.isfile(path(folder, 'stats_avg.csv')) else to_csv_avg(folder)
+    plot_all(data, path(folder, 'images'))
 
 
-stats_avg('simulations/')
+stats_avg()

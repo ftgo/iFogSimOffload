@@ -10,7 +10,7 @@
 /latencies/*
 /simulations/*
 
-# Backups created with bk_all.sh
+# Backups created with bk.sh
 out_*
 
 .idea/
