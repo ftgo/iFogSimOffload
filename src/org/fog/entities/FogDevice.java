@@ -920,6 +920,7 @@ public class FogDevice extends PowerDatacenter {
 
 		LatencyStats.add_Overall_write_Letency(LatencyStats.getOverall_write_Latency()+latency*nb_Unit);
 		LatencyStats.add_Overall_Letency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
+		LatencyStats.add_Overall_write_count(LatencyStats.getOverall_write_count()+nb_Unit);
 
 		////*System.out.println("source node name:"+getName());
 		////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
