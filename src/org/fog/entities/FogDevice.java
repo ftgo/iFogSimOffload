@@ -266,9 +266,10 @@ public class FogDevice extends PowerDatacenter {
 			if(tupleDataSize % ex != 0) nb_Unit++;
 
 			//nb_Unit = 1;
-			LatencyStats.add_Overall_read_Letency(LatencyStats.getOverall_read_Latency()+latency*nb_Unit);
-			LatencyStats.add_Overall_Letency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
+			LatencyStats.add_Overall_read_Latency(LatencyStats.getOverall_read_Latency()+latency*nb_Unit);
+			LatencyStats.add_Overall_Latency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
 			LatencyStats.add_Overall_read_count(LatencyStats.getOverall_read_count()+nb_Unit);
+			LatencyStats.add_Overall_count(LatencyStats.getOverall_count()+nb_Unit);
 
 			////*System.out.println("Node name:"+getName());
 			////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
@@ -887,9 +888,10 @@ public class FogDevice extends PowerDatacenter {
 		int nb_Unit = (int) (tupleDataSize / ex);
 		if(tupleDataSize % ex != 0) nb_Unit++;
 
-		LatencyStats.add_Overall_write_Letency(LatencyStats.getOverall_write_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_Letency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
+		LatencyStats.add_Overall_write_Latency(LatencyStats.getOverall_write_Latency()+latency*nb_Unit);
+		LatencyStats.add_Overall_Latency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
 		LatencyStats.add_Overall_write_count(LatencyStats.getOverall_write_count()+nb_Unit);
+		LatencyStats.add_Overall_count(LatencyStats.getOverall_count()+nb_Unit);
 
 		////*System.out.println("source node name:"+getName());
 		////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
@@ -918,13 +920,14 @@ public class FogDevice extends PowerDatacenter {
 		int nb_Unit = (int) (tupleDataSize / ex);
 		if(tupleDataSize % ex != 0) nb_Unit++;
 
-		LatencyStats.add_Overall_write_Letency(LatencyStats.getOverall_write_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_Letency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_write_count(LatencyStats.getOverall_write_count()+nb_Unit);
+		LatencyStats.add_Overall_reply_Latency(LatencyStats.getOverall_reply_Latency()+latency*nb_Unit);
+		LatencyStats.add_Overall_Latency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
+		LatencyStats.add_Overall_reply_count(LatencyStats.getOverall_reply_count()+nb_Unit);
+		LatencyStats.add_Overall_count(LatencyStats.getOverall_count()+nb_Unit);
 
 		////*System.out.println("source node name:"+getName());
 		////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
-		////*System.out.println("Overal write latency:"+LatencyStats.getOverall_write_Latency());
+		////*System.out.println("Overal reply latency:"+LatencyStats.getOverall_reply_Latency());
 		////*System.out.println("Overal latency:"+LatencyStats.getOverall_Latency());
 
 		reply(storageNodeId, latency*nb_Unit , FogEvents.TUPLE_STORAGE, tuple);

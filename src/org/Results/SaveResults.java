@@ -1,12 +1,10 @@
 package org.Results;
 
+import org.fog.examples.DataPlacement;
+
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-
-import org.fog.examples.DataPlacement;
-import org.fog.gui.lpFileConstuction.LatencyStats;
 
 
 /**
@@ -24,8 +22,8 @@ public class SaveResults {
 		
 	}
 	
-	public static void saveLatencyTimes(int dataConsPerDataProd, String storageMode, int nb_z, double write, double read,
-			double overall, long readCount, long writeCount) throws IOException {
+	public static void saveLatencyTimes(int dataConsPerDataProd, String storageMode, int nb_z, double read, double write,
+										double reply, double overall, long readCount, long writeCount, long replyCount, long overallCount) throws IOException {
 		
 		System.out.println("Saving Latency time information");
 		FileWriter fichier = new FileWriter("Stats/latencyStats" + DataPlacement.nb_HGW+"_"+DataPlacement.nb_DataCons_By_DataProd, true);
@@ -46,18 +44,23 @@ public class SaveResults {
 			if (nb_z != -1) {
 				fw.write("nb_zone: " + nb_z + "\n");
 			}
-			fw.write("Write latency: " + String.format("%.0f", write) + "\n");
 			fw.write("Read latency: " + String.format("%.0f", read) + "\n");
+			fw.write("Write latency: " + String.format("%.0f", write) + "\n");
+			fw.write("Reply latency: " + String.format("%.0f", reply) + "\n");
+			fw.write("Write+Reply latency: " + String.format("%.0f", write+reply) + "\n");
 			fw.write("Overall latency: " + String.format("%.0f", overall) + "\n");
 			fw.write("Read Count: " + readCount + "\n");
 			fw.write("Write Count: " + writeCount + "\n");
-			fw.write("Average Write latency: " + String.format("%.0f", write / writeCount) + "\n");
+			fw.write("Reply Count: " + replyCount + "\n");
+			fw.write("Write+Reply Count: " + (writeCount+replyCount) + "\n");
+			fw.write("Overall Count: " + overallCount + "\n");
 			fw.write("Average Read latency: " + String.format("%.0f", read / readCount) + "\n");
-			fw.write("Average Overall latency: " + String.format("%.0f", overall / (writeCount + readCount)) + "\n");
+			fw.write("Average Write latency: " + String.format("%.0f", write / writeCount) + "\n");
+			fw.write("Average Reply latency: " + String.format("%.0f", reply / replyCount) + "\n");
+			fw.write("Average Write+Reply latency: " + String.format("%.0f", (write+reply) / (writeCount+replyCount)) + "\n");
+			fw.write("Average Overall latency: " + String.format("%.0f", overall / overallCount) + "\n");
 			fw.write("----------------------------------------------------------------------------------\n");
 			fw.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

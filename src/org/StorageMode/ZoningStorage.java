@@ -173,24 +173,57 @@ public class ZoningStorage {
 			System.out.println("End of simulation!");
 
 			System.out.println(DataPlacement.storageMode);
-			System.out.println("Read Latency:"+ LatencyStats.getOverall_read_Latency());
-			System.out.println("Write Latency:"+ LatencyStats.getOverall_write_Latency());
-			System.out.println("Overall Latency:"+ LatencyStats.getOverall_Latency());
+			System.out.println("Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency()));
+			System.out.println("Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency()));
+			System.out.println("Reply Latency:"+ String.format("%.0f", LatencyStats.getOverall_reply_Latency()));
+			System.out.println("Write+Reply Latency:"+ String.format("%.0f", (LatencyStats.getOverall_write_Latency()+LatencyStats.getOverall_reply_Latency())));
+			System.out.println("Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency()));
+			System.out.println("Read Count:"+ String.format("%d", LatencyStats.getOverall_read_count()));
+			System.out.println("Write Count:"+ String.format("%d", LatencyStats.getOverall_write_count()));
+			System.out.println("Reply Count:"+ String.format("%d", LatencyStats.getOverall_reply_count()));
+			System.out.println("Write+Reply Count:"+ String.format("%d", (LatencyStats.getOverall_write_count()+LatencyStats.getOverall_reply_count())));
+			System.out.println("Overall Count:"+ String.format("%d", LatencyStats.getOverall_count()));
+			System.out.println("Average Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency() / LatencyStats.getOverall_read_count()));
+			System.out.println("Average Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency() / LatencyStats.getOverall_write_count()));
+			System.out.println("Average Reply Latency:"+ String.format("%.0f", LatencyStats.getOverall_reply_Latency() / LatencyStats.getOverall_reply_count()));
+			System.out.println("Average Write+Reply Latency:"+ String.format("%.0f", (LatencyStats.getOverall_write_Latency()+LatencyStats.getOverall_reply_Latency()) / (LatencyStats.getOverall_write_count()+LatencyStats.getOverall_reply_count())));
+			System.out.println("Average Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency() / (LatencyStats.getOverall_count())));
 
 			Log.writeInLogFile("DataPlacement", DataPlacement.storageMode);
-			Log.writeInLogFile("DataPlacement", "Read Latency:"+ LatencyStats.getOverall_read_Latency());
-			Log.writeInLogFile("DataPlacement", "Write Latency:"+ LatencyStats.getOverall_write_Latency());
-			Log.writeInLogFile("DataPlacement", "Overall Latency:"+ LatencyStats.getOverall_Latency());
-			SaveResults.saveLatencyTimes(DataPlacement.nb_DataCons_By_DataProd, DataPlacement.storageMode,DataPlacement.nb_zone, 
+			Log.writeInLogFile("DataPlacement", "Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency()));
+			Log.writeInLogFile("DataPlacement", "Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency()));
+			Log.writeInLogFile("DataPlacement", "Reply Latency:"+ String.format("%.0f", LatencyStats.getOverall_reply_Latency()));
+			Log.writeInLogFile("DataPlacement", "Write+Reply Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency()+LatencyStats.getOverall_reply_Latency()));
+			Log.writeInLogFile("DataPlacement", "Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency()));
+			Log.writeInLogFile("DataPlacement", "Read Count:"+ String.format("%d", LatencyStats.getOverall_read_count()));
+			Log.writeInLogFile("DataPlacement", "Write Count:"+ String.format("%d", LatencyStats.getOverall_write_count()));
+			Log.writeInLogFile("DataPlacement", "Reply Count:"+ String.format("%d", LatencyStats.getOverall_reply_count()));
+			Log.writeInLogFile("DataPlacement", "Write+Reply Count:"+ String.format("%d", LatencyStats.getOverall_write_count()+LatencyStats.getOverall_reply_count()));
+			Log.writeInLogFile("DataPlacement", "Overall Count:"+ String.format("%d", LatencyStats.getOverall_count()));
+			Log.writeInLogFile("DataPlacement", "Average Read Latency:"+ String.format("%.0f", LatencyStats.getOverall_read_Latency() / LatencyStats.getOverall_read_count()));
+			Log.writeInLogFile("DataPlacement", "Average Write Latency:"+ String.format("%.0f", LatencyStats.getOverall_write_Latency() / LatencyStats.getOverall_write_count()));
+			Log.writeInLogFile("DataPlacement", "Average Reply Latency:"+ String.format("%.0f", LatencyStats.getOverall_reply_Latency() / LatencyStats.getOverall_reply_count()));
+			Log.writeInLogFile("DataPlacement", "Average Write+Reply Latency:"+ String.format("%.0f", (LatencyStats.getOverall_write_Latency()+LatencyStats.getOverall_reply_Latency()) / (LatencyStats.getOverall_write_count()+LatencyStats.getOverall_reply_count())));
+			Log.writeInLogFile("DataPlacement", "Average Overall Latency:"+ String.format("%.0f", LatencyStats.getOverall_Latency() / (LatencyStats.getOverall_count())));
+
+			SaveResults.saveLatencyTimes(DataPlacement.nb_DataCons_By_DataProd, DataPlacement.storageMode, DataPlacement.nb_zone,
 					LatencyStats.getOverall_read_Latency(),
 					LatencyStats.getOverall_write_Latency(),
-					LatencyStats.getOverall_Latency(), LatencyStats.getOverall_read_count(), LatencyStats.getOverall_write_count());
+					LatencyStats.getOverall_reply_Latency(),
+					LatencyStats.getOverall_Latency(),
+					LatencyStats.getOverall_read_count(),
+					LatencyStats.getOverall_write_count(),
+					LatencyStats.getOverall_reply_count(),
+					LatencyStats.getOverall_count());
 
 			LatencyStats.reset_Overall_read_count();
 			LatencyStats.reset_Overall_write_count();
-			LatencyStats.reset_Overall_Letency();
-			LatencyStats.reset_Overall_write_Letency();
-			LatencyStats.reset_Overall_read_Letency();
+			LatencyStats.reset_Overall_reply_count();
+			LatencyStats.reset_Overall_count();
+			LatencyStats.reset_Overall_read_Latency();
+			LatencyStats.reset_Overall_write_Latency();
+			LatencyStats.reset_Overall_reply_Latency();
+			LatencyStats.reset_Overall_Latency();
 
 			System.out.println("VRGame finished!");
 
