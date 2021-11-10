@@ -8,7 +8,6 @@
 
 package org.cloudbus.cloudsim.core;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -18,8 +17,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-
-import javax.swing.plaf.synth.SynthSeparatorUI;
 
 import org.cloudbus.cloudsim.Log;
 import org.cloudbus.cloudsim.core.predicates.Predicate;
@@ -1108,9 +1105,9 @@ public class CloudSim {
 			//*System.out.println("Overal write latency:"+LatencyStats.getOverall_write_Latency());
 			//*System.out.println("Overal latency:"+LatencyStats.getOverall_Latency());
 			
-			Log.writeInLogFile("CloudSim", "Overal read latency:"+LatencyStats.getOverall_read_Latency());
-			Log.writeInLogFile("CloudSim", "Overal write latency:"+LatencyStats.getOverall_write_Latency());
-			Log.writeInLogFile("CloudSim", "Overal latency:"+LatencyStats.getOverall_Latency());
+			Log.writeInLogFile("CloudSim", "Overal read latency:"+LatencyStats.get_Overall_read_Latency());
+			Log.writeInLogFile("CloudSim", "Overal write latency:"+LatencyStats.get_Overall_write_Latency());
+			Log.writeInLogFile("CloudSim", "Overal latency:"+LatencyStats.get_Overall_Latency());
 			
 			//*System.out.println("Press enter...");
 			sc = new Scanner(System.in);

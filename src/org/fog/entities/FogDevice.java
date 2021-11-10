@@ -266,10 +266,10 @@ public class FogDevice extends PowerDatacenter {
 			if(tupleDataSize % ex != 0) nb_Unit++;
 
 			//nb_Unit = 1;
-			LatencyStats.add_Overall_read_Latency(LatencyStats.getOverall_read_Latency()+latency*nb_Unit);
-			LatencyStats.add_Overall_Latency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
-			LatencyStats.add_Overall_read_count(LatencyStats.getOverall_read_count()+nb_Unit);
-			LatencyStats.add_Overall_count(LatencyStats.getOverall_count()+nb_Unit);
+			LatencyStats.set_Overall_read_Latency(LatencyStats.get_Overall_read_Latency()+latency*nb_Unit);
+			LatencyStats.set_Overall_Latency(LatencyStats.get_Overall_Latency()+latency*nb_Unit);
+			LatencyStats.set_Overall_read_count(LatencyStats.get_Overall_read_count()+nb_Unit);
+			LatencyStats.set_Overall_count(LatencyStats.get_Overall_count()+nb_Unit);
 
 			////*System.out.println("Node name:"+getName());
 			////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
@@ -888,10 +888,10 @@ public class FogDevice extends PowerDatacenter {
 		int nb_Unit = (int) (tupleDataSize / ex);
 		if(tupleDataSize % ex != 0) nb_Unit++;
 
-		LatencyStats.add_Overall_write_Latency(LatencyStats.getOverall_write_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_Latency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_write_count(LatencyStats.getOverall_write_count()+nb_Unit);
-		LatencyStats.add_Overall_count(LatencyStats.getOverall_count()+nb_Unit);
+		LatencyStats.set_Overall_write_Latency(LatencyStats.get_Overall_write_Latency()+latency*nb_Unit);
+		LatencyStats.set_Overall_Latency(LatencyStats.get_Overall_Latency()+latency*nb_Unit);
+		LatencyStats.set_Overall_write_count(LatencyStats.get_Overall_write_count()+nb_Unit);
+		LatencyStats.set_Overall_count(LatencyStats.get_Overall_count()+nb_Unit);
 
 		////*System.out.println("source node name:"+getName());
 		////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
@@ -920,10 +920,10 @@ public class FogDevice extends PowerDatacenter {
 		int nb_Unit = (int) (tupleDataSize / ex);
 		if(tupleDataSize % ex != 0) nb_Unit++;
 
-		LatencyStats.add_Overall_reply_Latency(LatencyStats.getOverall_reply_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_Latency(LatencyStats.getOverall_Latency()+latency*nb_Unit);
-		LatencyStats.add_Overall_reply_count(LatencyStats.getOverall_reply_count()+nb_Unit);
-		LatencyStats.add_Overall_count(LatencyStats.getOverall_count()+nb_Unit);
+		LatencyStats.set_Overall_reply_Latency(LatencyStats.get_Overall_reply_Latency()+latency*nb_Unit);
+		LatencyStats.set_Overall_Latency(LatencyStats.get_Overall_Latency()+latency*nb_Unit);
+		LatencyStats.set_Overall_reply_count(LatencyStats.get_Overall_reply_count()+nb_Unit);
+		LatencyStats.set_Overall_count(LatencyStats.get_Overall_count()+nb_Unit);
 
 		////*System.out.println("source node name:"+getName());
 		////*System.out.println("Overal read latency:"+LatencyStats.getOverall_read_Latency());
