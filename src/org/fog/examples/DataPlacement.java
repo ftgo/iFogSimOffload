@@ -102,9 +102,9 @@ public class DataPlacement {
 //            ,new Pair<>(50f, 70f)
 //            ,new Pair<>(50f, 80f)
     );
-    public static final List<Float> Storage_Compression_List = Arrays.asList(20f, 40f, 60f);
-    public static final List<Float> HGW_Compression_Selection_List = Arrays.asList(0.3f, 0.5f, 0.7f);
-    public static final List<Float> HGW_Critical_Selection_List = Arrays.asList(0.3f, 0.5f, 0.7f);
+    public static final List<Float> Storage_Compression_List = Arrays.asList(20f, 50f, 80f);
+    public static final List<Float> HGW_Compression_Selection_List = Arrays.asList(0.2f, 0.5f, 0.8f);
+    public static final List<Float> HGW_Critical_Selection_List = Arrays.asList(0.2f, 0.5f, 0.8f);
 
     public static boolean offload;
     // offload min / max percentage
@@ -173,7 +173,7 @@ public class DataPlacement {
     public static final String ClosestNode = "ClosestNode";
     public static final String FogStorage = "FogStorage";
     public static final String ZoningStorage = "ZoningStorage";
-    public static final String GraphPartitionStorage = "GraphPartitionStorage";
+    public static final String GraphPartitionStorage = "GraphPartitFionStorage";
 
     //    public static final List<String> storageModes = Arrays.asList(CloudStorage,ClosestNode,FogStorage,ZoningStorage,GraphPartitionStorage);
 //    public static final List<String> storageModes = Arrays.asList(CloudStorage, ClosestNode);

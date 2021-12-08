@@ -6,14 +6,21 @@ HGW_Compression_Selection: 0.1
 HGW_Critical_Selection: 0.9
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 870660
-Read latency: 892810
-Overall latency: 1763470
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 161
-Average Read latency: 165
-Average Overall latency: 163
+Read latency: 869130
+Write latency: 904420
+Reply latency: 0
+Write+Reply latency: 904420
+Overall latency: 1773550
+Read Count: 5480
+Write Count: 5480
+Reply Count: 0
+Write+Reply Count: 5480
+Overall Count: 10960
+Average Read latency: 159
+Average Write latency: 165
+Average Reply latency: NaN
+Average Write+Reply latency: 165
+Average Overall latency: 162
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -23,14 +30,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 324420
-Overall latency: 956520
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 60
-Average Overall latency: 89
+Read latency: 621100
+Write latency: 0
+Reply latency: 325330
+Write+Reply latency: 325330
+Overall latency: 946430
+Read Count: 5480
+Write Count: 5480
+Reply Count: 4282
+Write+Reply Count: 9762
+Overall Count: 15242
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 76
+Average Write+Reply latency: 33
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -40,14 +54,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 321950
-Overall latency: 954050
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 60
-Average Overall latency: 88
+Read latency: 621100
+Write latency: 0
+Reply latency: 323320
+Write+Reply latency: 323320
+Overall latency: 944420
+Read Count: 5480
+Write Count: 5480
+Reply Count: 3396
+Write+Reply Count: 8876
+Overall Count: 14356
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 95
+Average Write+Reply latency: 36
+Average Overall latency: 66
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -57,14 +78,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 320150
-Overall latency: 952250
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 59
-Average Overall latency: 88
+Read latency: 621100
+Write latency: 0
+Reply latency: 321940
+Write+Reply latency: 321940
+Overall latency: 943040
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2530
+Write+Reply Count: 8010
+Overall Count: 13490
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 127
+Average Write+Reply latency: 40
+Average Overall latency: 70
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -74,14 +102,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 168050
-Overall latency: 800150
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 31
-Average Overall latency: 74
+Read latency: 621100
+Write latency: 0
+Reply latency: 167870
+Write+Reply latency: 167870
+Overall latency: 788970
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2878
+Write+Reply Count: 8358
+Overall Count: 13838
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 58
+Average Write+Reply latency: 20
+Average Overall latency: 57
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -91,14 +126,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 167370
-Overall latency: 799470
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 31
-Average Overall latency: 74
+Read latency: 621100
+Write latency: 0
+Reply latency: 167070
+Write+Reply latency: 167070
+Overall latency: 788170
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1930
+Write+Reply Count: 7410
+Overall Count: 12890
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 87
+Average Write+Reply latency: 23
+Average Overall latency: 61
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -108,14 +150,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 270230
-Overall latency: 902330
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 50
-Average Overall latency: 84
+Read latency: 621100
+Write latency: 0
+Reply latency: 274620
+Write+Reply latency: 274620
+Overall latency: 895720
+Read Count: 5480
+Write Count: 5480
+Reply Count: 3162
+Write+Reply Count: 8642
+Overall Count: 14122
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 87
+Average Write+Reply latency: 32
+Average Overall latency: 63
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -125,14 +174,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 275150
-Overall latency: 907250
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 51
-Average Overall latency: 84
+Read latency: 621100
+Write latency: 0
+Reply latency: 277040
+Write+Reply latency: 277040
+Overall latency: 898140
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2464
+Write+Reply Count: 7944
+Overall Count: 13424
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 112
+Average Write+Reply latency: 35
+Average Overall latency: 67
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -142,14 +198,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 277970
-Overall latency: 910070
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 51
-Average Overall latency: 84
+Read latency: 621100
+Write latency: 0
+Reply latency: 268980
+Write+Reply latency: 268980
+Overall latency: 890080
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1876
+Write+Reply Count: 7356
+Overall Count: 12836
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 143
+Average Write+Reply latency: 37
+Average Overall latency: 69
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -159,14 +222,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 159520
-Overall latency: 791620
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 30
-Average Overall latency: 73
+Read latency: 621100
+Write latency: 0
+Reply latency: 159670
+Write+Reply latency: 159670
+Overall latency: 780770
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2528
+Write+Reply Count: 8008
+Overall Count: 13488
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 63
+Average Write+Reply latency: 20
+Average Overall latency: 58
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -176,14 +246,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 157710
-Overall latency: 789810
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 29
-Average Overall latency: 73
+Read latency: 621100
+Write latency: 0
+Reply latency: 157760
+Write+Reply latency: 157760
+Overall latency: 778860
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1600
+Write+Reply Count: 7080
+Overall Count: 12560
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 99
+Average Write+Reply latency: 22
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -193,14 +270,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 187300
-Overall latency: 819400
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 35
-Average Overall latency: 76
+Read latency: 621100
+Write latency: 0
+Reply latency: 184450
+Write+Reply latency: 184450
+Overall latency: 805550
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1916
+Write+Reply Count: 7396
+Overall Count: 12876
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 96
+Average Write+Reply latency: 25
+Average Overall latency: 63
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -210,14 +294,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 189900
-Overall latency: 822000
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 35
-Average Overall latency: 76
+Read latency: 621100
+Write latency: 0
+Reply latency: 189750
+Write+Reply latency: 189750
+Overall latency: 810850
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1446
+Write+Reply Count: 6926
+Overall Count: 12406
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 131
+Average Write+Reply latency: 27
+Average Overall latency: 65
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -227,1561 +318,2205 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 181490
+Read latency: 621100
+Write latency: 0
+Reply latency: 178940
+Write+Reply latency: 178940
+Overall latency: 800040
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1146
+Write+Reply Count: 6626
+Overall Count: 12106
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 156
+Average Write+Reply latency: 27
+Average Overall latency: 66
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 129500
+Write+Reply latency: 129500
+Overall latency: 750600
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1750
+Write+Reply Count: 7230
+Overall Count: 12710
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 74
+Average Write+Reply latency: 18
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 128580
+Write+Reply latency: 128580
+Overall latency: 749680
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1100
+Write+Reply Count: 6580
+Overall Count: 12060
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 117
+Average Write+Reply latency: 20
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 325210
+Write+Reply latency: 325210
+Overall latency: 946310
+Read Count: 5480
+Write Count: 5480
+Reply Count: 4294
+Write+Reply Count: 9774
+Overall Count: 15254
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 76
+Average Write+Reply latency: 33
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 324680
+Write+Reply latency: 324680
+Overall latency: 945780
+Read Count: 5480
+Write Count: 5480
+Reply Count: 3372
+Write+Reply Count: 8852
+Overall Count: 14332
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 96
+Average Write+Reply latency: 37
+Average Overall latency: 66
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 318500
+Write+Reply latency: 318500
+Overall latency: 939600
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2562
+Write+Reply Count: 8042
+Overall Count: 13522
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 124
+Average Write+Reply latency: 40
+Average Overall latency: 69
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 166880
+Write+Reply latency: 166880
+Overall latency: 787980
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2860
+Write+Reply Count: 8340
+Overall Count: 13820
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 58
+Average Write+Reply latency: 20
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 162270
+Write+Reply latency: 162270
+Overall latency: 783370
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1830
+Write+Reply Count: 7310
+Overall Count: 12790
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 89
+Average Write+Reply latency: 22
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 269950
+Write+Reply latency: 269950
+Overall latency: 891050
+Read Count: 5480
+Write Count: 5480
+Reply Count: 3146
+Write+Reply Count: 8626
+Overall Count: 14106
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 86
+Average Write+Reply latency: 31
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 275220
+Write+Reply latency: 275220
+Overall latency: 896320
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2372
+Write+Reply Count: 7852
+Overall Count: 13332
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 116
+Average Write+Reply latency: 35
+Average Overall latency: 67
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 274080
+Write+Reply latency: 274080
+Overall latency: 895180
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1954
+Write+Reply Count: 7434
+Overall Count: 12914
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 140
+Average Write+Reply latency: 37
+Average Overall latency: 69
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 158170
+Write+Reply latency: 158170
+Overall latency: 779270
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2430
+Write+Reply Count: 7910
+Overall Count: 13390
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 65
+Average Write+Reply latency: 20
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 158220
+Write+Reply latency: 158220
+Overall latency: 779320
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1602
+Write+Reply Count: 7082
+Overall Count: 12562
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 99
+Average Write+Reply latency: 22
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 183230
+Write+Reply latency: 183230
+Overall latency: 804330
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1868
+Write+Reply Count: 7348
+Overall Count: 12828
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 98
+Average Write+Reply latency: 25
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 188400
+Write+Reply latency: 188400
+Overall latency: 809500
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1430
+Write+Reply Count: 6910
+Overall Count: 12390
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 132
+Average Write+Reply latency: 27
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 192490
+Write+Reply latency: 192490
 Overall latency: 813590
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 34
-Average Overall latency: 75
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 128400
-Overall latency: 760500
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 24
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 124200
-Overall latency: 756300
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 23
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 321520
-Overall latency: 953620
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 60
-Average Overall latency: 88
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 324370
-Overall latency: 956470
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 60
-Average Overall latency: 89
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 315040
-Overall latency: 947140
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 58
-Average Overall latency: 88
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 168110
-Overall latency: 800210
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 31
-Average Overall latency: 74
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 163700
-Overall latency: 795800
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 30
-Average Overall latency: 74
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 280620
-Overall latency: 912720
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 52
-Average Overall latency: 85
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 273170
-Overall latency: 905270
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 51
-Average Overall latency: 84
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 266340
-Overall latency: 898440
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 49
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 158060
-Overall latency: 790160
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 29
-Average Overall latency: 73
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 153730
-Overall latency: 785830
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 28
-Average Overall latency: 73
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 199120
-Overall latency: 831220
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 37
-Average Overall latency: 77
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 183740
-Overall latency: 815840
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 34
-Average Overall latency: 76
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 184930
-Overall latency: 817030
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 34
-Average Overall latency: 76
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 133390
-Overall latency: 765490
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 25
-Average Overall latency: 71
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 126750
-Overall latency: 758850
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 23
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 319520
-Overall latency: 951620
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 59
-Average Overall latency: 88
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 320810
-Overall latency: 952910
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 59
-Average Overall latency: 88
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 261600
-Overall latency: 893700
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 48
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 167270
-Overall latency: 799370
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 31
-Average Overall latency: 74
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 139010
-Overall latency: 771110
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 26
-Average Overall latency: 71
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 269380
-Overall latency: 901480
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 50
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 275200
-Overall latency: 907300
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 51
-Average Overall latency: 84
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 224310
-Overall latency: 856410
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 42
-Average Overall latency: 79
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 160360
-Overall latency: 792460
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 30
-Average Overall latency: 73
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 129580
-Overall latency: 761680
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 24
-Average Overall latency: 71
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 175910
-Overall latency: 808010
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 33
-Average Overall latency: 75
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 194080
-Overall latency: 826180
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 36
-Average Overall latency: 76
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 159060
-Overall latency: 791160
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 29
-Average Overall latency: 73
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 127730
-Overall latency: 759830
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 24
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 20.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 632100
-Read latency: 108170
-Overall latency: 740270
-Read Count: 5400
-Write Count: 5400
-Average Write latency: 117
-Average Read latency: 20
-Average Overall latency: 69
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 534605
-Read latency: 272135
-Overall latency: 806740
-Read Count: 4550
-Write Count: 4550
-Average Write latency: 117
-Average Read latency: 60
-Average Overall latency: 89
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 535265
-Read latency: 269685
-Overall latency: 804950
-Read Count: 4566
-Write Count: 4566
-Average Write latency: 117
-Average Read latency: 59
-Average Overall latency: 88
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 534850
-Read latency: 233560
-Overall latency: 768410
-Read Count: 4557
-Write Count: 4557
-Average Write latency: 117
-Average Read latency: 51
-Average Overall latency: 84
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 538415
-Read latency: 137410
-Overall latency: 675825
-Read Count: 4586
-Write Count: 4586
-Average Write latency: 117
-Average Read latency: 30
-Average Overall latency: 74
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 535065
-Read latency: 116640
-Overall latency: 651705
-Read Count: 4557
-Write Count: 4557
-Average Write latency: 117
-Average Read latency: 26
-Average Overall latency: 72
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 538565
-Read latency: 243615
-Overall latency: 782180
-Read Count: 4590
-Write Count: 4590
-Average Write latency: 117
-Average Read latency: 53
-Average Overall latency: 85
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 538505
-Read latency: 239190
-Overall latency: 777695
-Read Count: 4592
-Write Count: 4592
-Average Write latency: 117
-Average Read latency: 52
-Average Overall latency: 85
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 533830
-Read latency: 187940
-Overall latency: 721770
-Read Count: 4548
-Write Count: 4548
-Average Write latency: 117
-Average Read latency: 41
-Average Overall latency: 79
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 534680
-Read latency: 131820
-Overall latency: 666500
-Read Count: 4556
-Write Count: 4556
-Average Write latency: 117
-Average Read latency: 29
-Average Overall latency: 73
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 535050
-Read latency: 118355
-Overall latency: 653405
-Read Count: 4562
-Write Count: 4562
-Average Write latency: 117
-Average Read latency: 26
-Average Overall latency: 72
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 535320
-Read latency: 165885
-Overall latency: 701205
-Read Count: 4559
-Write Count: 4559
-Average Write latency: 117
-Average Read latency: 36
-Average Overall latency: 77
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 536705
-Read latency: 151190
-Overall latency: 687895
-Read Count: 4592
-Write Count: 4592
-Average Write latency: 117
-Average Read latency: 33
-Average Overall latency: 75
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 534600
-Read latency: 136885
-Overall latency: 671485
-Read Count: 4563
-Write Count: 4563
-Average Write latency: 117
-Average Read latency: 30
-Average Overall latency: 74
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 533830
-Read latency: 102415
-Overall latency: 636245
-Read Count: 4555
-Write Count: 4555
-Average Write latency: 117
-Average Read latency: 22
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 537785
-Read latency: 95800
-Overall latency: 633585
-Read Count: 4588
-Write Count: 4588
-Average Write latency: 117
-Average Read latency: 21
-Average Overall latency: 69
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 471955
-Read latency: 244555
-Overall latency: 716510
-Read Count: 4054
-Write Count: 4054
-Average Write latency: 116
-Average Read latency: 60
-Average Overall latency: 88
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 476260
-Read latency: 229880
-Overall latency: 706140
-Read Count: 4082
-Write Count: 4082
-Average Write latency: 117
-Average Read latency: 56
-Average Overall latency: 86
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 483970
-Read latency: 148270
-Overall latency: 632240
-Read Count: 4144
-Write Count: 4144
-Average Write latency: 117
-Average Read latency: 36
-Average Overall latency: 76
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 473395
-Read latency: 105185
-Overall latency: 578580
-Read Count: 4053
-Write Count: 4053
-Average Write latency: 117
-Average Read latency: 26
-Average Overall latency: 71
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 474330
-Read latency: 73520
-Overall latency: 547850
-Read Count: 4069
-Write Count: 4069
-Average Write latency: 117
-Average Read latency: 18
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1254
+Write+Reply Count: 6734
+Overall Count: 12214
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 154
+Average Write+Reply latency: 29
 Average Overall latency: 67
 ----------------------------------------------------------------------------------
 offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 472165
-Read latency: 204680
-Overall latency: 676845
-Read Count: 4054
-Write Count: 4054
-Average Write latency: 116
-Average Read latency: 50
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 476710
-Read latency: 199855
-Overall latency: 676565
-Read Count: 4082
-Write Count: 4082
-Average Write latency: 117
-Average Read latency: 49
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 473930
-Read latency: 110440
-Overall latency: 584370
-Read Count: 4058
-Write Count: 4058
-Average Write latency: 117
-Average Read latency: 27
-Average Overall latency: 72
-----------------------------------------------------------------------------------
-offload: true
 HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
+HGW_Storage_Compression: 20.0
 HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
+HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 474720
-Read latency: 105290
-Overall latency: 580010
-Read Count: 4067
-Write Count: 4067
-Average Write latency: 117
-Average Read latency: 26
-Average Overall latency: 71
+Read latency: 621100
+Write latency: 0
+Reply latency: 129310
+Write+Reply latency: 129310
+Overall latency: 750410
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1786
+Write+Reply Count: 7266
+Overall Count: 12746
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 72
+Average Write+Reply latency: 18
+Average Overall latency: 59
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
+HGW_Storage_Compression: 20.0
 HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
+HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 475340
-Read latency: 65845
-Overall latency: 541185
-Read Count: 4064
-Write Count: 4064
-Average Write latency: 117
-Average Read latency: 16
-Average Overall latency: 67
+Read latency: 621100
+Write latency: 0
+Reply latency: 116320
+Write+Reply latency: 116320
+Overall latency: 737420
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1028
+Write+Reply Count: 6508
+Overall Count: 11988
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 113
+Average Write+Reply latency: 18
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 477915
-Read latency: 138275
-Overall latency: 616190
-Read Count: 4090
-Write Count: 4090
-Average Write latency: 117
-Average Read latency: 34
-Average Overall latency: 75
+Read latency: 621100
+Write latency: 0
+Reply latency: 324950
+Write+Reply latency: 324950
+Overall latency: 946050
+Read Count: 5480
+Write Count: 5480
+Reply Count: 4226
+Write+Reply Count: 9706
+Overall Count: 15186
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 77
+Average Write+Reply latency: 33
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 473030
-Read latency: 135785
-Overall latency: 608815
-Read Count: 4048
-Write Count: 4048
-Average Write latency: 117
-Average Read latency: 34
-Average Overall latency: 75
+Read latency: 621100
+Write latency: 0
+Reply latency: 324380
+Write+Reply latency: 324380
+Overall latency: 945480
+Read Count: 5480
+Write Count: 5480
+Reply Count: 3334
+Write+Reply Count: 8814
+Overall Count: 14294
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 97
+Average Write+Reply latency: 37
+Average Overall latency: 66
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 478020
-Read latency: 85770
-Overall latency: 563790
-Read Count: 4095
-Write Count: 4095
-Average Write latency: 117
-Average Read latency: 21
-Average Overall latency: 69
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 476925
-Read latency: 83080
-Overall latency: 560005
-Read Count: 4090
-Write Count: 4090
-Average Write latency: 117
-Average Read latency: 20
+Read latency: 621100
+Write latency: 0
+Reply latency: 269300
+Write+Reply latency: 269300
+Overall latency: 890400
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2136
+Write+Reply Count: 7616
+Overall Count: 13096
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 126
+Average Write+Reply latency: 35
 Average Overall latency: 68
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 164550
+Write+Reply latency: 164550
+Overall latency: 785650
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2854
+Write+Reply Count: 8334
+Overall Count: 13814
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 58
+Average Write+Reply latency: 20
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.5
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 143220
+Write+Reply latency: 143220
+Overall latency: 764320
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1626
+Write+Reply Count: 7106
+Overall Count: 12586
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 88
+Average Write+Reply latency: 20
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 273390
+Write+Reply latency: 273390
+Overall latency: 894490
+Read Count: 5480
+Write Count: 5480
+Reply Count: 3174
+Write+Reply Count: 8654
+Overall Count: 14134
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 86
+Average Write+Reply latency: 32
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 276100
+Write+Reply latency: 276100
+Overall latency: 897200
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2448
+Write+Reply Count: 7928
+Overall Count: 13408
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 113
+Average Write+Reply latency: 35
+Average Overall latency: 67
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 230120
+Write+Reply latency: 230120
+Overall latency: 851220
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1638
+Write+Reply Count: 7118
+Overall Count: 12598
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 140
+Average Write+Reply latency: 32
+Average Overall latency: 68
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 160250
+Write+Reply latency: 160250
+Overall latency: 781350
+Read Count: 5480
+Write Count: 5480
+Reply Count: 2514
+Write+Reply Count: 7994
+Overall Count: 13474
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 64
+Average Write+Reply latency: 20
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 135730
+Write+Reply latency: 135730
+Overall latency: 756830
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1382
+Write+Reply Count: 6862
+Overall Count: 12342
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 98
+Average Write+Reply latency: 20
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 476280
-Read latency: 59975
-Overall latency: 536255
-Read Count: 4073
-Write Count: 4073
-Average Write latency: 117
-Average Read latency: 15
+Read latency: 621100
+Write latency: 0
+Reply latency: 186220
+Write+Reply latency: 186220
+Overall latency: 807320
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1876
+Write+Reply Count: 7356
+Overall Count: 12836
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 99
+Average Write+Reply latency: 25
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 189610
+Write+Reply latency: 189610
+Overall latency: 810710
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1400
+Write+Reply Count: 6880
+Overall Count: 12360
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 135
+Average Write+Reply latency: 28
 Average Overall latency: 66
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 146070
+Write+Reply latency: 146070
+Overall latency: 767170
+Read Count: 5480
+Write Count: 5480
+Reply Count: 938
+Write+Reply Count: 6418
+Overall Count: 11898
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 156
+Average Write+Reply latency: 23
+Average Overall latency: 64
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 137240
+Write+Reply latency: 137240
+Overall latency: 758340
+Read Count: 5480
+Write Count: 5480
+Reply Count: 1886
+Write+Reply Count: 7366
+Overall Count: 12846
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 73
+Average Write+Reply latency: 19
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 20.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 621100
+Write latency: 0
+Reply latency: 99310
+Write+Reply latency: 99310
+Overall latency: 720410
+Read Count: 5480
+Write Count: 5480
+Reply Count: 854
+Write+Reply Count: 6334
+Overall Count: 11814
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 116
+Average Write+Reply latency: 16
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 20.0
 HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
+HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 412245
-Read latency: 212020
-Overall latency: 624265
-Read Count: 3559
-Write Count: 3559
-Average Write latency: 116
-Average Read latency: 60
-Average Overall latency: 88
+Read latency: 524780
+Write latency: 0
+Reply latency: 274185
+Write+Reply latency: 274185
+Overall latency: 798965
+Read Count: 4611
+Write Count: 4611
+Reply Count: 3642
+Write+Reply Count: 8253
+Overall Count: 12864
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 75
+Average Write+Reply latency: 33
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 30.0
 HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
+HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 409010
-Read latency: 167435
-Overall latency: 576445
-Read Count: 3545
-Write Count: 3545
-Average Write latency: 115
-Average Read latency: 47
-Average Overall latency: 81
+Read latency: 524520
+Write latency: 0
+Reply latency: 261770
+Write+Reply latency: 261770
+Overall latency: 786290
+Read Count: 4626
+Write Count: 4626
+Reply Count: 2610
+Write+Reply Count: 7236
+Overall Count: 11862
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 100
+Average Write+Reply latency: 36
+Average Overall latency: 66
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 40.0
 HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
+HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 413750
-Read latency: 32325
-Overall latency: 446075
-Read Count: 3578
-Write Count: 3578
-Average Write latency: 116
-Average Read latency: 9
-Average Overall latency: 62
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 415935
-Read latency: 77695
-Overall latency: 493630
-Read Count: 3587
-Write Count: 3587
-Average Write latency: 116
-Average Read latency: 22
+Read latency: 526760
+Write latency: 0
+Reply latency: 246360
+Write+Reply latency: 246360
+Overall latency: 773120
+Read Count: 4624
+Write Count: 4624
+Reply Count: 1950
+Write+Reply Count: 6574
+Overall Count: 11198
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 126
+Average Write+Reply latency: 37
 Average Overall latency: 69
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Max_Threshold: 30.0
 HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
+HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 411480
-Read latency: 18505
-Overall latency: 429985
-Read Count: 3552
-Write Count: 3552
-Average Write latency: 116
-Average Read latency: 5
+Read latency: 530020
+Write latency: 0
+Reply latency: 137495
+Write+Reply latency: 137495
+Overall latency: 667515
+Read Count: 4668
+Write Count: 4668
+Reply Count: 2397
+Write+Reply Count: 7065
+Overall Count: 11733
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 57
+Average Write+Reply latency: 19
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 529800
+Write latency: 0
+Reply latency: 123930
+Write+Reply latency: 123930
+Overall latency: 653730
+Read Count: 4660
+Write Count: 4660
+Reply Count: 1418
+Write+Reply Count: 6078
+Overall Count: 10738
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 87
+Average Write+Reply latency: 20
 Average Overall latency: 61
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 20.0
 HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
+HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 416850
-Read latency: 170730
-Overall latency: 587580
-Read Count: 3587
-Write Count: 3587
-Average Write latency: 116
-Average Read latency: 48
-Average Overall latency: 82
+Read latency: 525650
+Write latency: 0
+Reply latency: 233335
+Write+Reply latency: 233335
+Overall latency: 758985
+Read Count: 4623
+Write Count: 4623
+Reply Count: 2686
+Write+Reply Count: 7309
+Overall Count: 11932
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 87
+Average Write+Reply latency: 32
+Average Overall latency: 64
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 30.0
 HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
+HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 412100
-Read latency: 143660
-Overall latency: 555760
-Read Count: 3554
-Write Count: 3554
-Average Write latency: 116
-Average Read latency: 40
-Average Overall latency: 78
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 413265
-Read latency: 35660
-Overall latency: 448925
-Read Count: 3564
-Write Count: 3564
-Average Write latency: 116
-Average Read latency: 10
-Average Overall latency: 63
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 412845
-Read latency: 70400
-Overall latency: 483245
-Read Count: 3580
-Write Count: 3580
-Average Write latency: 115
-Average Read latency: 20
-Average Overall latency: 67
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 410380
-Read latency: 22520
-Overall latency: 432900
-Read Count: 3542
-Write Count: 3542
-Average Write latency: 116
-Average Read latency: 6
-Average Overall latency: 61
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 413840
-Read latency: 122970
-Overall latency: 536810
-Read Count: 3549
-Write Count: 3549
-Average Write latency: 117
-Average Read latency: 35
-Average Overall latency: 76
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 414715
-Read latency: 106820
-Overall latency: 521535
-Read Count: 3571
-Write Count: 3571
-Average Write latency: 116
-Average Read latency: 30
-Average Overall latency: 73
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 419740
-Read latency: 36085
-Overall latency: 455825
-Read Count: 3621
-Write Count: 3621
-Average Write latency: 116
-Average Read latency: 10
-Average Overall latency: 63
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 406975
-Read latency: 51130
-Overall latency: 458105
-Read Count: 3513
-Write Count: 3513
-Average Write latency: 116
-Average Read latency: 15
-Average Overall latency: 65
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 40.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 413045
-Read latency: 16535
-Overall latency: 429580
-Read Count: 3566
-Write Count: 3566
-Average Write latency: 116
-Average Read latency: 5
-Average Overall latency: 60
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 536320
-Read latency: 259120
-Overall latency: 795440
-Read Count: 4574
-Write Count: 4574
-Average Write latency: 117
-Average Read latency: 57
-Average Overall latency: 87
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 536330
-Read latency: 244285
-Overall latency: 780615
-Read Count: 4564
-Write Count: 4564
-Average Write latency: 118
-Average Read latency: 54
-Average Overall latency: 86
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 531315
-Read latency: 150935
-Overall latency: 682250
-Read Count: 4524
-Write Count: 4524
-Average Write latency: 117
-Average Read latency: 33
-Average Overall latency: 75
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 528285
-Read latency: 104485
-Overall latency: 632770
-Read Count: 4505
-Write Count: 4505
-Average Write latency: 117
-Average Read latency: 23
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 534305
-Read latency: 80670
-Overall latency: 614975
-Read Count: 4559
-Write Count: 4559
-Average Write latency: 117
-Average Read latency: 18
+Read latency: 530710
+Write latency: 0
+Reply latency: 231150
+Write+Reply latency: 231150
+Overall latency: 761860
+Read Count: 4656
+Write Count: 4656
+Reply Count: 2019
+Write+Reply Count: 6675
+Overall Count: 11331
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 114
+Average Write+Reply latency: 35
 Average Overall latency: 67
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 535855
-Read latency: 223605
-Overall latency: 759460
-Read Count: 4560
-Write Count: 4560
-Average Write latency: 118
-Average Read latency: 49
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 533560
-Read latency: 216675
-Overall latency: 750235
-Read Count: 4544
-Write Count: 4544
-Average Write latency: 117
-Average Read latency: 48
-Average Overall latency: 83
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
+HGW_Storage_Compression: 40.0
 HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 536310
-Read latency: 134485
-Overall latency: 670795
-Read Count: 4581
-Write Count: 4581
-Average Write latency: 117
-Average Read latency: 29
-Average Overall latency: 73
+Read latency: 527175
+Write latency: 0
+Reply latency: 199805
+Write+Reply latency: 199805
+Overall latency: 726980
+Read Count: 4627
+Write Count: 4627
+Reply Count: 1381
+Write+Reply Count: 6008
+Overall Count: 10635
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 145
+Average Write+Reply latency: 33
+Average Overall latency: 68
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
+HGW_Storage_Compression: 40.0
 HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 534550
-Read latency: 106010
-Overall latency: 640560
-Read Count: 4554
-Write Count: 4554
-Average Write latency: 117
-Average Read latency: 23
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 534675
-Read latency: 72890
-Overall latency: 607565
-Read Count: 4558
-Write Count: 4558
-Average Write latency: 117
-Average Read latency: 16
-Average Overall latency: 67
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 537565
-Read latency: 162665
-Overall latency: 700230
-Read Count: 4585
-Write Count: 4585
-Average Write latency: 117
-Average Read latency: 35
-Average Overall latency: 76
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 535090
-Read latency: 140465
-Overall latency: 675555
-Read Count: 4559
-Write Count: 4559
-Average Write latency: 117
-Average Read latency: 31
-Average Overall latency: 74
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 539885
-Read latency: 103540
-Overall latency: 643425
-Read Count: 4608
-Write Count: 4608
-Average Write latency: 117
-Average Read latency: 22
-Average Overall latency: 70
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.3
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 543725
-Read latency: 93845
-Overall latency: 637570
+Read latency: 527865
+Write latency: 0
+Reply latency: 130385
+Write+Reply latency: 130385
+Overall latency: 658250
 Read Count: 4630
 Write Count: 4630
-Average Write latency: 117
-Average Read latency: 20
-Average Overall latency: 69
+Reply Count: 2109
+Write+Reply Count: 6739
+Overall Count: 11369
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 62
+Average Write+Reply latency: 19
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 525590
+Write latency: 0
+Reply latency: 119395
+Write+Reply latency: 119395
+Overall latency: 644985
+Read Count: 4634
+Write Count: 4634
+Reply Count: 1212
+Write+Reply Count: 5846
+Overall Count: 10480
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 99
+Average Write+Reply latency: 20
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 532070
+Write latency: 0
+Reply latency: 166815
+Write+Reply latency: 166815
+Overall latency: 698885
+Read Count: 4674
+Write Count: 4674
+Reply Count: 1729
+Write+Reply Count: 6403
+Overall Count: 11077
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 96
+Average Write+Reply latency: 26
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 528015
+Write latency: 0
+Reply latency: 167660
+Write+Reply latency: 167660
+Overall latency: 695675
+Read Count: 4654
+Write Count: 4654
+Reply Count: 1279
+Write+Reply Count: 5933
+Overall Count: 10587
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 131
+Average Write+Reply latency: 28
+Average Overall latency: 66
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 531280
+Write latency: 0
+Reply latency: 141660
+Write+Reply latency: 141660
+Overall latency: 672940
+Read Count: 4664
+Write Count: 4664
+Reply Count: 893
+Write+Reply Count: 5557
+Overall Count: 10221
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 159
+Average Write+Reply latency: 25
+Average Overall latency: 66
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 525060
+Write latency: 0
+Reply latency: 96785
+Write+Reply latency: 96785
+Overall latency: 621845
+Read Count: 4607
+Write Count: 4607
+Reply Count: 1342
+Write+Reply Count: 5949
+Overall Count: 10556
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 72
+Average Write+Reply latency: 16
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 527810
+Write latency: 0
+Reply latency: 89160
+Write+Reply latency: 89160
+Overall latency: 616970
+Read Count: 4637
+Write Count: 4637
+Reply Count: 778
+Write+Reply Count: 5415
+Overall Count: 10052
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 115
+Average Write+Reply latency: 16
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 467715
+Write latency: 0
+Reply latency: 243335
+Write+Reply latency: 243335
+Overall latency: 711050
+Read Count: 4132
+Write Count: 4132
+Reply Count: 3130
+Write+Reply Count: 7262
+Overall Count: 11394
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 78
+Average Write+Reply latency: 34
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 462175
+Write latency: 0
+Reply latency: 221300
+Write+Reply latency: 221300
+Overall latency: 683475
+Read Count: 4070
+Write Count: 4070
+Reply Count: 2134
+Write+Reply Count: 6204
+Overall Count: 10274
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 104
+Average Write+Reply latency: 36
+Average Overall latency: 67
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 476460
+Write latency: 0
+Reply latency: 149860
+Write+Reply latency: 149860
+Overall latency: 626320
+Read Count: 4208
+Write Count: 4208
+Reply Count: 1206
+Write+Reply Count: 5414
+Overall Count: 9622
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 124
+Average Write+Reply latency: 28
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 466495
+Write latency: 0
+Reply latency: 108465
+Write+Reply latency: 108465
+Overall latency: 574960
+Read Count: 4140
+Write Count: 4140
+Reply Count: 1914
+Write+Reply Count: 6054
+Overall Count: 10194
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 57
+Average Write+Reply latency: 18
+Average Overall latency: 56
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 468170
+Write latency: 0
+Reply latency: 71080
+Write+Reply latency: 71080
+Overall latency: 539250
+Read Count: 4138
+Write Count: 4138
+Reply Count: 802
+Write+Reply Count: 4940
+Overall Count: 9078
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 89
+Average Write+Reply latency: 14
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 467295
+Write latency: 0
+Reply latency: 208240
+Write+Reply latency: 208240
+Overall latency: 675535
+Read Count: 4142
+Write Count: 4142
+Reply Count: 2351
+Write+Reply Count: 6493
+Overall Count: 10635
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 89
+Average Write+Reply latency: 32
+Average Overall latency: 64
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 466245
+Write latency: 0
+Reply latency: 192090
+Write+Reply latency: 192090
+Overall latency: 658335
+Read Count: 4119
+Write Count: 4119
+Reply Count: 1618
+Write+Reply Count: 5737
+Overall Count: 9856
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 119
+Average Write+Reply latency: 33
+Average Overall latency: 67
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 471490
+Write latency: 0
+Reply latency: 131280
+Write+Reply latency: 131280
+Overall latency: 602770
+Read Count: 4166
+Write Count: 4166
+Reply Count: 904
+Write+Reply Count: 5070
+Overall Count: 9236
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 145
+Average Write+Reply latency: 26
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 464510
+Write latency: 0
+Reply latency: 102775
+Write+Reply latency: 102775
+Overall latency: 567285
+Read Count: 4120
+Write Count: 4120
+Reply Count: 1590
+Write+Reply Count: 5710
+Overall Count: 9830
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 65
+Average Write+Reply latency: 18
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 460910
+Write latency: 0
+Reply latency: 61365
+Write+Reply latency: 61365
+Overall latency: 522275
+Read Count: 4086
+Write Count: 4086
+Reply Count: 629
+Write+Reply Count: 4715
+Overall Count: 8801
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 98
+Average Write+Reply latency: 13
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 464615
+Write latency: 0
+Reply latency: 145045
+Write+Reply latency: 145045
+Overall latency: 609660
+Read Count: 4123
+Write Count: 4123
+Reply Count: 1469
+Write+Reply Count: 5592
+Overall Count: 9715
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 99
+Average Write+Reply latency: 26
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 472120
+Write latency: 0
+Reply latency: 132405
+Write+Reply latency: 132405
+Overall latency: 604525
+Read Count: 4179
+Write Count: 4179
+Reply Count: 967
+Write+Reply Count: 5146
+Overall Count: 9325
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 137
+Average Write+Reply latency: 26
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 464535
+Write latency: 0
+Reply latency: 74740
+Write+Reply latency: 74740
+Overall latency: 539275
+Read Count: 4119
+Write Count: 4119
+Reply Count: 472
+Write+Reply Count: 4591
+Overall Count: 8710
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 158
+Average Write+Reply latency: 16
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 468195
+Write latency: 0
+Reply latency: 86200
+Write+Reply latency: 86200
+Overall latency: 554395
+Read Count: 4154
+Write Count: 4154
+Reply Count: 1212
+Write+Reply Count: 5366
+Overall Count: 9520
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 71
+Average Write+Reply latency: 16
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 465305
+Write latency: 0
+Reply latency: 51300
+Write+Reply latency: 51300
+Overall latency: 516605
+Read Count: 4116
+Write Count: 4116
+Reply Count: 429
+Write+Reply Count: 4545
+Overall Count: 8661
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 120
+Average Write+Reply latency: 11
+Average Overall latency: 60
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 410305
+Write latency: 0
+Reply latency: 209435
+Write+Reply latency: 209435
+Overall latency: 619740
+Read Count: 3654
+Write Count: 3654
+Reply Count: 2617
+Write+Reply Count: 6271
+Overall Count: 9925
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 80
+Average Write+Reply latency: 33
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 404770
+Write latency: 0
+Reply latency: 173040
+Write+Reply latency: 173040
+Overall latency: 577810
+Read Count: 3613
+Write Count: 3613
+Reply Count: 1552
+Write+Reply Count: 5165
+Overall Count: 8778
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 111
+Average Write+Reply latency: 34
+Average Overall latency: 66
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 409420
+Write latency: 0
+Reply latency: 47805
+Write+Reply latency: 47805
+Overall latency: 457225
+Read Count: 3656
+Write Count: 3656
+Reply Count: 385
+Write+Reply Count: 4041
+Overall Count: 7697
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 124
+Average Write+Reply latency: 12
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 404330
+Write latency: 0
+Reply latency: 67195
+Write+Reply latency: 67195
+Overall latency: 471525
+Read Count: 3607
+Write Count: 3607
+Reply Count: 1212
+Write+Reply Count: 4819
+Overall Count: 8426
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 55
+Average Write+Reply latency: 14
+Average Overall latency: 56
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 405940
+Write latency: 0
+Reply latency: 21835
+Write+Reply latency: 21835
+Overall latency: 427775
+Read Count: 3631
+Write Count: 3631
+Reply Count: 252
+Write+Reply Count: 3883
+Overall Count: 7514
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 87
+Average Write+Reply latency: 6
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 410775
+Write latency: 0
+Reply latency: 183060
+Write+Reply latency: 183060
+Overall latency: 593835
+Read Count: 3676
+Write Count: 3676
+Reply Count: 1992
+Write+Reply Count: 5668
+Overall Count: 9344
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 92
+Average Write+Reply latency: 32
+Average Overall latency: 64
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 405370
+Write latency: 0
+Reply latency: 146820
+Write+Reply latency: 146820
+Overall latency: 552190
+Read Count: 3635
+Write Count: 3635
+Reply Count: 1167
+Write+Reply Count: 4802
+Overall Count: 8437
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 126
+Average Write+Reply latency: 31
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 408450
+Write latency: 0
+Reply latency: 39705
+Write+Reply latency: 39705
+Overall latency: 448155
+Read Count: 3646
+Write Count: 3646
+Reply Count: 282
+Write+Reply Count: 3928
+Overall Count: 7574
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 141
+Average Write+Reply latency: 10
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 407535
+Write latency: 0
+Reply latency: 65860
+Write+Reply latency: 65860
+Overall latency: 473395
+Read Count: 3650
+Write Count: 3650
+Reply Count: 1078
+Write+Reply Count: 4728
+Overall Count: 8378
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 61
+Average Write+Reply latency: 14
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 406135
+Write latency: 0
+Reply latency: 17695
+Write+Reply latency: 17695
+Overall latency: 423830
+Read Count: 3625
+Write Count: 3625
+Reply Count: 182
+Write+Reply Count: 3807
+Overall Count: 7432
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 97
+Average Write+Reply latency: 5
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 403565
+Write latency: 0
+Reply latency: 122030
+Write+Reply latency: 122030
+Overall latency: 525595
+Read Count: 3621
+Write Count: 3621
+Reply Count: 1153
+Write+Reply Count: 4774
+Overall Count: 8395
+Average Read latency: 111
+Average Write latency: 0
+Average Reply latency: 106
+Average Write+Reply latency: 26
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 404820
+Write latency: 0
+Reply latency: 105225
+Write+Reply latency: 105225
+Overall latency: 510045
+Read Count: 3629
+Write Count: 3629
+Reply Count: 741
+Write+Reply Count: 4370
+Overall Count: 7999
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 142
+Average Write+Reply latency: 24
+Average Overall latency: 64
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 410410
+Write latency: 0
+Reply latency: 29155
+Write+Reply latency: 29155
+Overall latency: 439565
+Read Count: 3667
+Write Count: 3667
+Reply Count: 189
+Write+Reply Count: 3856
+Overall Count: 7523
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 154
+Average Write+Reply latency: 8
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 405755
+Write latency: 0
+Reply latency: 55850
+Write+Reply latency: 55850
+Overall latency: 461605
+Read Count: 3627
+Write Count: 3627
+Reply Count: 767
+Write+Reply Count: 4394
+Overall Count: 8021
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 73
+Average Write+Reply latency: 13
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 40.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 398290
+Write latency: 0
+Reply latency: 12390
+Write+Reply latency: 12390
+Overall latency: 410680
+Read Count: 3560
+Write Count: 3560
+Reply Count: 104
+Write+Reply Count: 3664
+Overall Count: 7224
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 119
+Average Write+Reply latency: 3
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 527885
+Write latency: 0
+Reply latency: 259610
+Write+Reply latency: 259610
+Overall latency: 787495
+Read Count: 4653
+Write Count: 4653
+Reply Count: 3476
+Write+Reply Count: 8129
+Overall Count: 12782
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 75
+Average Write+Reply latency: 32
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 526845
+Write latency: 0
+Reply latency: 247775
+Write+Reply latency: 247775
+Overall latency: 774620
+Read Count: 4639
+Write Count: 4639
+Reply Count: 2475
+Write+Reply Count: 7114
+Overall Count: 11753
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 100
+Average Write+Reply latency: 35
+Average Overall latency: 66
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 527695
+Write latency: 0
+Reply latency: 151550
+Write+Reply latency: 151550
+Overall latency: 679245
+Read Count: 4633
+Write Count: 4633
+Reply Count: 1222
+Write+Reply Count: 5855
+Overall Count: 10488
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 124
+Average Write+Reply latency: 26
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 526100
+Write latency: 0
+Reply latency: 110440
+Write+Reply latency: 110440
+Overall latency: 636540
+Read Count: 4637
+Write Count: 4637
+Reply Count: 2053
+Write+Reply Count: 6690
+Overall Count: 11327
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 54
+Average Write+Reply latency: 17
+Average Overall latency: 56
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 525220
+Write latency: 0
+Reply latency: 84220
+Write+Reply latency: 84220
+Overall latency: 609440
+Read Count: 4628
+Write Count: 4628
+Reply Count: 948
+Write+Reply Count: 5576
+Overall Count: 10204
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 89
+Average Write+Reply latency: 15
+Average Overall latency: 60
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 526160
+Write latency: 0
+Reply latency: 219680
+Write+Reply latency: 219680
+Overall latency: 745840
+Read Count: 4629
+Write Count: 4629
+Reply Count: 2546
+Write+Reply Count: 7175
+Overall Count: 11804
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 86
+Average Write+Reply latency: 31
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 527735
+Write latency: 0
+Reply latency: 211565
+Write+Reply latency: 211565
+Overall latency: 739300
+Read Count: 4642
+Write Count: 4642
+Reply Count: 1772
+Write+Reply Count: 6414
+Overall Count: 11056
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 119
+Average Write+Reply latency: 33
+Average Overall latency: 67
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 524405
+Write latency: 0
+Reply latency: 128330
+Write+Reply latency: 128330
+Overall latency: 652735
+Read Count: 4607
+Write Count: 4607
+Reply Count: 906
+Write+Reply Count: 5513
+Overall Count: 10120
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 142
+Average Write+Reply latency: 23
+Average Overall latency: 64
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 528740
+Write latency: 0
+Reply latency: 103205
+Write+Reply latency: 103205
+Overall latency: 631945
+Read Count: 4646
+Write Count: 4646
+Reply Count: 1722
+Write+Reply Count: 6368
+Overall Count: 11014
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 60
+Average Write+Reply latency: 16
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 524155
+Write latency: 0
+Reply latency: 72980
+Write+Reply latency: 72980
+Overall latency: 597135
+Read Count: 4596
+Write Count: 4596
+Reply Count: 741
+Write+Reply Count: 5337
+Overall Count: 9933
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 98
+Average Write+Reply latency: 14
+Average Overall latency: 60
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 523745
+Write latency: 0
+Reply latency: 157490
+Write+Reply latency: 157490
+Overall latency: 681235
+Read Count: 4604
+Write Count: 4604
+Reply Count: 1663
+Write+Reply Count: 6267
+Overall Count: 10871
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 95
+Average Write+Reply latency: 25
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 524930
+Write latency: 0
+Reply latency: 145205
+Write+Reply latency: 145205
+Overall latency: 670135
+Read Count: 4627
+Write Count: 4627
+Reply Count: 1042
+Write+Reply Count: 5669
+Overall Count: 10296
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 139
+Average Write+Reply latency: 26
+Average Overall latency: 65
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 524835
+Write latency: 0
+Reply latency: 89455
+Write+Reply latency: 89455
+Overall latency: 614290
+Read Count: 4627
+Write Count: 4627
+Reply Count: 566
+Write+Reply Count: 5193
+Overall Count: 9820
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 158
+Average Write+Reply latency: 17
+Average Overall latency: 63
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.3
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 529570
+Write latency: 0
+Reply latency: 85665
+Write+Reply latency: 85665
+Overall latency: 615235
+Read Count: 4662
+Write Count: 4662
+Reply Count: 1249
+Write+Reply Count: 5911
+Overall Count: 10573
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 69
+Average Write+Reply latency: 14
+Average Overall latency: 58
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -1791,14 +2526,21 @@ HGW_Compression_Selection: 0.3
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 531665
-Read latency: 61885
-Overall latency: 593550
-Read Count: 4524
-Write Count: 4524
-Average Write latency: 118
-Average Read latency: 14
-Average Overall latency: 66
+Read latency: 529045
+Write latency: 0
+Reply latency: 65260
+Write+Reply latency: 65260
+Overall latency: 594305
+Read Count: 4659
+Write Count: 4659
+Reply Count: 580
+Write+Reply Count: 5239
+Overall Count: 9898
+Average Read latency: 114
+Average Write latency: 0
+Average Reply latency: 113
+Average Write+Reply latency: 12
+Average Overall latency: 60
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -1808,14 +2550,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 478610
-Read latency: 215995
-Overall latency: 694605
-Read Count: 4090
-Write Count: 4090
-Average Write latency: 117
-Average Read latency: 53
-Average Overall latency: 85
+Read latency: 465730
+Write latency: 0
+Reply latency: 206355
+Write+Reply latency: 206355
+Overall latency: 672085
+Read Count: 4125
+Write Count: 4125
+Reply Count: 2858
+Write+Reply Count: 6983
+Overall Count: 11108
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 72
+Average Write+Reply latency: 30
+Average Overall latency: 61
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -1825,33 +2574,47 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 478970
-Read latency: 178250
-Overall latency: 657220
-Read Count: 4090
-Write Count: 4090
-Average Write latency: 117
-Average Read latency: 44
-Average Overall latency: 80
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 472205
-Read latency: 49435
-Overall latency: 521640
-Read Count: 4037
-Write Count: 4037
-Average Write latency: 117
-Average Read latency: 12
+Read latency: 468640
+Write latency: 0
+Reply latency: 177790
+Write+Reply latency: 177790
+Overall latency: 646430
+Read Count: 4142
+Write Count: 4142
+Reply Count: 1702
+Write+Reply Count: 5844
+Overall Count: 9986
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 104
+Average Write+Reply latency: 30
 Average Overall latency: 65
 ----------------------------------------------------------------------------------
 offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 468985
+Write latency: 0
+Reply latency: 54685
+Write+Reply latency: 54685
+Overall latency: 523670
+Read Count: 4155
+Write Count: 4155
+Reply Count: 436
+Write+Reply Count: 4591
+Overall Count: 8746
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 125
+Average Write+Reply latency: 12
+Average Overall latency: 60
+----------------------------------------------------------------------------------
+offload: true
 HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 30.0
 HGW_Storage_Compression: 60.0
@@ -1859,14 +2622,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 472960
-Read latency: 62850
-Overall latency: 535810
-Read Count: 4058
-Write Count: 4058
-Average Write latency: 117
-Average Read latency: 15
-Average Overall latency: 66
+Read latency: 471315
+Write latency: 0
+Reply latency: 66985
+Write+Reply latency: 66985
+Overall latency: 538300
+Read Count: 4169
+Write Count: 4169
+Reply Count: 1427
+Write+Reply Count: 5596
+Overall Count: 9765
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 47
+Average Write+Reply latency: 12
+Average Overall latency: 55
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -1876,48 +2646,69 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 472065
-Read latency: 29175
-Overall latency: 501240
-Read Count: 4047
-Write Count: 4047
-Average Write latency: 117
-Average Read latency: 7
+Read latency: 463590
+Write latency: 0
+Reply latency: 28860
+Write+Reply latency: 28860
+Overall latency: 492450
+Read Count: 4115
+Write Count: 4115
+Reply Count: 330
+Write+Reply Count: 4445
+Overall Count: 8560
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 87
+Average Write+Reply latency: 6
+Average Overall latency: 58
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 465040
+Write latency: 0
+Reply latency: 176985
+Write+Reply latency: 176985
+Overall latency: 642025
+Read Count: 4129
+Write Count: 4129
+Reply Count: 2065
+Write+Reply Count: 6194
+Overall Count: 10323
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 86
+Average Write+Reply latency: 29
 Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 471610
-Read latency: 181955
-Overall latency: 653565
-Read Count: 4037
-Write Count: 4037
-Average Write latency: 117
-Average Read latency: 45
-Average Overall latency: 81
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
 HGW_Storage_Max_Threshold: 30.0
 HGW_Storage_Compression: 60.0
 HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 478615
-Read latency: 160515
-Overall latency: 639130
-Read Count: 4103
-Write Count: 4103
-Average Write latency: 117
-Average Read latency: 39
-Average Overall latency: 78
+Read latency: 467545
+Write latency: 0
+Reply latency: 155530
+Write+Reply latency: 155530
+Overall latency: 623075
+Read Count: 4136
+Write Count: 4136
+Reply Count: 1294
+Write+Reply Count: 5430
+Overall Count: 9566
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 120
+Average Write+Reply latency: 29
+Average Overall latency: 65
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -1927,14 +2718,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 476585
-Read latency: 43845
-Overall latency: 520430
-Read Count: 4081
-Write Count: 4081
-Average Write latency: 117
-Average Read latency: 11
-Average Overall latency: 64
+Read latency: 459595
+Write latency: 0
+Reply latency: 41810
+Write+Reply latency: 41810
+Overall latency: 501405
+Read Count: 4072
+Write Count: 4072
+Reply Count: 285
+Write+Reply Count: 4357
+Overall Count: 8429
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 147
+Average Write+Reply latency: 10
+Average Overall latency: 59
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -1944,14 +2742,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 470080
-Read latency: 60295
-Overall latency: 530375
-Read Count: 4033
-Write Count: 4033
-Average Write latency: 117
-Average Read latency: 15
-Average Overall latency: 66
+Read latency: 468400
+Write latency: 0
+Reply latency: 63550
+Write+Reply latency: 63550
+Overall latency: 531950
+Read Count: 4147
+Write Count: 4147
+Reply Count: 1184
+Write+Reply Count: 5331
+Overall Count: 9478
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 54
+Average Write+Reply latency: 12
+Average Overall latency: 56
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -1961,14 +2766,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.5
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 473675
-Read latency: 24925
-Overall latency: 498600
-Read Count: 4058
-Write Count: 4058
-Average Write latency: 117
-Average Read latency: 6
-Average Overall latency: 61
+Read latency: 465110
+Write latency: 0
+Reply latency: 23855
+Write+Reply latency: 23855
+Overall latency: 488965
+Read Count: 4107
+Write Count: 4107
+Reply Count: 238
+Write+Reply Count: 4345
+Overall Count: 8452
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 100
+Average Write+Reply latency: 5
+Average Overall latency: 58
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -1978,14 +2790,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 474790
-Read latency: 132325
-Overall latency: 607115
-Read Count: 4071
-Write Count: 4071
-Average Write latency: 117
-Average Read latency: 33
-Average Overall latency: 75
+Read latency: 469540
+Write latency: 0
+Reply latency: 128915
+Write+Reply latency: 128915
+Overall latency: 598455
+Read Count: 4167
+Write Count: 4167
+Reply Count: 1389
+Write+Reply Count: 5556
+Overall Count: 9723
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 93
+Average Write+Reply latency: 23
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -1995,33 +2814,47 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 478015
-Read latency: 112310
-Overall latency: 590325
-Read Count: 4098
-Write Count: 4098
-Average Write latency: 117
-Average Read latency: 27
-Average Overall latency: 72
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.5
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 480270
-Read latency: 34655
-Overall latency: 514925
-Read Count: 4110
-Write Count: 4110
-Average Write latency: 117
-Average Read latency: 8
+Read latency: 463855
+Write latency: 0
+Reply latency: 106260
+Write+Reply latency: 106260
+Overall latency: 570115
+Read Count: 4117
+Write Count: 4117
+Reply Count: 759
+Write+Reply Count: 4876
+Overall Count: 8993
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 140
+Average Write+Reply latency: 22
 Average Overall latency: 63
 ----------------------------------------------------------------------------------
 offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.5
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 465005
+Write latency: 0
+Reply latency: 26415
+Write+Reply latency: 26415
+Overall latency: 491420
+Read Count: 4110
+Write Count: 4110
+Reply Count: 164
+Write+Reply Count: 4274
+Overall Count: 8384
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 161
+Average Write+Reply latency: 6
+Average Overall latency: 59
+----------------------------------------------------------------------------------
+offload: true
 HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 30.0
 HGW_Storage_Compression: 60.0
@@ -2029,14 +2862,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 471080
-Read latency: 43775
-Overall latency: 514855
-Read Count: 4036
-Write Count: 4036
-Average Write latency: 117
-Average Read latency: 11
-Average Overall latency: 64
+Read latency: 469150
+Write latency: 0
+Reply latency: 46885
+Write+Reply latency: 46885
+Overall latency: 516035
+Read Count: 4157
+Write Count: 4157
+Reply Count: 802
+Write+Reply Count: 4959
+Overall Count: 9116
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 58
+Average Write+Reply latency: 9
+Average Overall latency: 57
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -2046,14 +2886,21 @@ HGW_Compression_Selection: 0.5
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 471570
-Read latency: 22585
-Overall latency: 494155
-Read Count: 4035
-Write Count: 4035
-Average Write latency: 117
-Average Read latency: 6
-Average Overall latency: 61
+Read latency: 469210
+Write latency: 0
+Reply latency: 22510
+Write+Reply latency: 22510
+Overall latency: 491720
+Read Count: 4166
+Write Count: 4166
+Reply Count: 200
+Write+Reply Count: 4366
+Overall Count: 8532
+Average Read latency: 113
+Average Write latency: 0
+Average Reply latency: 113
+Average Write+Reply latency: 5
+Average Overall latency: 58
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -2063,14 +2910,21 @@ HGW_Compression_Selection: 0.7
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 411345
-Read latency: 141255
-Overall latency: 552600
-Read Count: 3550
-Write Count: 3550
-Average Write latency: 116
-Average Read latency: 40
-Average Overall latency: 78
+Read latency: 405005
+Write latency: 0
+Reply latency: 141760
+Write+Reply latency: 141760
+Overall latency: 546765
+Read Count: 3614
+Write Count: 3614
+Reply Count: 1990
+Write+Reply Count: 5604
+Overall Count: 9218
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 71
+Average Write+Reply latency: 25
+Average Overall latency: 59
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -2080,14 +2934,21 @@ HGW_Compression_Selection: 0.7
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 414690
-Read latency: 93510
-Overall latency: 508200
-Read Count: 3581
-Write Count: 3581
-Average Write latency: 116
-Average Read latency: 26
-Average Overall latency: 71
+Read latency: 408030
+Write latency: 0
+Reply latency: 101145
+Write+Reply latency: 101145
+Overall latency: 509175
+Read Count: 3639
+Write Count: 3639
+Reply Count: 946
+Write+Reply Count: 4585
+Overall Count: 8224
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 107
+Average Write+Reply latency: 22
+Average Overall latency: 62
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 10.0
@@ -2097,14 +2958,21 @@ HGW_Compression_Selection: 0.7
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 412515
-Read latency: 8165
-Overall latency: 420680
-Read Count: 3559
-Write Count: 3559
-Average Write latency: 116
-Average Read latency: 2
-Average Overall latency: 59
+Read latency: 406040
+Write latency: 0
+Reply latency: 10295
+Write+Reply latency: 10295
+Overall latency: 416335
+Read Count: 3634
+Write Count: 3634
+Reply Count: 82
+Write+Reply Count: 3716
+Overall Count: 7350
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 126
+Average Write+Reply latency: 3
+Average Overall latency: 57
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
@@ -2114,199 +2982,283 @@ HGW_Compression_Selection: 0.7
 HGW_Critical_Selection: 0.3
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 413325
-Read latency: 21315
-Overall latency: 434640
+Read latency: 406470
+Write latency: 0
+Reply latency: 21180
+Write+Reply latency: 21180
+Overall latency: 427650
+Read Count: 3630
+Write Count: 3630
+Reply Count: 568
+Write+Reply Count: 4198
+Overall Count: 7828
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 37
+Average Write+Reply latency: 5
+Average Overall latency: 55
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.3
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 414080
+Write latency: 0
+Reply latency: 8130
+Write+Reply latency: 8130
+Overall latency: 422210
+Read Count: 3689
+Write Count: 3689
+Reply Count: 92
+Write+Reply Count: 3781
+Overall Count: 7470
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 88
+Average Write+Reply latency: 2
+Average Overall latency: 57
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 405235
+Write latency: 0
+Reply latency: 126770
+Write+Reply latency: 126770
+Overall latency: 532005
+Read Count: 3628
+Write Count: 3628
+Reply Count: 1522
+Write+Reply Count: 5150
+Overall Count: 8778
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 83
+Average Write+Reply latency: 25
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 403565
+Write latency: 0
+Reply latency: 78590
+Write+Reply latency: 78590
+Overall latency: 482155
+Read Count: 3609
+Write Count: 3609
+Reply Count: 616
+Write+Reply Count: 4225
+Overall Count: 7834
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 128
+Average Write+Reply latency: 19
+Average Overall latency: 62
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 404820
+Write latency: 0
+Reply latency: 6355
+Write+Reply latency: 6355
+Overall latency: 411175
+Read Count: 3619
+Write Count: 3619
+Reply Count: 44
+Write+Reply Count: 3663
+Overall Count: 7282
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 144
+Average Write+Reply latency: 2
+Average Overall latency: 56
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 406985
+Write latency: 0
+Reply latency: 21645
+Write+Reply latency: 21645
+Overall latency: 428630
+Read Count: 3632
+Write Count: 3632
+Reply Count: 521
+Write+Reply Count: 4153
+Overall Count: 7785
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 42
+Average Write+Reply latency: 5
+Average Overall latency: 55
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.5
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 405000
+Write latency: 0
+Reply latency: 3900
+Write+Reply latency: 3900
+Overall latency: 408900
+Read Count: 3603
+Write Count: 3603
+Reply Count: 37
+Write+Reply Count: 3640
+Overall Count: 7243
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 105
+Average Write+Reply latency: 1
+Average Overall latency: 56
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 20.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 408945
+Write latency: 0
+Reply latency: 92460
+Write+Reply latency: 92460
+Overall latency: 501405
+Read Count: 3653
+Write Count: 3653
+Reply Count: 974
+Write+Reply Count: 4627
+Overall Count: 8280
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 95
+Average Write+Reply latency: 20
+Average Overall latency: 61
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 404485
+Write latency: 0
+Reply latency: 52845
+Write+Reply latency: 52845
+Overall latency: 457330
+Read Count: 3606
+Write Count: 3606
+Reply Count: 385
+Write+Reply Count: 3991
+Overall Count: 7597
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 137
+Average Write+Reply latency: 13
+Average Overall latency: 60
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 10.0
+HGW_Storage_Max_Threshold: 40.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 407060
+Write latency: 0
+Reply latency: 4210
+Write+Reply latency: 4210
+Overall latency: 411270
+Read Count: 3634
+Write Count: 3634
+Reply Count: 29
+Write+Reply Count: 3663
+Overall Count: 7297
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 145
+Average Write+Reply latency: 1
+Average Overall latency: 56
+----------------------------------------------------------------------------------
+offload: true
+HGW_Storage_Min_Threshold: 20.0
+HGW_Storage_Max_Threshold: 30.0
+HGW_Storage_Compression: 60.0
+HGW_Compression_Selection: 0.7
+HGW_Critical_Selection: 0.7
+DataCons/DataProd: 1
+StorageMode: CloudStorage
+Read latency: 400140
+Write latency: 0
+Reply latency: 15925
+Write+Reply latency: 15925
+Overall latency: 416065
 Read Count: 3577
 Write Count: 3577
-Average Write latency: 116
-Average Read latency: 6
-Average Overall latency: 61
+Reply Count: 367
+Write+Reply Count: 3944
+Overall Count: 7521
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 43
+Average Write+Reply latency: 4
+Average Overall latency: 55
 ----------------------------------------------------------------------------------
 offload: true
 HGW_Storage_Min_Threshold: 20.0
 HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.3
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 415320
-Read latency: 4510
-Overall latency: 419830
-Read Count: 3585
-Write Count: 3585
-Average Write latency: 116
-Average Read latency: 1
-Average Overall latency: 59
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 412220
-Read latency: 119820
-Overall latency: 532040
-Read Count: 3557
-Write Count: 3557
-Average Write latency: 116
-Average Read latency: 34
-Average Overall latency: 75
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 412670
-Read latency: 78405
-Overall latency: 491075
-Read Count: 3557
-Write Count: 3557
-Average Write latency: 116
-Average Read latency: 22
-Average Overall latency: 69
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 414250
-Read latency: 11500
-Overall latency: 425750
-Read Count: 3569
-Write Count: 3569
-Average Write latency: 116
-Average Read latency: 3
-Average Overall latency: 60
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 413360
-Read latency: 18765
-Overall latency: 432125
-Read Count: 3563
-Write Count: 3563
-Average Write latency: 116
-Average Read latency: 5
-Average Overall latency: 61
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.5
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 414100
-Read latency: 4400
-Overall latency: 418500
-Read Count: 3569
-Write Count: 3569
-Average Write latency: 116
-Average Read latency: 1
-Average Overall latency: 59
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 20.0
 HGW_Storage_Compression: 60.0
 HGW_Compression_Selection: 0.7
 HGW_Critical_Selection: 0.7
 DataCons/DataProd: 1
 StorageMode: CloudStorage
-Write latency: 418235
-Read latency: 98445
-Overall latency: 516680
+Read latency: 404560
+Write latency: 0
+Reply latency: 3985
+Write+Reply latency: 3985
+Overall latency: 408545
 Read Count: 3616
 Write Count: 3616
-Average Write latency: 116
-Average Read latency: 27
-Average Overall latency: 71
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 415925
-Read latency: 56165
-Overall latency: 472090
-Read Count: 3576
-Write Count: 3576
-Average Write latency: 116
-Average Read latency: 16
-Average Overall latency: 66
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 10.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 417915
-Read latency: 8125
-Overall latency: 426040
-Read Count: 3602
-Write Count: 3602
-Average Write latency: 116
-Average Read latency: 2
-Average Overall latency: 59
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 30.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 410925
-Read latency: 18170
-Overall latency: 429095
-Read Count: 3556
-Write Count: 3556
-Average Write latency: 116
-Average Read latency: 5
-Average Overall latency: 60
-----------------------------------------------------------------------------------
-offload: true
-HGW_Storage_Min_Threshold: 20.0
-HGW_Storage_Max_Threshold: 40.0
-HGW_Storage_Compression: 60.0
-HGW_Compression_Selection: 0.7
-HGW_Critical_Selection: 0.7
-DataCons/DataProd: 1
-StorageMode: CloudStorage
-Write latency: 413805
-Read latency: 4340
-Overall latency: 418145
-Read Count: 3564
-Write Count: 3564
-Average Write latency: 116
-Average Read latency: 1
-Average Overall latency: 59
+Reply Count: 31
+Write+Reply Count: 3647
+Overall Count: 7263
+Average Read latency: 112
+Average Write latency: 0
+Average Reply latency: 129
+Average Write+Reply latency: 1
+Average Overall latency: 56
 ----------------------------------------------------------------------------------

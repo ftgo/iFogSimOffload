@@ -41,13 +41,9 @@ def column(data, i):
     return [row[i] for row in data]
 
 
-def path(folder, file):
-    return '{}/{}'.format(folder, file)
-
-
 def get_stats(folder=DIR_DEFAULT):
-    data = [[] for x in range(16)]
-    with open(path(folder, 'latencyStats500_1'), 'r') as f:
+    data = [[] for x in range(23)]
+    with open(os.path.join(folder, 'latencyStats500_1'), 'r') as f:
         line = 1
         while line:
             line = f.readline()
@@ -59,16 +55,24 @@ def get_stats(folder=DIR_DEFAULT):
             get_value(line, 'HGW_Storage_Compression', data[increment()])
             get_value(line, 'HGW_Compression_Selection', data[increment()])
             get_value(line, 'HGW_Critical_Selection', data[increment()])
-            get_value(line, 'Write latency', data[increment()])
             get_value(line, 'Read latency', data[increment()])
+            get_value(line, 'Write latency', data[increment()])
+            get_value(line, 'Reply latency', data[increment()])
+            get_value(line, 'Write+Reply latency', data[increment()])
             get_value(line, 'Overall latency', data[increment()])
             get_value(line, 'Read Count', data[increment()])
             get_value(line, 'Write Count', data[increment()])
-            get_value(line, 'Average Write latency', data[increment()])
+            get_value(line, 'Reply Count', data[increment()])
+            get_value(line, 'Write+Reply Count', data[increment()])
+            get_value(line, 'Overall Count', data[increment()])
             get_value(line, 'Average Read latency', data[increment()])
+            get_value(line, 'Average Write latency', data[increment()])
+            get_value(line, 'Average Reply latency', data[increment()])
+            get_value(line, 'Average Write+Reply latency', data[increment()])
             get_value(line, 'Average Overall latency', data[increment()])
+            j = 0
 
-    with open(path(folder, 'SimulationTime500_1'), 'r') as f:
+    with open(os.path.join(folder, 'SimulationTime500_1'), 'r') as f:
         line = 1
         j = increment()
         while line:
@@ -99,19 +103,22 @@ def get_stats(folder=DIR_DEFAULT):
     data[current()] = [int(v) for v in data[increment()]]
     data[current()] = [int(v) for v in data[increment()]]
     data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
+    data[current()] = [int(v) for v in data[increment()]]
 
     data = list(zip(*data))
 
     return data
 
 
-def get_pidstat(folder=DIR_DEFAULT):
-    return None
-
-
 def to_csv(folder=DIR_DEFAULT):
     data = get_stats(folder)
-    with open(path(folder, 'stats.csv'), 'w+') as f:
+    with open(os.path.join(folder, 'stats.csv'), 'w+') as f:
         w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         w.writerows(data)
 
@@ -120,7 +127,7 @@ def to_csv(folder=DIR_DEFAULT):
 
 def from_csv(folder=DIR_DEFAULT):
     data = []
-    with open(path(folder, 'stats.csv')) as file:
+    with open(os.path.join(folder, 'stats.csv')) as file:
         reader = csv.reader(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         for line in reader:
             data.append(line)
@@ -270,45 +277,88 @@ def plot_bars(data, x, y, title, series, folder=DIR_DEFAULT):
     plt.xticks(id + width / 2, vs_0)
     plt.ylabel(series)
     plt.legend(loc='best')
-    plt.savefig(path(folder, '{}_{}.png'.format(title, series.replace(' ', '_'))))
+    plt.savefig(os.path.join(folder, '{}_{}.png'.format(title, series.replace(' ', '_'))))
     # plt.show()
     plt.clf()
     plt.cla()
     plt.close()
 
 
-def plot_all(data, folder):
-    plot_bars(data, 4, 7, 'HGW_Storage_Compression', 'Write latency', folder)
-    plot_bars(data, 5, 7, 'HGW_Compression_Selection', 'Write latency', folder)
-    plot_bars(data, 6, 7, 'HGW_Critical_Selection', 'Write latency', folder)
-    plot_bars(data, 4, 8, 'HGW_Storage_Compression', 'Read latency', folder)
-    plot_bars(data, 5, 8, 'HGW_Compression_Selection', 'Read latency', folder)
-    plot_bars(data, 6, 8, 'HGW_Critical_Selection', 'Read latency', folder)
-    plot_bars(data, 4, 9, 'HGW_Storage_Compression', 'Overall latency', folder)
-    plot_bars(data, 5, 9, 'HGW_Compression_Selection', 'Overall latency', folder)
-    plot_bars(data, 6, 9, 'HGW_Critical_Selection', 'Overall latency', folder)
-    plot_bars(data, 4, 10, 'HGW_Storage_Compression', 'Read Count', folder)
-    plot_bars(data, 5, 10, 'HGW_Compression_Selection', 'Read Count', folder)
-    plot_bars(data, 6, 10, 'HGW_Critical_Selection', 'Read Count', folder)
-    plot_bars(data, 4, 11, 'HGW_Storage_Compression', 'Write Count', folder)
-    plot_bars(data, 5, 11, 'HGW_Compression_Selection', 'Write Count', folder)
-    plot_bars(data, 6, 11, 'HGW_Critical_Selection', 'Write Count', folder)
-    plot_bars(data, 4, 12, 'HGW_Storage_Compression', 'Average Write latency', folder)
-    plot_bars(data, 5, 12, 'HGW_Compression_Selection', 'Average Write latency', folder)
-    plot_bars(data, 6, 12, 'HGW_Critical_Selection', 'Average Write latency', folder)
-    plot_bars(data, 4, 13, 'HGW_Storage_Compression', 'Average Read latency', folder)
-    plot_bars(data, 5, 13, 'HGW_Compression_Selection', 'Average Read latency', folder)
-    plot_bars(data, 6, 13, 'HGW_Critical_Selection', 'Average Read latency', folder)
-    plot_bars(data, 4, 14, 'HGW_Storage_Compression', 'Average Overall latency', folder)
-    plot_bars(data, 5, 14, 'HGW_Compression_Selection', 'Average Overall latency', folder)
-    plot_bars(data, 6, 14, 'HGW_Critical_Selection', 'Average Overall latency', folder)
-    plot_bars(data, 4, 15, 'HGW_Storage_Compression', 'Execution Time', folder)
-    plot_bars(data, 5, 15, 'HGW_Compression_Selection', 'Execution Time', folder)
-    plot_bars(data, 6, 15, 'HGW_Critical_Selection', 'Execution Time', folder)
+def plot_stats(data, folder):
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+    # plot_bars(data, 4, 7, 'HGW_Storage_Compression', 'Read latency', folder)
+    # plot_bars(data, 5, 7, 'HGW_Compression_Selection', 'Read latency', folder)
+    # plot_bars(data, 6, 7, 'HGW_Critical_Selection', 'Read latency', folder)
+    #
+    # plot_bars(data, 4, 8, 'HGW_Storage_Compression', 'Write latency', folder)
+    # plot_bars(data, 5, 8, 'HGW_Compression_Selection', 'Write latency', folder)
+    # plot_bars(data, 6, 8, 'HGW_Critical_Selection', 'Write latency', folder)
+    #
+    # plot_bars(data, 4, 9, 'HGW_Storage_Compression', 'Reply latency', folder)
+    # plot_bars(data, 5, 9, 'HGW_Compression_Selection', 'Reply latency', folder)
+    # plot_bars(data, 6, 9, 'HGW_Critical_Selection', 'Reply latency', folder)
+    #
+    # plot_bars(data, 4, 10, 'HGW_Storage_Compression', 'Write+Reply latency', folder)
+    # plot_bars(data, 5, 10, 'HGW_Compression_Selection', 'Write+Reply latency', folder)
+    # plot_bars(data, 6, 10, 'HGW_Critical_Selection', 'Write+Reply latency', folder)
+    #
+    # plot_bars(data, 4, 11, 'HGW_Storage_Compression', 'Overall latency', folder)
+    # plot_bars(data, 5, 11, 'HGW_Compression_Selection', 'Overall latency', folder)
+    # plot_bars(data, 6, 11, 'HGW_Critical_Selection', 'Overall latency', folder)
+    #
+    # plot_bars(data, 4, 12, 'HGW_Storage_Compression', 'Read Count', folder)
+    # plot_bars(data, 5, 12, 'HGW_Compression_Selection', 'Read Count', folder)
+    # plot_bars(data, 6, 12, 'HGW_Critical_Selection', 'Read Count', folder)
+    #
+    # plot_bars(data, 4, 13, 'HGW_Storage_Compression', 'Write Count', folder)
+    # plot_bars(data, 5, 13, 'HGW_Compression_Selection', 'Write Count', folder)
+    # plot_bars(data, 6, 13, 'HGW_Critical_Selection', 'Write Count', folder)
+    #
+    # plot_bars(data, 4, 14, 'HGW_Storage_Compression', 'Reply Count', folder)
+    # plot_bars(data, 5, 14, 'HGW_Compression_Selection', 'Reply Count', folder)
+    # plot_bars(data, 6, 14, 'HGW_Critical_Selection', 'Reply Count', folder)
+    #
+    # plot_bars(data, 4, 15, 'HGW_Storage_Compression', 'Write+Reply Count', folder)
+    # plot_bars(data, 5, 15, 'HGW_Compression_Selection', 'Write+Reply Count', folder)
+    # plot_bars(data, 6, 15, 'HGW_Critical_Selection', 'Write+Reply Count', folder)
+    #
+    # plot_bars(data, 4, 16, 'HGW_Storage_Compression', 'Overall Count', folder)
+    # plot_bars(data, 5, 16, 'HGW_Compression_Selection', 'Overall Count', folder)
+    # plot_bars(data, 6, 16, 'HGW_Critical_Selection', 'Overall Count', folder)
+    #
+    # plot_bars(data, 4, 17, 'HGW_Storage_Compression', 'Average Read latency', folder)
+    # plot_bars(data, 5, 17, 'HGW_Compression_Selection', 'Average Read latency', folder)
+    # plot_bars(data, 6, 17, 'HGW_Critical_Selection', 'Average Read latency', folder)
+    #
+    # plot_bars(data, 4, 18, 'HGW_Storage_Compression', 'Average Write latency', folder)
+    # plot_bars(data, 5, 18, 'HGW_Compression_Selection', 'Average Write latency', folder)
+    # plot_bars(data, 6, 18, 'HGW_Critical_Selection', 'Average Write latency', folder)
+    #
+    # plot_bars(data, 4, 19, 'HGW_Storage_Compression', 'Average Reply latency', folder)
+    # plot_bars(data, 5, 19, 'HGW_Compression_Selection', 'Average Reply latency', folder)
+    # plot_bars(data, 6, 19, 'HGW_Critical_Selection', 'Average Reply latency', folder)
+    #
+    # plot_bars(data, 4, 20, 'HGW_Storage_Compression', 'Average Write+Reply latency', folder)
+    # plot_bars(data, 5, 20, 'HGW_Compression_Selection', 'Average Write+Reply latency', folder)
+    # plot_bars(data, 6, 20, 'HGW_Critical_Selection', 'Average Write+Reply latency', folder)
+    #
+    # plot_bars(data, 4, 21, 'HGW_Storage_Compression', 'Average Overall latency', folder)
+    # plot_bars(data, 5, 21, 'HGW_Compression_Selection', 'Average Overall latency', folder)
+    # plot_bars(data, 6, 21, 'HGW_Critical_Selection', 'Average Overall latency', folder)
+    #
+    # plot_bars(data, 4, 22, 'HGW_Storage_Compression', 'Execution Time', folder)
+    # plot_bars(data, 5, 22, 'HGW_Compression_Selection', 'Execution Time', folder)
+    # plot_bars(data, 6, 22, 'HGW_Critical_Selection', 'Execution Time', folder)
+
+    plot_bars(data, 4, 20, 'HGW_Storage_Compression', 'Average Latency', folder)
+    plot_bars(data, 5, 20, 'HGW_Compression_Selection', 'Average Latency', folder)
+    plot_bars(data, 6, 20, 'HGW_Critical_Selection', 'Average Latency', folder)
 
 
-def stats(folder=DIR_DEFAULT):
-    data = from_csv(folder) if os.path.isfile(path(folder, 'stats.csv')) else to_csv(folder)
+def do_stats(folder=DIR_DEFAULT):
+    data = from_csv(folder) if os.path.isfile(os.path.join(folder, 'stats.csv')) else to_csv(folder)
 
 
 def get_pk(row):
@@ -332,7 +382,8 @@ def get_data_avg(data_all):
     for key in data_dict:
         rows = data_dict[key]
 
-        row_avg = rows[0]
+        row_avg = list(rows[0])
+
         for row in rows[1:]:
             row_avg[7] += row[7]
             row_avg[8] += row[8]
@@ -343,6 +394,13 @@ def get_data_avg(data_all):
             row_avg[13] += row[13]
             row_avg[14] += row[14]
             row_avg[15] += row[15]
+            row_avg[16] += row[16]
+            row_avg[17] += row[17]
+            row_avg[18] += row[18]
+            row_avg[19] += row[19]
+            row_avg[20] += row[20]
+            row_avg[21] += row[21]
+            row_avg[22] += row[22]
 
         rowCount = len(rows)
         row_avg[7] /= rowCount
@@ -354,6 +412,13 @@ def get_data_avg(data_all):
         row_avg[13] /= rowCount
         row_avg[14] /= rowCount
         row_avg[15] /= rowCount
+        row_avg[16] /= rowCount
+        row_avg[17] /= rowCount
+        row_avg[18] /= rowCount
+        row_avg[19] /= rowCount
+        row_avg[20] /= rowCount
+        row_avg[21] /= rowCount
+        row_avg[22] /= rowCount
 
         data_avg.append(row_avg)
 
@@ -363,11 +428,11 @@ def get_data_avg(data_all):
 def get_data_all(folder=DIR_DEFAULT):
     data_all = []
     for n in range(99):
-        basefolder = path(folder, n)
+        basefolder = os.path.join(folder, str(n))
         if not os.path.isdir(basefolder):
             break
 
-        data = from_csv(basefolder) if os.path.isfile(path(basefolder, 'stats.csv')) else to_csv(basefolder)
+        data = from_csv(basefolder) if os.path.isfile(os.path.join(basefolder, 'stats.csv')) else to_csv(basefolder)
         data_all.append(data)
 
     return data_all
@@ -375,7 +440,7 @@ def get_data_all(folder=DIR_DEFAULT):
 
 def from_csv_avg(folder=DIR_DEFAULT):
     data = []
-    with open(path(folder, 'stats_avg.csv')) as file:
+    with open(os.path.join(folder, 'stats_avg.csv')) as file:
         reader = csv.reader(file, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         for line in reader:
             data.append(line)
@@ -387,16 +452,73 @@ def to_csv_avg(folder=DIR_DEFAULT):
     data_all = get_data_all(folder)
     data = get_data_avg(data_all)
 
-    with open(path(folder, 'stats_avg.csv'), 'w+') as f:
+    with open(os.path.join(folder, 'stats_avg.csv'), 'w+') as f:
         w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_NONNUMERIC)
         w.writerows(data)
 
     return data
 
 
-def stats_avg(folder=DIR_DEFAULT):
-    data = from_csv_avg(folder) if os.path.isfile(path(folder, 'stats_avg.csv')) else to_csv_avg(folder)
-    plot_all(data, path(folder, 'images'))
+def do_stats_avg(folder=DIR_DEFAULT):
+    data = from_csv_avg(folder) if os.path.isfile(os.path.join(folder, 'stats_avg.csv')) else to_csv_avg(folder)
+    plot_stats(data, os.path.join(folder, 'images'))
 
 
-stats_avg()
+def get_pidstat(file):
+    pidstat = {'cpu': [], 'ram': []}
+    with open(file, 'r') as f:
+        line = 1
+        while line:
+            line = f.readline()
+            split = line.split()
+            s = len(split)
+            if s == 0 or 'java' not in split[-1]:
+                continue
+
+            if s == 10:
+                pidstat['cpu'].append(split[7])
+            else:
+                pidstat['ram'].append(split[6])
+
+    return pidstat
+
+
+def get_pidstat_all(folder=DIR_DEFAULT):
+    pidstat_all = []
+
+    folder = os.path.join(folder, 'pidstat')
+    for n in range(99):
+        basefolder = os.path.join(folder, str(n))
+        if not os.path.isdir(basefolder):
+            break
+
+        for file in os.listdir(basefolder):
+            file = os.path.join(basefolder, file)
+            if os.path.isfile(file) and 'pidstat_' in file:
+                pidstat_all.append(get_pidstat(file))
+
+    return pidstat_all
+
+
+def do_pidstat(folder=DIR_DEFAULT):
+    pidstat_all = get_pidstat_all(folder)
+
+    plot_pidstat({'cloud': pidstat_all[0]['cpu'], 'offload': pidstat_all[1]['cpu']}, 'CPU')
+
+
+def plot_pidstat(datas, title):
+    keys = list(datas.keys())
+
+    df0 = pd.DataFrame({'xs': range(len(datas[keys[0]])), 'ys': datas[keys[0]]})
+    plt.plot('xs', 'ys', data=df0, marker='o', markerfacecolor='grey', markersize=8, color='lightgrey')
+
+    df1 = pd.DataFrame({'xs': range(len(datas[keys[1]])), 'ys': datas[keys[1]]})
+    plt.plot('xs', 'ys', data=df1, marker='x', markerfacecolor='grey', markersize=8, color='lightgrey')
+
+    plt.legend(keys)
+    plt.title(title)
+    plt.show()
+
+
+do_stats_avg()
+# do_pidstat()

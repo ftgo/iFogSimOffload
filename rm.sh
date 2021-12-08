@@ -6,3 +6,4 @@ find Log/ ! -name '.gitkeep' -type f -exec rm -f {} \;
 find Stats/ ! -name '.gitkeep' -type f -exec rm -f {} \;
 find latencies/ ! -name '.gitkeep' -type f -exec rm -f {} \;
 
+find -type d -name "out_*" -exec rm -rf "{}" \;
